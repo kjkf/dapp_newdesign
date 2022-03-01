@@ -1,0 +1,59 @@
+
+.banner
+  //min-height: 472px
+  +adaptiv-value('min-height', 472, 270, 89)
+  background:
+    color: var(--bgcolor)
+    image: url("../images/content/banner.jpg")
+    size: cover
+    repeat: no-repeat
+    position: center
+
+  .banner-in
+    //margin-top: 70px
+    +adaptiv-value('margin-top', 70, 34, 11)
+    +adaptiv-value('margin-bottom', 70, 34, 14)
+
+  .breadcrumbs
+    color: $lightgrey
+    +adaptiv-value('font-size', 25, 17, 6)
+    //margin-bottom: 55px
+    +adaptiv-value('margin-bottom', 55, 55, 17)
+    span
+      color: #fff
+
+  .title
+    +adaptiv-value('font-size', 100, 67, 22)
+    font-family: "Inter-ExtraBold"
+    +adaptiv-value('margin-bottom', 55, 55, 22)
+    color: $white
+    .text-grey
+      color: $lightgrey
+
+  .menu
+    display: none
+    +tablet
+      display: flex
+      list-style: none
+      align-items: center
+      justify-content: space-between
+      +adaptiv-value('font-size', 37, 20, 12)
+      //font-size: 37px
+      +adaptiv-value('padding-top', 25, 10, 12)
+      +adaptiv-value('padding-right', 100, 50, 12)
+      +adaptiv-value('padding-bottom', 37, 10, 12)
+      +adaptiv-value('padding-left', 106, 50, 12)
+      //padding: 25px 100px 37px 106px
+      -webkit-box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
+      box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
+      border-radius: 12px
+      background-color: var(--menubg)
+      transform: translateY(120%)
+    &__item.active
+      font-weight: bold
+    &__link
+      color: var(--menucolor)
+      &:hover
+        color: var(--menucolor)
+        text-decoration: none
+        font-weight: bold

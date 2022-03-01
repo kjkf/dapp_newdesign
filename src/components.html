@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components</title>
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/styles.min.css">
+    <!--
+    darkmode
+        --bgcolor:#191919;
+        --menubg:#1b1b1b;
+        --menucolor:#ffffff;
+        --
+
+    lightmode
+        --bgcolor:#ffffff;
+        --menubg:#ffffff;
+        --menucolor:#000000;
+    -->
+    <style>
+body {
+    --bgcolor:#191919;
+    --menubg:#1b1b1b;
+    --menucolor:#ffffff;
+}
+    </style>
 </head>
 <body>
+<div class="banner">
+    <div class="container">
+        <div class="banner-in">
+            <p class="breadcrumbs">Cryptocurrencies &gt; Coins &gt; <span>Bitcoin</span> </p>
+            <h3 class="title">
+                <p>Открой глаза</p>
+                <p class="text-grey">на мир криптовалюты</p>
+            </h3>
+            <ul class="menu">
+                <li class="menu__item active" ><a href="" class="menu__link">Новинки</a></li>
+                <li class="menu__item" ><a href="" class="menu__link">Рейтинги</a></li>
+                <li class="menu__item" ><a href="" class="menu__link">Мои NFT</a></li>
+                <li class="menu__item" ><a href="" class="menu__link">Новости</a></li>
+                <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
+            </ul>
+        </div>
+        <div class="main-submenu submenu">
+            <ul class="submenu-list">
+                <li class="submenu__item"><a href="#" class="submenu__link">Тренды</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Топ</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Исскуство</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Коллекции</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link">Доменные имена</a></li>
+            </ul>
+            <a href="#" class="submenu__btn">Подробнее</a>
+        </div>
 
+    </div>
+</div>
 </body>
 </html>

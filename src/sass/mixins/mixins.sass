@@ -26,7 +26,7 @@
 $laptop-width1: 1366px
 $laptop-width: 1024px
 $tablet-width: 768px
-=laptop
+=laptop1
 	@media screen and (min-width: $laptop-width1)
 		@content
 =laptop
@@ -48,11 +48,25 @@ $tablet-width: 768px
 
 
 $maxWidth: 2880
-=adaptiv-value($property, $startSize, $minSize)
+=adaptiv-value($property, $startSize, $minSize, $mobMinSize)
 	$addSize: $startSize - $minSize
-	$addMobSize: $addSize + $addSize * 0.7
+
+	$mobStartSize: $minSize
+	//$mobMinSize: 20
+	$addMobSize: ($mobStartSize - $mobMinSize) * 0.1 //$addSize + $addSize * 0.7
+
+	@media (max-width: 1170px)
+		#{$property}: $mobStartSize + px
+		#{$property}: calc(#{$mobMinSize + px} + #{$addMobSize} * ((100vw - 320px) / #{1170 - 320}))
+
+	@media (min-width: 1170px)
+		#{$property}: $minSize + px
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 1170px) / #{$maxWidth - 1170}))
+
+
+=adaptiv-value1($property, $startSize, $minSize, $mobMinSize)
+	$addSize: $startSize - $minSize
+	$addMobSize: $addSize + $addSize * 0.6
 
 	#{$property}: $startSize + px
 	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 1080px) / #{$maxWidth - 1080}))
-
-
