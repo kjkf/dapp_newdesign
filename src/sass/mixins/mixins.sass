@@ -48,11 +48,12 @@ $tablet-width: 768px
 
 
 $maxWidth: 2880
-=adaptiv-value($property, $startSize, $minSize, $mobMinSize)
+=adaptiv-value($property, $startSize, $minSize)
 	$addSize: $startSize - $minSize
 
 	$mobStartSize: $minSize
-	//$mobMinSize: 20
+
+ 	$mobMinSize: $minSize / 3
 	$addMobSize: ($mobStartSize - $mobMinSize) * 0.1 //$addSize + $addSize * 0.7
 
 	@media (max-width: 1170px)
