@@ -205,11 +205,14 @@ h3
 
 .details
 	color: #747474
-	+adaptiv-value('font-size', 19, 15)
+	//+adaptiv-value('font-size', 19, 15)
+	+adaptiv-value-mob('font-size', 15)
 	width: 90%
 	display: flex
 	justify-content: space-between
 	align-items: center
+	+tablet
+		+adaptiv-value-desc('font-size', 19)
 	&.dib
 		display: inline
 		span
@@ -226,10 +229,15 @@ h3
 
 	&__btn
 		display: inline-block
-		+adaptiv-value('width', 35, 24)
-		+adaptiv-value('height', 25, 20)
+		//+adaptiv-value('width', 35, 24)
+		//+adaptiv-value('height', 25, 20)
+		+adaptiv-value-mob('width', 24)
+		+adaptiv-value-mob('height', 20)
 		background:
 			image: url("../images/icons/open-arrow.png")
 			size: contain
 			repeat: no-repeat
+		+tablet
+			+adaptiv-value-desc('width', 35)
+			+adaptiv-value-desc('height', 25)
 

@@ -1,34 +1,55 @@
+.section-in
+  +tablet
+    +adaptiv-value-desc('padding-left', 120)
+    +adaptiv-value-desc('padding-right', 120)
 .banner
-  //min-height: 472px
-  +adaptiv-value('min-height', 472, 264)
-  +adaptiv-value('margin-bottom', 130, 20)
+  //+adaptiv-value('margin-bottom', 130, 20)
+  +adaptiv-value-mob('min-height', 264)
+  +adaptiv-value-mob('margin-bottom', 20)
   background:
     color: var(--bgcolor)
     image: url("../images/content/banner.jpg")
     size: cover
     repeat: no-repeat
     position: center
+  +tablet
+    +adaptiv-value-desc('min-height', 472)
+    +adaptiv-value-desc('margin-bottom', 130)
 
   .banner-in
     display: inline-block
     width: 100%
     //margin-top: 70px
-    +adaptiv-value('margin-top', 70, 30)
-    +adaptiv-value('margin-bottom', 70, 30)
+    //+adaptiv-value('margin-top', 70, 30)
+    //+adaptiv-value('margin-bottom', 50, 30)
+    +adaptiv-value-mob('margin-top', 30)
+    +adaptiv-value-mob('margin-bottom', 30)
+    +tablet
+      +adaptiv-value-desc('margin-top', 70)
+      +adaptiv-value-desc('margin-bottom', 25)
 
   .breadcrumbs
     color: $lightgrey
     font-family: $InterRegular
-    +adaptiv-value('font-size', 25, 17)
-    //margin-bottom: 55px
-    +adaptiv-value('margin-bottom', 57, 51)
+    //+adaptiv-value('font-size', 25, 17)
+    //+adaptiv-value('margin-bottom', 57, 51)
+    +adaptiv-value-mob('font-size', 17)
+    +adaptiv-value-mob('margin-bottom', 45)
+    +tablet
+      +adaptiv-value-desc('font-size', 25)
+      +adaptiv-value-desc('margin-bottom', 57)
     span
       color: $white
 
   .title
-    +adaptiv-value('font-size', 100, 67)
+    //+adaptiv-value('font-size', 100, 67)
+    //+adaptiv-value('margin-bottom', 81, 14)
+    +adaptiv-value-mob('font-size', 67)
+    +adaptiv-value-mob('margin-bottom', 14)
     font-family: $InterExtraBold
-    +adaptiv-value('margin-bottom', 81, 14)
+    +tablet
+      +adaptiv-value-desc('font-size', 100)
+      +adaptiv-value-desc('margin-bottom', 0)
     color: $white
     .text-grey
       color: $lightgrey
@@ -40,19 +61,24 @@
       list-style: none
       align-items: center
       justify-content: space-between
-      +adaptiv-value('font-size', 37, 20)
-      //font-size: 37px
-      +adaptiv-value('padding-top', 25, 10)
-      +adaptiv-value('padding-right', 100, 50)
-      +adaptiv-value('padding-bottom', 37, 10)
-      +adaptiv-value('padding-left', 106, 50)
       //padding: 25px 100px 37px 106px
+      //+adaptiv-value('font-size', 37, 20)
+      //+adaptiv-value('padding-top', 25, 10)
+      //+adaptiv-value('padding-right', 100, 50)
+      //+adaptiv-value('padding-bottom', 37, 10)
+      //+adaptiv-value('padding-left', 106, 50)
+      //+adaptiv-value('border-radius', 15, 12)
+      +adaptiv-value-desc('font-size', 37)
+      +adaptiv-value-desc('padding-top', 25)
+      +adaptiv-value-desc('padding-right', 100)
+      +adaptiv-value-desc('padding-bottom', 37)
+      +adaptiv-value-desc('padding-left', 106)
+      +adaptiv-value-desc('border-radius', 15)
+      +adaptiv-value-desc('max-width', 1692)
       -webkit-box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
       box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
-      //border-radius: $borderRadius
-      +adaptiv-value('border-radius', 15, 12)
       background-color: var(--menubg)
-      transform: translateY(120%)
+      transform: translateY(75%)
     &__item.active
       font-weight: bold
     &__link
@@ -73,7 +99,10 @@
     justify-content: space-between
     align-items: center
     color: var(--submenu-color)
-    +adaptiv-value('font-size', 37, 41)
+    //+adaptiv-value('font-size', 37, 41)
+    +adaptiv-value-mob('font-size', 41)
+    +tablet
+      +adaptiv-value-desc('font-size', 37)
     position: relative
     +tablet
       position: static
@@ -83,11 +112,22 @@
       align-items: center
       min-width: 460px
     &__item
-      +adaptiv-value('border-radius', 15, 12)
-      +adaptiv-value('padding-top', 30, 20)
-      +adaptiv-value('padding-right', 46, 35)
-      +adaptiv-value('padding-bottom', 30, 20)
-      +adaptiv-value('padding-left', 46, 35)
+      //+adaptiv-value('border-radius', 15, 12)
+      //+adaptiv-value('padding-top', 30, 20)
+      //+adaptiv-value('padding-right', 46, 35)
+      //+adaptiv-value('padding-bottom', 30, 20)
+      //+adaptiv-value('padding-left', 46, 35)
+      +adaptiv-value-mob('border-radius', 12)
+      +adaptiv-value-mob('padding-top', 20)
+      +adaptiv-value-mob('padding-right', 35)
+      +adaptiv-value-mob('padding-bottom', 20)
+      +adaptiv-value-mob('padding-left', 35)
+      +tablet
+        +adaptiv-value-desc('border-radius', 15)
+        +adaptiv-value-desc('padding-top', 30)
+        +adaptiv-value-desc('padding-right', 46)
+        +adaptiv-value-desc('padding-bottom', 30)
+        +adaptiv-value-desc('padding-left', 46)
       &.active
         background-color: var(--submenu-active-bg)
         color: var(--submenu-active-color)
@@ -108,12 +148,25 @@
       display: flex
       justify-content: space-between
       align-items: center
-      +adaptiv-value('font-size', 30, 30)
-      +adaptiv-value('padding-right', 70, 30)
-      +adaptiv-value('padding-top', 25, 25)
-      +adaptiv-value('padding-left', 70, 30)
-      +adaptiv-value('padding-bottom', 25, 25)
-      +adaptiv-value('border-radius', 15, 12)
+      //+adaptiv-value('font-size', 30, 30)
+      //+adaptiv-value('padding-right', 70, 30)
+      //+adaptiv-value('padding-top', 25, 25)
+      //+adaptiv-value('padding-left', 70, 30)
+      //+adaptiv-value('padding-bottom', 25, 25)
+      //+adaptiv-value('border-radius', 15, 12)
+      +adaptiv-value-mob('font-size',  30)
+      +adaptiv-value-mob('padding-right', 30)
+      +adaptiv-value-mob('padding-top', 25)
+      +adaptiv-value-mob('padding-left', 30)
+      +adaptiv-value-mob('padding-bottom',  25)
+      +adaptiv-value-mob('border-radius',  12)
+      +tablet
+        +adaptiv-value-desc('font-size', 30)
+        +adaptiv-value-desc('padding-right', 70)
+        +adaptiv-value-desc('padding-top', 25)
+        +adaptiv-value-desc('padding-left', 70)
+        +adaptiv-value-desc('padding-bottom', 25)
+        +adaptiv-value-desc('border-radius', 15)
   &__item.active
         font-family: $InterBold
 
@@ -132,15 +185,20 @@
 
   .post-news
     max-width: 36vw
-    +adaptiv-value('margin-bottom', 100, 100)
+    //+adaptiv-value('margin-bottom', 100, 100)
+    +adaptiv-value-mob('margin-bottom', 100)
     +tablet
       max-width: 20vw
+      +adaptiv-value-desc('margin-bottom', 100)
     &.mb-0
       margin-bottom: 0
     &__img
-      +adaptiv-value('border-radius', 15, 12)
+      //+adaptiv-value('border-radius', 15, 12)
+      +adaptiv-value-mob('border-radius', 12)
       overflow: hidden
       margin-bottom: 30px
+      +tablet
+        +adaptiv-value-desc('border-radius', 15)
       img
         width: 100%
         height: auto
@@ -155,10 +213,15 @@
 
   .post-news__title
     color: var(--post-title-color)
-    +adaptiv-value('font-size', 32, 25)
+    //+adaptiv-value('font-size', 32, 25)
+    //+adaptiv-value('margin-bottom', 40, 25)
+    +adaptiv-value-mob('font-size', 25)
+    +adaptiv-value-mob('margin-bottom', 25)
     line-height: 1.9
     font-family: $InterBold
-    +adaptiv-value('margin-bottom', 40, 25)
+    +tablet
+      +adaptiv-value-desc('font-size', 32)
+      +adaptiv-value-desc('margin-bottom', 40)
 
     &.dib
       margin-right: 5%
@@ -167,25 +230,39 @@
     display: none
     +tablet
       display: block
-      +adaptiv-value('font-size', 46, 30)
-      +adaptiv-value('margin-top', 70, 55)
+      //+adaptiv-value('font-size', 46, 30)
+      //+adaptiv-value('margin-top', 70, 55)
+      +adaptiv-value-desc('font-size', 30)
+      +adaptiv-value-desc('margin-top', 55)
       font-family: $InterSemiBold
       color: var(--post-col-title-color)
 
   button.btn.see-more
     display: none
-    +adaptiv-value('font-size', 25, 20)
-    +adaptiv-value('margin-top', 65, 55)
+    //+adaptiv-value('font-size', 25, 20)
+    //+adaptiv-value('margin-top', 65, 55)
+    //+adaptiv-value('padding-right', 54, 30)
+    //+adaptiv-value('padding-top', 22, 18)
+    //+adaptiv-value('padding-left', 54, 30)
+    //+adaptiv-value('padding-bottom', 22, 18)
+    +adaptiv-value-mob('font-size', 20)
+    +adaptiv-value-mob('margin-top', 55)
+    +adaptiv-value-mob('padding-right', 30)
+    +adaptiv-value-mob('padding-top', 18)
+    +adaptiv-value-mob('padding-left', 30)
+    +adaptiv-value-mob('padding-bottom', 18)
     font-family: $InterRegular
     color: var(--seemore-btn-color)
     background-color: var(--seemore-btn-bg)
-    +adaptiv-value('padding-right', 54, 30)
-    +adaptiv-value('padding-top', 22, 18)
-    +adaptiv-value('padding-left', 54, 30)
-    +adaptiv-value('padding-bottom', 22, 18)
     margin-left: 50%
     +tablet
       display: block
+      +adaptiv-value-desc('font-size', 25)
+      +adaptiv-value-desc('margin-top', 65)
+      +adaptiv-value-desc('padding-right', 54)
+      +adaptiv-value-desc('padding-top', 22)
+      +adaptiv-value-desc('padding-left', 54)
+      +adaptiv-value-desc('padding-bottom', 22)
 
 
   &__title
@@ -196,7 +273,8 @@
       display: none
     .title
       color: var(--submenu-title-color)
-      +adaptiv-value('font-size',49, 49)
+      //+adaptiv-value('font-size',49, 49)
+      +adaptiv-value-mob('font-size',49)
       line-height: 5.14
       font-family: $InterBold
     button.btn.see-more
