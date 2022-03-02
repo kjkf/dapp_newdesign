@@ -69,3 +69,32 @@ $maxWidth: 2880
 
 	#{$property}: $startSize + px
 	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 1080px) / #{$maxWidth - 1080}))
+
+
+=adaptiv-value-desc($property, $val)
+	#{$property}: calc(#{$val + vw} * 100 / 2880)
+
+=adaptiv-value-mob($property, $val)
+	#{$property}: calc(#{$val + vw} * 100 / 1170)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
