@@ -1,0 +1,40 @@
+/* FOOTER styles */
+@import "../general/social"
+
+.footer
+  .logo
+    width: 45px
+    height: 45px
+    min-width: 45px
+    min-height: 45px
+    +adaptiv-value("margin-right", 65, 35)
+  .menu
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .menu-item
+    font-size: inherit
+    color: #909090
+  .social-menu
+    margin-left: auto
+    align-items: center
+  .social-menu-link
+    display: inline-block
+    +adaptiv-value("min-width", 24, 24)
+    +adaptiv-value("width", 24, 24)
+    +adaptiv-value("min-height", 24, 24)
+    +adaptiv-value("height", 24, 24)
+    margin-right: -5px
+
+  .social-menu li
+    +adaptiv-value("margin-right", 40, 35)
+
+  .copyright
+    display: flex
+    justify-content: center
+    +adaptiv-value("margin-bottom", 23, 33)
+
+
+.footer__btm
+  display: flex
+  //justify-content: space-between
