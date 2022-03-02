@@ -1,7 +1,7 @@
 .section-in
   +tablet
     +adaptiv-value-desc('padding-left', 120)
-    +adaptiv-value-desc('padding-right', 120)
+    //+adaptiv-value-desc('padding-right', 120)
 .banner
   //+adaptiv-value('margin-bottom', 130, 20)
   +adaptiv-value-mob('min-height', 264)
@@ -37,7 +37,8 @@
     +adaptiv-value-mob('margin-bottom', 45)
     +tablet
       +adaptiv-value-desc('font-size', 25)
-      +adaptiv-value-desc('margin-bottom', 57)
+      +adaptiv-value-desc('margin-bottom', 43)
+      +adaptiv-value-desc('margin-left', 17)
     span
       color: $white
 
@@ -46,10 +47,13 @@
     //+adaptiv-value('margin-bottom', 81, 14)
     +adaptiv-value-mob('font-size', 67)
     +adaptiv-value-mob('margin-bottom', 14)
+    +adaptiv-value-mob('letter-spacing', 8)
     font-family: $InterExtraBold
     +tablet
       +adaptiv-value-desc('font-size', 100)
       +adaptiv-value-desc('margin-bottom', 0)
+      +adaptiv-value-desc('margin-left', 17)
+      +adaptiv-value-desc('letter-spacing', 8)
     color: $white
     .text-grey
       color: $lightgrey
@@ -69,7 +73,7 @@
       //+adaptiv-value('padding-left', 106, 50)
       //+adaptiv-value('border-radius', 15, 12)
       +adaptiv-value-desc('font-size', 37)
-      +adaptiv-value-desc('padding-top', 25)
+      +adaptiv-value-desc('padding-top', 26)
       +adaptiv-value-desc('padding-right', 100)
       +adaptiv-value-desc('padding-bottom', 37)
       +adaptiv-value-desc('padding-left', 106)
@@ -78,9 +82,11 @@
       -webkit-box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
       box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
       background-color: var(--menubg)
-      transform: translateY(75%)
-    &__item.active
-      font-weight: bold
+      transform: translateY(84%)
+    &__item
+      +adaptiv-value-desc('letter-spacing', 2)
+      &.active
+        font-weight: bold
     &__link
       color: var(--menucolor)
       &:hover
@@ -92,7 +98,8 @@
   //min-height: 73px
   position: relative
   overflow: hidden
-  margin-bottom: 18px
+  //margin-bottom: 18px
+  +adaptiv-value-mob('margin-bottom', 5)
   .submenu
     position: absolute
     display: flex
@@ -103,6 +110,7 @@
     +adaptiv-value-mob('font-size', 41)
     +tablet
       +adaptiv-value-desc('font-size', 37)
+      +adaptiv-value-desc('max-width', 2135)
     position: relative
     +tablet
       position: static
@@ -135,10 +143,13 @@
       display: none
       +tablet
         display: block
+        +adaptiv-value-desc('font-size', 25)
+        +adaptiv-value-desc('letter-spacing', 7)
 
 .block-menu
   +tablet
-    margin-bottom: 60px
+    //margin-bottom: 60px
+    +adaptiv-value-desc('margin-bottom', 60)
   &__list
     display: none
     +tablet
@@ -163,25 +174,37 @@
       +tablet
         +adaptiv-value-desc('font-size', 30)
         +adaptiv-value-desc('padding-right', 70)
-        +adaptiv-value-desc('padding-top', 25)
+        +adaptiv-value-desc('padding-top', 20)
         +adaptiv-value-desc('padding-left', 70)
-        +adaptiv-value-desc('padding-bottom', 25)
+        +adaptiv-value-desc('padding-bottom', 21)
         +adaptiv-value-desc('border-radius', 15)
+        +adaptiv-value-desc('max-width', 2027)
   &__item.active
         font-family: $InterBold
 
 .news
+  .section-in
+    +tablet
+      +adaptiv-value-desc('padding-left', 132)
+      +adaptiv-value-desc('padding-right', 188)
   &__right
-    width: 100vw
+    //width: 100vw
+    +adaptiv-value-mob('width', 990)
     display: flex
     justify-content: space-between
-    align-items: center
+    //align-items: center
     +tablet
-      width: 50vw
+      //width: 50vw
+      +adaptiv-value-desc('width', 1235)
+      +adaptiv-value-desc('margin-left', 30)
+    &-col
+      +adaptiv-value-mob('padding-top', 25)
+      +tablet
+        +adaptiv-value-desc('padding-top', 25)
   .news-in
     display: flex
     justify-content: space-between
-    align-items: center
+    //align-items: center
 
   .post-news
     max-width: 36vw
@@ -194,21 +217,24 @@
       margin-bottom: 0
     &__img
       //+adaptiv-value('border-radius', 15, 12)
+      //margin-bottom: 30px
       +adaptiv-value-mob('border-radius', 12)
+      +adaptiv-value-mob('margin-bottom', 30)
       overflow: hidden
-      margin-bottom: 30px
       +tablet
         +adaptiv-value-desc('border-radius', 15)
+        +adaptiv-value-desc('margin-bottom', 13)
       img
         width: 100%
         height: auto
-        max-height: 259px
+        +adaptiv-value-desc('max-height', 259)
 
     &.img__post
       display: none
       +tablet
         max-width: 24vw
-        margin-bottom: 70px
+        //margin-bottom: 70px
+        +adaptiv-value-desc('margin-bottom', 54)
         display: block
 
   .post-news__title
@@ -221,19 +247,34 @@
     font-family: $InterBold
     +tablet
       +adaptiv-value-desc('font-size', 32)
-      +adaptiv-value-desc('margin-bottom', 40)
+      +adaptiv-value-desc('margin-bottom', 18)
 
     &.dib
       margin-right: 5%
+      +adaptiv-value-mob('margin-bottom', 25)
+      +tablet
+        +adaptiv-value-desc('margin-bottom', 40)
 
+
+
+  .news_foot
+    +tablet
+      +adaptiv-value-desc('margin-top', 59)
+      +adaptiv-value-desc('min-height', 81.5)
+      display: flex
+      justify-content: flex-start
+      align-items: center
+    &.btn-wrapper
+      +tablet
+        justify-content: flex-end
   .news__col_title
     display: none
     +tablet
       display: block
       //+adaptiv-value('font-size', 46, 30)
       //+adaptiv-value('margin-top', 70, 55)
-      +adaptiv-value-desc('font-size', 30)
-      +adaptiv-value-desc('margin-top', 55)
+      +adaptiv-value-desc('font-size', 46)
+      //+adaptiv-value-desc('margin-top', 55)
       font-family: $InterSemiBold
       color: var(--post-col-title-color)
 
@@ -246,7 +287,7 @@
     //+adaptiv-value('padding-left', 54, 30)
     //+adaptiv-value('padding-bottom', 22, 18)
     +adaptiv-value-mob('font-size', 20)
-    +adaptiv-value-mob('margin-top', 55)
+    +adaptiv-value-mob('margin-right', 26)
     +adaptiv-value-mob('padding-right', 30)
     +adaptiv-value-mob('padding-top', 18)
     +adaptiv-value-mob('padding-left', 30)
@@ -254,11 +295,11 @@
     font-family: $InterRegular
     color: var(--seemore-btn-color)
     background-color: var(--seemore-btn-bg)
-    margin-left: 50%
+    //margin-left: 50%
     +tablet
       display: block
       +adaptiv-value-desc('font-size', 25)
-      +adaptiv-value-desc('margin-top', 65)
+      //+adaptiv-value-desc('margin-top', 65)
       +adaptiv-value-desc('padding-right', 54)
       +adaptiv-value-desc('padding-top', 22)
       +adaptiv-value-desc('padding-left', 54)
