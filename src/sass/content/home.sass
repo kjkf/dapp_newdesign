@@ -63,7 +63,7 @@
         font-weight: bold
 
 .main-submenu
-  min-height: 73px
+  //min-height: 73px
   position: relative
   overflow: hidden
   margin-bottom: 18px
@@ -95,6 +95,7 @@
       display: none
       +tablet
         display: block
+
 .block-menu
   +tablet
     margin-bottom: 60px
@@ -173,15 +174,31 @@
 
   button.btn.see-more
     display: none
+    +adaptiv-value('font-size', 25, 20)
+    +adaptiv-value('margin-top', 65, 55)
+    font-family: $InterRegular
+    color: var(--seemore-btn-color)
+    background-color: var(--seemore-btn-bg)
+    +adaptiv-value('padding-right', 54, 30)
+    +adaptiv-value('padding-top', 22, 18)
+    +adaptiv-value('padding-left', 54, 30)
+    +adaptiv-value('padding-bottom', 22, 18)
+    margin-left: 50%
     +tablet
       display: block
-      +adaptiv-value('font-size', 25, 20)
-      +adaptiv-value('margin-top', 65, 55)
-      font-family: $InterRegular
-      color: var(--seemore-btn-color)
-      background-color: var(--seemore-btn-bg)
-      +adaptiv-value('padding-right', 54, 30)
-      +adaptiv-value('padding-top', 22, 18)
-      +adaptiv-value('padding-left', 54, 30)
-      +adaptiv-value('padding-bottom', 22, 18)
-      margin-left: 50%
+
+
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +tablet
+      display: none
+    .title
+      color: var(--submenu-title-color)
+      +adaptiv-value('font-size',49, 49)
+      line-height: 5.14
+      font-family: $InterBold
+    button.btn.see-more
+      display: block
+      margin: 0
