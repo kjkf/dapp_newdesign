@@ -5,7 +5,7 @@
 .banner
   //+adaptiv-value('margin-bottom', 130, 20)
   +adaptiv-value-mob('min-height', 264)
-  +adaptiv-value-mob('margin-bottom', 20)
+  +adaptiv-value-mob('margin-bottom', 0)
   background:
     color: var(--bgcolor)
     image: url("../images/content/banner.jpg")
@@ -24,9 +24,11 @@
     //+adaptiv-value('margin-bottom', 50, 30)
     +adaptiv-value-mob('margin-top', 30)
     +adaptiv-value-mob('margin-bottom', 30)
+    +adaptiv-value-mob('padding-left', 30)
     +tablet
       +adaptiv-value-desc('margin-top', 70)
       +adaptiv-value-desc('margin-bottom', 25)
+      +adaptiv-value-mob('padding-left', 0)
 
   .breadcrumbs
     color: $lightgrey
@@ -99,7 +101,9 @@
   position: relative
   overflow: hidden
   //margin-bottom: 18px
-  +adaptiv-value-mob('margin-bottom', 5)
+  +adaptiv-value-mob('margin-bottom', 20)
+  +tablet
+    +adaptiv-value-desc('margin-bottom', 14)
   .submenu
     position: absolute
     display: flex
@@ -195,7 +199,7 @@
     //align-items: center
     +tablet
       //width: 50vw
-      +adaptiv-value-desc('width', 1235)
+      +adaptiv-value-desc('width', 1230)
       +adaptiv-value-desc('margin-left', 30)
     &-col
       +adaptiv-value-mob('padding-top', 25)
@@ -207,11 +211,11 @@
     //align-items: center
 
   .post-news
-    max-width: 36vw
+    max-width: 39vw
     //+adaptiv-value('margin-bottom', 100, 100)
-    +adaptiv-value-mob('margin-bottom', 100)
+    +adaptiv-value-mob('margin-bottom', 90)
     +tablet
-      max-width: 20vw
+      max-width: 19.5vw
       +adaptiv-value-desc('margin-bottom', 100)
     &.mb-0
       margin-bottom: 0
@@ -242,7 +246,7 @@
     //+adaptiv-value('font-size', 32, 25)
     //+adaptiv-value('margin-bottom', 40, 25)
     +adaptiv-value-mob('font-size', 25)
-    +adaptiv-value-mob('margin-bottom', 25)
+    +adaptiv-value-mob('margin-bottom', 10)
     line-height: 1.9
     font-family: $InterBold
     +tablet
@@ -288,10 +292,10 @@
     //+adaptiv-value('padding-bottom', 22, 18)
     +adaptiv-value-mob('font-size', 20)
     +adaptiv-value-mob('margin-right', 26)
-    +adaptiv-value-mob('padding-right', 30)
-    +adaptiv-value-mob('padding-top', 18)
-    +adaptiv-value-mob('padding-left', 30)
-    +adaptiv-value-mob('padding-bottom', 18)
+    +adaptiv-value-mob('padding-right', 51)
+    +adaptiv-value-mob('padding-top', 15)
+    +adaptiv-value-mob('padding-left', 51)
+    +adaptiv-value-mob('padding-bottom', 13)
     font-family: $InterRegular
     color: var(--seemore-btn-color)
     background-color: var(--seemore-btn-bg)
@@ -310,14 +314,17 @@
     display: flex
     justify-content: space-between
     align-items: center
+    +adaptiv-value-mob('margin-bottom',15)
     +tablet
       display: none
     .title
       color: var(--submenu-title-color)
       //+adaptiv-value('font-size',49, 49)
       +adaptiv-value-mob('font-size',49)
-      line-height: 5.14
+      +adaptiv-value-mob('padding-left',10)
+      line-height: 3
       font-family: $InterBold
     button.btn.see-more
       display: block
       margin: 0
+      +adaptiv-value-mob('margin-right',20)

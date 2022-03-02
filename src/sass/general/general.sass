@@ -61,9 +61,15 @@ h3
 
 
 .container
-	max-width: 82.8vw
+	max-width: 89vw
 	width: 100%
 	margin: 0 auto
+	+adaptiv-value-mob('padding-left', 10)
+	+adaptiv-value-mob('padding-right', 10)
+	+tablet
+		max-width: 82.8vw
+		+adaptiv-value-mob('padding-left', 8)
+		+adaptiv-value-mob('padding-right', 8)
 	//background-color: #5a6268
 
 .title
@@ -216,6 +222,7 @@ h3
 	align-items: center
 	+tablet
 		+adaptiv-value-desc('font-size', 19)
+		width: 90%
 	&.dib
 		display: inline
 		span
@@ -234,7 +241,7 @@ h3
 		display: inline-block
 		//+adaptiv-value('width', 35, 24)
 		//+adaptiv-value('height', 25, 20)
-		+adaptiv-value-mob('width', 24)
+		+adaptiv-value-mob('width', 22)
 		+adaptiv-value-mob('height', 20)
 		background:
 			image: url("../images/icons/open-arrow.png")
