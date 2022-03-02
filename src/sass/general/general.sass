@@ -4,12 +4,12 @@
 
 html
 	//overflow: hidden
-	font-size: $fontSize_body
+	+adaptiv-value("font-size", 25, 19.58)
 
 body
 	font:
-		//family: $font-Roboto-Regular
-		size: 1rem
+		family: $InterRegular
+		size: $fs_body
 		weight: 400
 	color: $fontColorMain
 	line-height: 1
@@ -17,29 +17,42 @@ body
 	margin: 0
 	padding: 0
 	height: 100vh
-	background-color: var(--bgcolor)
+	background-color: $bgColor
+	+tablet
+		+adaptiv-value("font-size", 24.97, 12)
 
 h1, h2, h3, h4, p, ul
 	margin: 0px
 	padding: 0px
 
+a
+	display: inline-block
+	text-decoration: none
+	color: inherit
+	&:hover, &:active
+		text-decoration: none
+		color: inherit
+	//&.active, &:hover, &:focus, &:active
+		color: $violetta
+
+
 ul
 	list-style: none
 
-h1
+//h1
 	font-size: $fontSize_h1
 	line-height: $lineHeight_h1
 	font-weight: normal
 
 h2
 	line-height: $lineHeight_h2
-	+adaptiv-value('font-size', 100, 67)
+	+adaptiv-value('font-size', 100, 75)
 
 h3
-	font-size: $fontSize_h3
+	+adaptiv-value('font-size', 58, 50)
 	line-height: $lineHeight_h3
 
-h4
+//h4
 	font-size: $fontSize_h4
 	line-height: $lineHeight_h4
 
@@ -77,7 +90,97 @@ h4
 .text-upper
 	text-transform: uppercase
 
+.logo
+	+adaptiv-value("max-width", 190, 105)
+	+adaptiv-value("border-radius", 4, 3)
+	display: flex
+	align-items: center
+	&>a
+		width: 100%
+		height: 100%
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.logo img
+	width: 100%
+	height: 100%
+	object-fit: contain
+
 .btn
 	position: relative
-	&:hover
+	//font-family: $ff_InterMedium, $ff_apple !important
+	//font-size: $fs_body!important
+	//line-height: $lh_body
+	text-decoration: none
+	-webkit-appearance: none
+	border: 0
+	cursor: pointer
+	user-select: none
+	outline: none
+	background-color: transparent
+	padding: 0
+	font-size: inherit
+	&:focus, &:active, &.focus, &:hover
+		outline: none
+		box-shadow: none
 		color: inherit
+
+	&--filled
+		background-color: $violetta!important
+		padding: 6px 28px!important
+		color: $fontColorMain
+		border-radius: $br_btn
+		background: rgb(96,19,182) !important
+		background: linear-gradient(90deg, rgba(96,19,182,1) 0%, rgba(136,14,216,1) 50%, rgba(181,8,253,1) 100%) !important
+		//fill: $fc_body
+		//border: 0!important
+		&:hover
+			opacity: 0.8!important
+			background-color: $violetta!important
+			border: 0!important
+.dropdown-menu
+	display: none
+	flex-direction: column
+	//padding: $p_menu
+	//background: $bg_body
+	//box-shadow: $bsh_menu
+	//border-radius: $br_menu
+	//color: $fc_body
+	//min-width: $mw_menu
+	border: none
+	//font-size: $fs_body
+
+	.menu-item
+		//margin-bottom: $mb_menuItem
+		margin-right: 0
+		&:last-child
+			margin-bottom: 0
+		&>a
+			display: flex
+			align-items: center
+			padding: 0
+			line-height: inherit
+			color: inherit
+			&:hover
+				//color: $violetta1
+				background-color: transparent
+				.menu__icon
+					//fill: $violetta1
+
+		&:hover
+			.menu__icon
+				//fill: $violetta1
+
+	.menu__icon
+		width: 24px
+		height: 24px
+		min-width: 24px
+		min-height: 24px
+		display: inline-block
+		//fill: $fc_body
+		margin-right: 10px
+
+.dropdown-toggle::after
+	display: none
