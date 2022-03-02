@@ -2,12 +2,27 @@
 @import "../general/social"
 
 .footer
+  &__inner
+    +adaptiv-value-mob("padding-top", 15)
+    +adaptiv-value-mob("padding-bottom", 25)
+    +tablet
+      +adaptiv-value-desc("padding-top", 35)
+      +adaptiv-value-desc("padding-bottom", 45)
   .logo
-    width: 45px
-    height: 45px
-    min-width: 45px
-    min-height: 45px
-    +adaptiv-value("margin-right", 65, 35)
+    //min-width: 45px
+    //min-height: 45px
+    +adaptiv-value-mob("width", 45)
+    +adaptiv-value-mob("height", 45)
+    +adaptiv-value-mob("min-width", 45)
+    +adaptiv-value-mob("min-height", 45)
+    +adaptiv-value-mob("margin-right", 35)
+    +tablet
+      +adaptiv-value-desc("margin-right", 65)
+      +adaptiv-value-desc("width", 65)
+      +adaptiv-value-desc("height", 65)
+      +adaptiv-value-desc("min-width", 65)
+      +adaptiv-value-desc("min-height", 65)
+
   .menu
     display: flex
     flex-direction: column
@@ -20,19 +35,30 @@
     align-items: center
   .social-menu-link
     display: inline-block
-    +adaptiv-value("min-width", 24, 24)
-    +adaptiv-value("width", 24, 24)
-    +adaptiv-value("min-height", 24, 24)
-    +adaptiv-value("height", 24, 24)
-    margin-right: -5px
+    +adaptiv-value-mob("min-width", 24)
+    +adaptiv-value-mob("width", 24)
+    +adaptiv-value-mob("min-height", 24)
+    +adaptiv-value-mob("height", 24)
+
+    +tablet
+      +adaptiv-value-desc("min-width", 24)
+      +adaptiv-value-desc("width", 24)
+      +adaptiv-value-desc("min-height", 24)
+      +adaptiv-value-desc("height", 24)
+      margin-right: -5px
+
 
   .social-menu li
-    +adaptiv-value("margin-right", 40, 35)
+    +adaptiv-value-mob("margin-right", 35)
+    +tablet
+      +adaptiv-value-desc("margin-right", 40)
 
   .copyright
     display: flex
     justify-content: center
-    +adaptiv-value("margin-bottom", 23, 33)
+    +adaptiv-value-mob("margin-bottom", 33)
+    +tablet
+      +adaptiv-value-desc("margin-bottom", 23)
 
 
 .footer__btm
