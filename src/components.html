@@ -12,18 +12,50 @@
         --bgcolor:#191919;
         --menubg:#1b1b1b;
         --menucolor:#ffffff;
-        --
+        --submenu-color: #adadad;
+        --submenu-active-bg: #1d1d1d;
+        --submenu-active-color: #5c5c5c;
+        --block-menu-color: #191919;
+        --block-menu-bg: #ffffff;
+        --post-title-color: #ffffff;
+        --post-col-title-color: #858585;
+        --seemore-btn-color: #ffffff;
+        --seemore-btn-bg: #1e1e1e;
+        --border-color: #252525;
 
     lightmode
         --bgcolor:#ffffff;
         --menubg:#ffffff;
         --menucolor:#000000;
+        --submenu-color: #adadad;
+        --submenu-active-bg: #ebebeb;
+        --submenu-active-color: #5c5c5c
+        --block-menu-color: #191919;
+        --block-menu-bg: #ffffff;
+        --post-title-color: #242424;
+        --post-col-title-color: #858585;
+        --seemore-btn-color: #ffffff;
+        --seemore-btn-bg: #1e1e1e;
+        --border-color: #252525;
+
     -->
     <style>
 body {
     --bgcolor:#191919;
     --menubg:#1b1b1b;
     --menucolor:#ffffff;
+    --submenu-color: #adadad;
+    --submenu-active-bg: #1d1d1d;
+    --submenu-active-color: #5c5c5c;
+    --block-menu-color: #191919;
+    --block-menu-bg: #ffffff;
+    --post-title-color: #ffffff;
+    --post-col-title-color: #858585;
+    --seemore-btn-color: #ffffff;
+    --seemore-btn-bg: #1e1e1e;
+    --border-color: #252525;
+
+
 }
     </style>
 </head>
@@ -44,9 +76,14 @@ body {
                 <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
             </ul>
         </div>
-        <div class="main-submenu submenu">
+    </div>
+</div>
+<br><br>
+<div class="main-submenu">
+    <div class="container">
+        <div class=" submenu">
             <ul class="submenu-list">
-                <li class="submenu__item"><a href="#" class="submenu__link">Тренды</a></li>
+                <li class="submenu__item active"><a href="#" class="submenu__link">Тренды</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link">Топ</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link">Исскуство</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link">Коллекции</a></li>
@@ -54,8 +91,124 @@ body {
             </ul>
             <a href="#" class="submenu__btn">Подробнее</a>
         </div>
-
     </div>
+</div>
+<br><br>
+<div class="block-menu">
+    <div class="container">
+        <ul class="block-menu__list">
+            <li class="block-menu__item"><a href="#" class="block-menu__link">Последнее</a></li>
+            <li class="block-menu__item"><a href="#" class="block-menu__link">Главное</a></li>
+            <li class="block-menu__item"><a href="#" class="block-menu__link">Современное</a></li>
+            <li class="block-menu__item"><a href="#" class="block-menu__link">Криптовалюта</a></li>
+            <li class="block-menu__item"><a href="#" class="block-menu__link">Блокчейн</a></li>
+            <li class="block-menu__item"><a href="#" class="block-menu__link">Дапп</a></li>
+            <li class="block-menu__item"><a href="#" class="block-menu__link">Жизнь</a></li>
+        </ul>
+    </div>
+</div>
+<br><br>
+<section class="news">
+    <div class="container">
+        <div class="news-in">
+            <div class="news__left">
+                <div class="news__post post-news img__post">
+                    <div class="img-wrapper post-news__img">
+                        <img src="/public/images/content/post1.jpg" alt="post image">
+                    </div>
+                    <h5 class="post-news__title dib">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                    <p class="post-news__details details dib">
+                        <span class="details__source">BSCnews</span>
+                        <span class="details__time">3 day ago</span>
+                        <a class="details__btn"></a>
+                    </p>
+                </div>
+                <div class="news__post post-news img__post">
+                    <div class="img-wrapper post-news__img">
+                        <img src="/public/images/content/post2.jpg" alt="post image">
+                    </div>
+                    <h5 class="post-news__title dib">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                    <p class="post-news__details details dib">
+                        <span class="details__source">BSCnews</span>
+                        <span class="details__time">3 day ago</span>
+                        <a class="details__btn"></a>
+                    </p>
+                </div>
+            </div>
+            <div class="news__right">
+                <div class="news__right-col">
+                    <div class="news__post post-news">
+                        <h5 class="post-news__title">LUNA от Terra установила новый рекорд - выше 90 долларов</h5>
+                        <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                            <a class="details__btn"></a>
+                        </p>
+                    </div>
+                    <div class="news__post post-news">
+                        <h5 class="post-news__title">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                        <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                            <a class="details__btn"></a>
+                        </p>
+                    </div>
+                    <div class="news__post post-news mb-0">
+                        <h5 class="post-news__title">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                        <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                            <a class="details__btn"></a>
+                        </p>
+                    </div>
+                    <h5 class="news__col_title">Other news</h5>
+                </div>
+                <div class="news__right-col">
+                    <div class="news__post post-news">
+                        <h5 class="post-news__title">LUNA от Terra установила новый рекорд - выше 90 долларов</h5>
+                        <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                            <a class="details__btn"></a>
+                        </p>
+                    </div>
+                    <div class="news__post post-news">
+                        <h5 class="post-news__title">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                        <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                            <a class="details__btn"></a>
+                        </p>
+                    </div>
+                    <div class="news__post post-news mb-0">
+                        <h5 class="post-news__title">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                        <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                            <a class="details__btn"></a>
+                        </p>
+                    </div>
+                    <button class="btn see-more">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+<div class="container">
+    <div class="triangle-border"></div>
 </div>
 </body>
 </html>

@@ -8,7 +8,7 @@ html
 
 body
 	font:
-		//family: $font-Roboto-Regular
+		family: $InterRegular
 		size: 1rem
 		weight: 400
 	color: $fontColorMain
@@ -43,6 +43,8 @@ h4
 	font-size: $fontSize_h4
 	line-height: $lineHeight_h4
 
+a
+	color: inherit
 
 .container
 	max-width: 84.8vw
@@ -81,3 +83,66 @@ h4
 	position: relative
 	&:hover
 		color: inherit
+
+.dib
+	display: inline
+
+.mb-0
+	margin-bottom: 0
+
+.triangle-border
+	display: none
+	+tablet
+		display: block
+		//+adaptiv-value('height', 10, 10)
+		//background-color: grey
+		width: 0
+		height: 0
+		border-top: 5px solid transparent
+		border-right: 84.8vw solid var(--border-color)
+		border-bottom: 5px solid transparent
+
+.details
+	color: #747474
+	+adaptiv-value('font-size', 19, 15)
+	width: 90%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&.dib
+		display: inline
+		span
+			margin-right: 3%
+			line-height: 4.83
+			+tablet
+				line-height: 3.13
+
+	&-text
+		display: inline-block
+		width: 100%
+	&__source
+		margin-right: 6%
+
+	&__btn
+		display: inline-block
+		+adaptiv-value('width', 35, 24)
+		+adaptiv-value('height', 25, 20)
+		background:
+			image: url("../images/icons/open-arrow.png")
+			size: contain
+			repeat: no-repeat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
