@@ -146,10 +146,12 @@
     .menu-item
       position: relative
       color: $fontColorMain
-      +adaptiv-value("font-size", 24.97, 19.58)
+      //+adaptiv-value("font-size", 24.97, 19.58)
+      +adaptiv-value-mob("font-size", 19.58)
       +tablet
+        +adaptiv-value-desc("font-size", 24.97)
         //+adaptiv-value("font-size", 24.97, 9)
-        font-size: inherit
+        //font-size: inherit
       &::after
         content: ""
         position: absolute
