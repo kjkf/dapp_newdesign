@@ -3,13 +3,19 @@
 
 .header
   background-color: $bgColor
+  +adaptiv-value-mob("font-size", 40)
+  +tablet
+    +adaptiv-value-desc("font-size", 25)
   .container
     max-width: 100%
     padding: 0
   &__inner
     padding: 9px 25px 10px
-    +adaptiv-value("padding-left", 45, 45)
-    +adaptiv-value("padding-right", 45, 45)
+    //+adaptiv-value("padding-left", 45, 45)
+    //+adaptiv-value("padding-right", 45, 45)
+
+    +adaptiv-value-mob("padding-left", 45)
+    +adaptiv-value-mob("padding-right", 45)
     display: flex
     align-items: center
 
@@ -21,21 +27,20 @@
       padding-bottom: 16px
 
   .logo
-    height: 76px
-    width: 436px
-    max-width: 136px
-    //margin-right: 40px
-    //margin-left: auto
+    //height: 76px
+    //width: 436px
     margin-right: auto
+    +adaptiv-value-mob("width", 436)
+    +adaptiv-value-mob("min-width", 436)
+    +adaptiv-value-mob("height", 76)
+    +adaptiv-value-mob("min-height", 76)
 
     +tablet
-      +adaptiv-value("margin-right", 65, 0)
-      +adaptiv-value("width", 342, 242)
-      +adaptiv-value("height", 60, 42)
-      //height: 55px
-    //+tablet-down
-      height: 26px
-      min-width: 70px
+      +adaptiv-value-desc("margin-right", 65)
+      +adaptiv-value-desc("width", 342)
+      +adaptiv-value-desc("min-width", 342)
+      +adaptiv-value-desc("height", 60)
+
 
 
 
@@ -73,8 +78,12 @@
       min-width: 24px
       min-height: 24px
       margin-left: 10px
-      +adaptiv-value("margin-left", 10, 30)
+      //+adaptiv-value("margin-left", 10, 30)
+      +adaptiv-value-mob("margin-left", 30)
       overflow: hidden
+      +tablet
+        +adaptiv-value-desc("margin-left", 10)
+
       img
         width: 100%
         height: auto
@@ -146,12 +155,9 @@
     .menu-item
       position: relative
       color: $fontColorMain
-      //+adaptiv-value("font-size", 24.97, 19.58)
-      +adaptiv-value-mob("font-size", 19.58)
+      +adaptiv-value-mob("font-size", 40)
       +tablet
         +adaptiv-value-desc("font-size", 24.97)
-        //+adaptiv-value("font-size", 24.97, 9)
-        //font-size: inherit
       &::after
         content: ""
         position: absolute
@@ -182,11 +188,13 @@
     flex-direction: column
     align-items: flex-start
     &-item
-      +adaptiv-value("margin-left", 45, 20)
-      //+phone-down
-      margin-bottom: 20px
+      //+adaptiv-value("margin-left", 45, 20)
+      +adaptiv-value-mob("margin-left", 20)
+      +adaptiv-value-mob("margin-bottom", 45)
+      //margin-bottom: 20px
       +tablet
         margin-bottom: 0
+        +adaptiv-value-desc("margin-left", 45)
       &:last-child
         margin-right: 0
   &__inner
@@ -225,7 +233,11 @@
   .btn-login
     margin-top: 0
     margin-bottom: 0
-    +adaptiv-value("margin-right", 45, 0)
+    //+adaptiv-value("margin-right", 45, 0)
+    +adaptiv-value-mob("margin-right", 0)
+    +tablet
+      +adaptiv-value-desc("margin-right", 45)
+
 
 .burger
   +tablet
@@ -306,16 +318,23 @@
     order: 0
     width: auto!important
 
-  +adaptiv-value("width", 232, 32)
+  //+adaptiv-value("width", 232, 32)
+  +adaptiv-value-mob("width", 32)
+
   transition: all 500ms ease-out 0ms
   //+phone-down
   order: 1
   margin-left: 0
   margin-right: 0
+  +tablet
+    +adaptiv-value-desc("width", 232)
 
   &.active
     flex-grow: 1
-    +adaptiv-value("margin-left", 28, 24)
+    //+adaptiv-value("margin-left", 28, 24)
+    +adaptiv-value-mob("margin-left", 24)
+    +tablet
+      +adaptiv-value-desc("margin-left", 28)
     .search-field
 
       padding-left: 10px
@@ -331,15 +350,27 @@
   background: #252525
   color: $fontColorMain
   //padding: 15px 10px 15px 40px
-  +adaptiv-value("padding-top", 15, 10)
-  +adaptiv-value("padding-bottom", 15, 10)
-  +adaptiv-value("padding-left", 40, 30)
-  +adaptiv-value("padding-right", 10, 5)
+  //+adaptiv-value("padding-top", 15, 10)
+  //+adaptiv-value("padding-bottom", 15, 10)
+  //+adaptiv-value("padding-left", 40, 30)
+  //+adaptiv-value("padding-right", 10, 5)
+
+  +adaptiv-value-mob("padding-top", 10)
+  +adaptiv-value-mob("padding-bottom", 10)
+  +adaptiv-value-mob("padding-left", 30)
+  +adaptiv-value-mob("padding-right", 5)
+
   border: none
   flex-grow: 1
   width: 100%
   border-radius: 8px
   font-size: inherit
+  +tablet
+    +adaptiv-value-desc("padding-top", 15)
+    +adaptiv-value-desc("padding-bottom", 15)
+    +adaptiv-value-desc("padding-left", 40)
+    +adaptiv-value-desc("padding-right", 10)
+
   +placeholder
     color: $fontColorMain
 
@@ -360,17 +391,26 @@
 
 
 .search-icon
-  +adaptiv-value("width", 52, 52)
-  +adaptiv-value("min-width", 52, 52)
-  +adaptiv-value("height", 50, 52)
+  //+adaptiv-value("width", 52, 52)
+  //+adaptiv-value("min-width", 52, 52)
+  //+adaptiv-value("height", 50, 52)
+
+  +adaptiv-value-mob("width", 52)
+  +adaptiv-value-mob("min-width", 52)
+  +adaptiv-value-mob("height", 52)
+
   fill: #ffffff
   +tablet
-    +adaptiv-value("width", 52, 22)
-    +adaptiv-value("min-width", 52, 22)
-    +adaptiv-value("height", 50, 20)
+    +adaptiv-value-desc("width", 52)
+    +adaptiv-value-desc("min-width", 52)
+    +adaptiv-value-desc("height", 50)
 
 .search-icon+.search-field
-  +adaptiv-value("margin-left", 20, 10)
+  //+adaptiv-value("margin-left", 20, 10)
+  +adaptiv-value-mob("margin-left", 10)
+  +tablet
+    +adaptiv-value-desc("margin-left", 20)
+
 
 .lang-dropdown
   .dropdown-select > span
