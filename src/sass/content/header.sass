@@ -1,13 +1,13 @@
 /* HEADER styles */
 
+
 .header
   background-color: $bgColor
   +adaptiv-value-mob("font-size", 40)
-  +tablet
-    +adaptiv-value-desc("font-size", 24.97)
   .container
     max-width: 100%
     padding: 0
+
   &__inner
     +adaptiv-value-mob("padding-left", 45)
     +adaptiv-value-mob("padding-right", 45)
@@ -16,41 +16,30 @@
     display: flex
     align-items: center
 
-    +tablet
-      +adaptiv-value-desc("padding-left", 75)
-      +adaptiv-value-desc("padding-right", 75)
-      +adaptiv-value-desc("padding-top", 25)
-      +adaptiv-value-desc("padding-bottom", 18)
-    //+tablet-down
-      padding-top: 14px
-      padding-bottom: 15px
-    //+phone-down
-      padding-top: 20px
-      padding-bottom: 16px
+    &.searching
+      .nav, .logo, .menu--right
+        display: none
+      .btn-left, .btn-close
+        display: inline-block
+      .burger
+        display: inline-block
+    .search.active
+      width: 100%
+      margin-right: 0
+      margin-left: 15px
+
+  .search-field
+    display: none
 
   .logo
-    //height: 76px
-    //width: 436px
     margin-right: auto
     +adaptiv-value-mob("width", 436)
     +adaptiv-value-mob("min-width", 436)
     +adaptiv-value-mob("height", 76)
     +adaptiv-value-mob("min-height", 76)
 
-    +tablet
-      +adaptiv-value-desc("margin-right", 65)
-      +adaptiv-value-desc("width", 342)
-      +adaptiv-value-desc("min-width", 342)
-      +adaptiv-value-desc("height", 60)
-      +adaptiv-value-desc("min-height", 60)
-
-
-
-
 
   .profile-dropdown
-    //+phone-down
-      width: 100%
     .dropdown-menu
       //+phone-down
         display: flex
@@ -72,9 +61,7 @@
   .a-profile
     display: flex
     align-items: center
-    &__name
-      //+tablet-down
-        display: none
+
     &__img
       border-radius: 50%
       width: 24px
@@ -82,18 +69,14 @@
       min-width: 24px
       min-height: 24px
       margin-left: 10px
-      //+adaptiv-value("margin-left", 10, 30)
       +adaptiv-value-mob("margin-left", 30)
       overflow: hidden
-      +tablet
-        +adaptiv-value-desc("margin-left", 10)
 
       img
         width: 100%
         height: auto
 
   .nav
-    //+phone-down
     order: 1
     display: none
     position: fixed
@@ -106,24 +89,9 @@
     background: #202020
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
     border-radius: 0px 4px 4px 4px
-    //background: red
     filter: drop-shadow(-100px 0px 25px rgba(0, 0, 0, 0.8))
     z-index: 102
     padding: 20px 0 20px 20px
-    +tablet
-      display: flex
-      position: relative
-      //width: auto
-      height: auto
-      box-shadow: none
-      border-radius: unset
-      filter: none
-      padding: 0
-      order: unset
-      background: transparent
-      overflow: unset
-
-
 
     &.mobActive
       display: block
@@ -133,35 +101,21 @@
         display: flex
 
   .lang-dropdown
-    //+phone-down
     order: -1
     &--mobile
-      +tablet
-       display: none
-      //+phone-down
       display: block
       .dropdown-select.open ul
-        //+phone-down
         left: 0
         z-index: 1001
     &--desktop
-      +tablet
-        display: block
-      //+phone-down
       display: none
 
   .nav__menu
-    +tablet
-      align-items: center
-      border-bottom: 0
-    //+phone-down
     border-bottom: 1px solid $grey
+
     .menu-item
       position: relative
-      color: $fontColorMain
-      +adaptiv-value-mob("font-size", 40)
-      +tablet
-        +adaptiv-value-desc("font-size", 24.97)
+      font-size: inherit
       &::after
         content: ""
         position: absolute
@@ -176,77 +130,24 @@
 
   .menu--right.menu
     display: none
-    +tablet
-      display: flex
 
   .btn-left, .btn-close
     display: none
+
   .menu
-    +tablet
-      align-items: center
-      flex-direction: row
-    //+phone-down
     display: flex
     flex-direction: column
     align-items: flex-start
     &-item
-      //+adaptiv-value("margin-left", 45, 20)
       +adaptiv-value-mob("margin-left", 20)
       +adaptiv-value-mob("margin-bottom", 45)
-      //margin-bottom: 20px
-      +tablet
-        margin-bottom: 0
-        +adaptiv-value-desc("margin-left", 75)
-      &:last-child
-        margin-right: 0
-  &__inner
-    &.searching
-      //+tablet-down
-        padding-top: 9px
-        padding-bottom: 10px
-      .nav, .logo, .menu--right
-        //+tablet-down
-        display: none
-        +tablet
-          display: flex
-      .btn-left, .btn-close
-        //+tablet-down
-        display: inline-block
-        +tablet
-          display: none
-      .burger
-        //+phone-down
-        display: inline-block
-        +tablet
-          display: none
-    .search.active
-      //+tablet-down
-      width: 100%
-      margin-right: 0
-      margin-left: 15px
-      +tablet
 
-
-  .search-field
-    //+tablet-down
-    display: none
-    +tablet
-      display: block
   .btn-login
     margin-top: 0
     margin-bottom: 0
-    //+adaptiv-value("margin-right", 45, 0)
     +adaptiv-value-mob("margin-right", 0)
-    +tablet
-      +adaptiv-value-desc("margin-right", 45)
-
 
 .burger
-  +tablet
-    display: none
-    order: unset
-    margin-left: 0
-  //+phone-down
   order: 2
   +adaptiv-value-mob("margin-left", 70)
   display: block
@@ -254,6 +155,7 @@
   width: 18px
   height: 12px
   z-index: 103
+
   &::before, &::after
     content: ''
     position: absolute
@@ -263,7 +165,6 @@
     background-color: $fontColorMain
     transition: all 0.5s ease 0s
     border-radius: 2px
-
   &::before
     top: 0
   &::after
@@ -290,7 +191,7 @@
     &::before, &::after
       width: 70%
       left: 6px
-      background-color: #000000
+      background-color: $bgColor
     &::before
       transform: rotate(45deg)
       top: 18px
@@ -300,18 +201,6 @@
       transform: rotate(-45deg)
       bottom: 16px
 
-
-.select-menu
-  padding: 20px
-  background: $bgColor
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
-  border-radius: 4px
-  color: $fontColorMain
-  min-width: 160px
-  border: none
-  font-size: inherit
-
-
 .search
   +adaptiv-value-mob("width", 32)
   transition: all 500ms ease-out 0ms
@@ -319,32 +208,19 @@
   margin-left: 0
   margin-right: 0
 
-  +tablet
-    margin-left: auto
-    margin-right: auto
-    order: 0
-    +adaptiv-value-desc("width", 406)
-
-
   &.active
     flex-grow: 1
     +adaptiv-value-mob("margin-left", 24)
-    +tablet
-      +adaptiv-value-desc("margin-left", 28)
-
 
     .search-field
       padding-left: 10px
-      //+tablet-down
       display: inline-block
-      +tablet
-
 
     .search-wrap
       flex-grow: 1
 
 .search-field
-  background: #252525
+  background: $grey1
   color: $fontColorMain
   +adaptiv-value-mob("padding-top", 10)
   +adaptiv-value-mob("padding-bottom", 10)
@@ -355,11 +231,6 @@
   width: 100%
   border-radius: 8px
   font-size: inherit
-  +tablet
-    +adaptiv-value-desc("padding-top", 12)
-    +adaptiv-value-desc("padding-bottom", 12)
-    +adaptiv-value-desc("padding-left", 40)
-    +adaptiv-value-desc("padding-right", 10)
 
   +placeholder
     color: $fontColorMain
@@ -378,33 +249,19 @@
 
 
 .search-icon
-  //+adaptiv-value("width", 52, 52)
-  //+adaptiv-value("min-width", 52, 52)
-  //+adaptiv-value("height", 50, 52)
-
   +adaptiv-value-mob("width", 52)
   +adaptiv-value-mob("min-width", 52)
   +adaptiv-value-mob("height", 52)
-
   fill: #ffffff
-  +tablet
-    +adaptiv-value-desc("width", 45)
-    +adaptiv-value-desc("min-width", 45)
-    +adaptiv-value-desc("height", 50)
 
 .search-icon+.search-field
-  //+adaptiv-value("margin-left", 20, 10)
   +adaptiv-value-mob("margin-left", 10)
-  +tablet
-    +adaptiv-value-desc("margin-left", 25)
 
 
 .lang-dropdown
   .dropdown-select > span
     &:before,&:after
       display: none
-
-
 
 .headerSign
   .search,.menu--right li:not(.signUp-link)
@@ -413,16 +270,7 @@
     margin-left: auto
   .btn-login
     margin-left: 24px
-    //+phone-down
-      margin-left: auto
-  .burger
-    //+phone-down
-      display: none
-
-.header .menu--right
-  .menu-item
-    +tablet
-      +adaptiv-value-desc("margin-left", 60)
 
 
+@import "header_desc"
 /* HEADER styles end */
