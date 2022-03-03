@@ -14,3 +14,31 @@ function menuMob() {
         this.classList.toggle('active');
     });
 }
+function searchField() {
+    const header__inner = document.querySelector('.header__inner');
+    const search = document.querySelector('.search');
+    const searchWrap = document.querySelector('.header .search-wrap');
+    const searchClose = document.querySelector('.search-close');
+    const btnLeft = document.querySelector('.header__btn-left');
+
+
+    if (!search || !header__inner) return false;
+
+    searchWrap.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        search.classList.add('active');
+        header__inner.classList.add('searching');
+    });
+
+    searchClose.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        search.classList.remove('active');
+        header__inner.classList.remove('searching');
+    });
+
+    btnLeft.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        search.classList.remove('active');
+        header__inner.classList.remove('searching');
+    });
+}

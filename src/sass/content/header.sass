@@ -5,20 +5,23 @@
   background-color: $bgColor
   +adaptiv-value-mob("font-size", 40)
   +tablet
-    +adaptiv-value-desc("font-size", 25)
+    +adaptiv-value-desc("font-size", 24.97)
   .container
     max-width: 100%
     padding: 0
   &__inner
-    padding: 9px 25px 10px
-    //+adaptiv-value("padding-left", 45, 45)
-    //+adaptiv-value("padding-right", 45, 45)
-
     +adaptiv-value-mob("padding-left", 45)
     +adaptiv-value-mob("padding-right", 45)
+    +adaptiv-value-mob("padding-top", 30)
+    +adaptiv-value-mob("padding-bottom", 30)
     display: flex
     align-items: center
 
+    +tablet
+      +adaptiv-value-desc("padding-left", 75)
+      +adaptiv-value-desc("padding-right", 75)
+      +adaptiv-value-desc("padding-top", 25)
+      +adaptiv-value-desc("padding-bottom", 18)
     //+tablet-down
       padding-top: 14px
       padding-bottom: 15px
@@ -40,6 +43,8 @@
       +adaptiv-value-desc("width", 342)
       +adaptiv-value-desc("min-width", 342)
       +adaptiv-value-desc("height", 60)
+      +adaptiv-value-desc("min-height", 60)
+
 
 
 
@@ -171,8 +176,6 @@
           border-bottom-color: $violetta
 
   .menu--right.menu
-    //+phone-down
-    padding: 20px 0
     display: none
     +tablet
       display: flex
@@ -194,7 +197,7 @@
       //margin-bottom: 20px
       +tablet
         margin-bottom: 0
-        +adaptiv-value-desc("margin-left", 45)
+        +adaptiv-value-desc("margin-left", 75)
       &:last-child
         margin-right: 0
   &__inner
@@ -206,7 +209,7 @@
         //+tablet-down
         display: none
         +tablet
-          display: block
+          display: flex
       .btn-left, .btn-close
         //+tablet-down
         display: inline-block
@@ -214,9 +217,9 @@
           display: none
       .burger
         //+phone-down
-        display: none
+        display: inline-block
         +tablet
-          display: block
+          display: none
     .search.active
       //+tablet-down
       width: 100%
@@ -246,7 +249,7 @@
     margin-left: 0
   //+phone-down
   order: 2
-  margin-left: 36px
+  +adaptiv-value-mob("margin-left", 70)
   display: block
   position: relative
   width: 18px
@@ -311,63 +314,51 @@
 
 
 .search
-  +tablet
-    margin-left: auto
-    margin-right: auto
-    //+adaptiv-value("margin-right", 28, 24)
-    order: 0
-    width: auto!important
-
-  //+adaptiv-value("width", 232, 32)
   +adaptiv-value-mob("width", 32)
-
   transition: all 500ms ease-out 0ms
-  //+phone-down
   order: 1
   margin-left: 0
   margin-right: 0
+
   +tablet
-    +adaptiv-value-desc("width", 232)
+    margin-left: auto
+    margin-right: auto
+    order: 0
+    +adaptiv-value-desc("width", 406)
+
 
   &.active
     flex-grow: 1
-    //+adaptiv-value("margin-left", 28, 24)
     +adaptiv-value-mob("margin-left", 24)
     +tablet
       +adaptiv-value-desc("margin-left", 28)
-    .search-field
 
+
+    .search-field
       padding-left: 10px
-      background: $grey
       //+tablet-down
       display: inline-block
       +tablet
 
-    .search-label
-      background: $grey
+
+    .search-wrap
+      flex-grow: 1
 
 .search-field
   background: #252525
   color: $fontColorMain
-  //padding: 15px 10px 15px 40px
-  //+adaptiv-value("padding-top", 15, 10)
-  //+adaptiv-value("padding-bottom", 15, 10)
-  //+adaptiv-value("padding-left", 40, 30)
-  //+adaptiv-value("padding-right", 10, 5)
-
   +adaptiv-value-mob("padding-top", 10)
   +adaptiv-value-mob("padding-bottom", 10)
   +adaptiv-value-mob("padding-left", 30)
   +adaptiv-value-mob("padding-right", 5)
-
   border: none
   flex-grow: 1
   width: 100%
   border-radius: 8px
   font-size: inherit
   +tablet
-    +adaptiv-value-desc("padding-top", 15)
-    +adaptiv-value-desc("padding-bottom", 15)
+    +adaptiv-value-desc("padding-top", 12)
+    +adaptiv-value-desc("padding-bottom", 12)
     +adaptiv-value-desc("padding-left", 40)
     +adaptiv-value-desc("padding-right", 10)
 
@@ -376,9 +367,6 @@
 
 
 .search-label
-  border-radius: 8px
-  padding-left: 10px
-  padding-right: 7px
   display: flex
   align-items: center
   justify-content: space-between
@@ -401,15 +389,15 @@
 
   fill: #ffffff
   +tablet
-    +adaptiv-value-desc("width", 52)
-    +adaptiv-value-desc("min-width", 52)
+    +adaptiv-value-desc("width", 45)
+    +adaptiv-value-desc("min-width", 45)
     +adaptiv-value-desc("height", 50)
 
 .search-icon+.search-field
   //+adaptiv-value("margin-left", 20, 10)
   +adaptiv-value-mob("margin-left", 10)
   +tablet
-    +adaptiv-value-desc("margin-left", 20)
+    +adaptiv-value-desc("margin-left", 25)
 
 
 .lang-dropdown
@@ -431,6 +419,11 @@
   .burger
     //+phone-down
       display: none
+
+.header .menu--right
+  .menu-item
+    +tablet
+      +adaptiv-value-desc("margin-left", 60)
 
 
 /* HEADER styles end */

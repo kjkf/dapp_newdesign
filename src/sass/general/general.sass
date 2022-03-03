@@ -137,18 +137,33 @@ h3
 		color: inherit
 
 	&--filled
-		background-color: $violetta!important
-		padding: 6px 28px!important
+		//padding: 3px 46px!important
 		color: $fontColorMain
 		border-radius: $br_btn
 		background: rgb(96,19,182) !important
 		background: linear-gradient(90deg, rgba(96,19,182,1) 0%, rgba(136,14,216,1) 50%, rgba(181,8,253,1) 100%) !important
-		//fill: $fc_body
-		//border: 0!important
+		+tablet
+			+adaptiv-value-desc("padding-left", 47)
+			+adaptiv-value-desc("padding-right", 43)
+			+adaptiv-value-desc("padding-top", 5)
+			+adaptiv-value-desc("padding-bottom", 5)
+
 		&:hover
 			opacity: 0.8!important
 			background-color: $violetta!important
 			border: 0!important
+.btn-close
+	display: inline-block
+	width: 24px
+	height: 24px
+	min-width: 24px
+	min-height: 24px
+	background:
+		color: transparent
+		image: url("../images/icons/close.svg")
+		repeat: no-repeat
+		size: auto
+		position: center
 .dropdown-menu
 	display: none
 	flex-direction: column
