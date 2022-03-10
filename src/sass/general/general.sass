@@ -4,7 +4,6 @@
 
 html
 	//overflow: hidden
-	//+adaptiv-value("font-size", 25, 19.58)
 	+adaptiv-value-mob("font-size", 19.58)
 	+tablet
 		+adaptiv-value-desc("font-size", 25)
@@ -21,8 +20,7 @@ body
 	padding: 0
 	height: 100vh
 	background-color: var(--bgcolor)
-	+tablet
-		+adaptiv-value("font-size", 24.97, 12)
+
 
 h1, h2, h3, h4, p, ul
 	margin: 0px
@@ -49,15 +47,43 @@ ul
 
 h2
 	line-height: $lineHeight_h2
-	+adaptiv-value('font-size', 100, 75)
+	+adaptiv-value-mob("font-size", 75)
+	+tablet
+		+adaptiv-value-desc("font-size", 100)
 
 h3
-	+adaptiv-value('font-size', 58, 50)
 	line-height: $lineHeight_h3
+	+adaptiv-value-mob("font-size", 50)
+	+tablet
+		+adaptiv-value-desc("font-size", 58)
 
-//h4
-	font-size: $fontSize_h4
-	line-height: $lineHeight_h4
+
+.title
+	font-family: $InterBold
+
+.news__title h3.title //news__title??
+	line-height: 1
+	+adaptiv-value-mob("font-size", 45.88) //?
+	+tablet
+		+adaptiv-value-desc("font-size", 58.33)
+
+h3.title.title--sm
+	line-height: 1
+	+adaptiv-value-mob("font-size", 45.88)
+	+tablet
+		+adaptiv-value-desc("font-size", 36.17)
+
+h4.title.title--sm
+	line-height: 1.5
+	+adaptiv-value-mob("font-size", 35.8)
+	+tablet
+		+adaptiv-value-desc("font-size", 24.04)
+
+h4.title.title--xs
+	line-height: 1.5
+	//+adaptiv-value-mob("font-size", 35.8)
+	+tablet
+		+adaptiv-value-desc("font-size", 23.21)
 
 
 .container
@@ -70,11 +96,9 @@ h3
 		max-width: 82.8vw
 		+adaptiv-value-mob('padding-left', 8)
 		+adaptiv-value-mob('padding-right', 8)
-	//background-color: #5a6268
 
-.title
-	color: $fontColorMain
-	//font-family: $font-Gilroy-ExtraBold
+
+
 
 .green
 	color: $green
@@ -100,8 +124,6 @@ h3
 	text-transform: uppercase
 
 .logo
-	//+adaptiv-value("max-width", 190, 105)
-	//+adaptiv-value("border-radius", 4, 3)
 	display: flex
 	align-items: center
 	&>a
@@ -111,11 +133,6 @@ h3
 		width: 100%
 		height: 100%
 		object-fit: contain
-
-.logo img
-	width: 100%
-	height: 100%
-	object-fit: contain
 
 .btn
 	position: relative
@@ -137,18 +154,34 @@ h3
 		color: inherit
 
 	&--filled
-		background-color: $violetta!important
-		padding: 6px 28px!important
+		//padding: 3px 46px!important
 		color: $fontColorMain
 		border-radius: $br_btn
 		background: rgb(96,19,182) !important
 		background: linear-gradient(90deg, rgba(96,19,182,1) 0%, rgba(136,14,216,1) 50%, rgba(181,8,253,1) 100%) !important
-		//fill: $fc_body
-		//border: 0!important
+		+tablet
+			+adaptiv-value-desc("padding-left", 47)
+			+adaptiv-value-desc("padding-right", 43)
+			+adaptiv-value-desc("padding-top", 5)
+			+adaptiv-value-desc("padding-bottom", 5)
+
 		&:hover
 			opacity: 0.8!important
 			background-color: $violetta!important
 			border: 0!important
+.btn-close
+	display: inline-block
+	width: 24px
+	height: 24px
+	min-width: 24px
+	min-height: 24px
+	background:
+		color: transparent
+		image: url("../images/icons/close.svg")
+		repeat: no-repeat
+		size: auto
+		position: center
+
 .dropdown-menu
 	display: none
 	flex-direction: column
@@ -234,6 +267,10 @@ h3
 	&-text
 		display: inline-block
 		width: 100%
+		line-height: 1.7
+		+adaptiv-value-mob('font-size', 20.6) //??
+		+tablet
+			+adaptiv-value-desc('font-size', 25)
 	&__source
 		margin-right: 6%
 
@@ -243,6 +280,7 @@ h3
 		//+adaptiv-value('height', 25, 20)
 		+adaptiv-value-mob('width', 22)
 		+adaptiv-value-mob('height', 20)
+		align-self: flex-end
 		background:
 			image: url("../images/icons/open-arrow.png")
 			size: contain
@@ -251,3 +289,40 @@ h3
 			+adaptiv-value-desc('width', 25)
 			+adaptiv-value-desc('height', 20)
 
+	&--sm
+		+adaptiv-value-mob('font-size', 20.6)
+		+tablet
+			+adaptiv-value-desc('font-size', 13.84)
+	&--m
+		line-height: 2
+		+tablet
+			+adaptiv-value-desc('font-size', 17.41)
+
+
+.img-round
+	border-radius: 50%
+	overflow: hidden
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.d-mob-none
+	display: none !important
+	+tablet
+		display: flex !important
+
+.line
+	position: relative
+	&::after
+		content: ""
+		position: absolute
+		right: 0
+		+adaptiv-value-mob('right', -10)
+		top: 0
+		height: 100%
+		width: 2px
+		display: inline-block
+	&--grey
+		&::after
+			background-color: $grey2

@@ -1,0 +1,151 @@
+/* HEADER DECT styles */
+
+.header
+  +tablet
+    +adaptiv-value-desc("font-size", 24.97)
+
+  &__inner
+    +tablet
+      +adaptiv-value-desc("padding-left", 75)
+      +adaptiv-value-desc("padding-right", 75)
+      +adaptiv-value-desc("padding-top", 25)
+      +adaptiv-value-desc("padding-bottom", 18)
+
+    &.searching
+      .nav, .logo, .menu--right
+        +tablet
+          display: flex
+      .btn-left, .btn-close
+        +tablet
+          display: none
+      .burger
+        +tablet
+          display: none
+
+  .search-field
+    +tablet
+      display: block
+
+  .logo
+    +tablet
+      +adaptiv-value-desc("margin-right", 65)
+      +adaptiv-value-desc("width", 342)
+      +adaptiv-value-desc("min-width", 342)
+      +adaptiv-value-desc("height", 60)
+      +adaptiv-value-desc("min-height", 60)
+
+  .profile-dropdown
+    //+phone-down
+      width: 100%
+    .dropdown-menu
+      //+phone-down
+        display: flex
+        padding: 0
+        background: transparent
+        box-shadow: none
+        border-radius: 0
+        width: 100%
+        border-top: 1px solid $grey
+        padding-top: 20px
+
+      li:last-child
+        border-top: none
+
+  //+phone-down
+    display: none
+
+  .a-profile
+    &__img
+      +tablet
+        +adaptiv-value-desc("margin-left", 10)
+
+  .nav
+    +tablet
+      display: flex
+      position: relative
+      height: auto
+      box-shadow: none
+      border-radius: unset
+      filter: none
+      padding: 0
+      order: unset
+      background: transparent
+      overflow: unset
+
+  .lang-dropdown
+    &--mobile
+      +tablet
+        display: none
+    &--desktop
+      +tablet
+        display: block
+
+  .nav__menu
+    +tablet
+      align-items: center
+      border-bottom: 0
+
+  .menu--right.menu
+    +tablet
+      display: flex
+
+  .menu
+    +tablet
+      align-items: center
+      flex-direction: row
+    &-item
+      +tablet
+        +adaptiv-value-desc("margin-left", 75)
+        margin-bottom: 0
+
+  .btn-login
+    +tablet
+      +adaptiv-value-desc("margin-right", 45)
+
+
+.burger
+  +tablet
+    display: none
+    order: unset
+    margin-left: 0
+
+
+
+.search
+  +tablet
+    margin-left: auto
+    margin-right: auto
+    order: 0
+    +adaptiv-value-desc("width", 406)
+
+
+  &.active
+    +tablet
+      +adaptiv-value-desc("margin-left", 28)
+
+.search-field
+  +tablet
+    +adaptiv-value-desc("padding-top", 12)
+    +adaptiv-value-desc("padding-bottom", 12)
+    +adaptiv-value-desc("padding-left", 40)
+    +adaptiv-value-desc("padding-right", 10)
+
+
+.search-icon
+  +tablet
+    +adaptiv-value-desc("width", 45)
+    +adaptiv-value-desc("min-width", 45)
+    +adaptiv-value-desc("height", 50)
+
+.search-icon+.search-field
+  +tablet
+    +adaptiv-value-desc("margin-left", 25)
+
+
+.header .menu--right
+  .menu-item
+    +tablet
+      +adaptiv-value-desc("margin-left", 60)
+
+
+/* HEADER DECT styles end */

@@ -1,0 +1,37 @@
+.explore
+  display: none
+
+.explore-top
+  grid-area: top
+  background-color: red
+  padding: 20px
+
+.explore-left
+  grid-area: left
+  background-color: blue
+  padding: 20px
+
+.explore-content
+  grid-area: content
+  background-color: green
+  padding: 20px
+  
+
+.explore .section-in
+  display: grid
+  grid-template-columns: 1fr 4fr
+  grid-template-areas: "left  top" "left content"
+  +tablet
+    +adaptiv-value-desc('column-gap', 100)
+    +adaptiv-value-desc('row-gap', 50)
+
+
+.explore-top
+  display: flex
+  justify-content: space-between
+
+.select-all-items
+  margin-left: auto
+
+.btn-grid-9
+
