@@ -8,7 +8,7 @@
   +adaptiv-value-mob('margin-bottom', 0)
   background:
     color: var(--bgcolor)
-    image: url("../images/content/banner.jpg")
+    //image: url("../images/content/banner.jpg")
     size: cover
     repeat: no-repeat
     position: center
@@ -209,6 +209,23 @@
     display: flex
     justify-content: space-between
     //align-items: center
+  &-add
+    display: none
+    +tablet
+      display: block
+      +adaptiv-value-desc('margin-top', 45)
+    .news-in
+      justify-content: flex-start
+    .news-col
+      +tablet
+        +adaptiv-value-desc('margin-right', 60)
+      &:first-child
+        +tablet
+          +adaptiv-value-desc('margin-right', 117)
+      &:last-child
+        +tablet
+           +adaptiv-value-desc('padding-top', 20)
+           margin-right: 0
 
   .post-news
     max-width: 39vw
@@ -328,3 +345,13 @@
       display: block
       margin: 0
       +adaptiv-value-mob('margin-right',20)
+
+.user-feed
+  &-in
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__post-title
+    font-family: $InterBlack
+    //+adaptiv-value-mob('font-size', )
