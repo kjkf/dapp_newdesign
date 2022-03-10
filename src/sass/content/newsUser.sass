@@ -1,0 +1,103 @@
+.news-user
+  display: none
+
+  +tablet
+    display: block
+  .news__title
+    display: flex
+  .news-in
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    +tablet
+      +adaptiv-value-desc('column-gap', 150)
+      grid-template-columns: repeat(2, 1fr)
+  .news-wrap
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    +adaptiv-value-mob('row-gap', 50)
+    +tablet
+      +adaptiv-value-desc('column-gap', 80)
+      +adaptiv-value-desc('row-gap', 50)
+
+  .post-news
+    margin-bottom: 0
+
+  .post-news.img__post
+    margin-bottom: 0
+    display: flex
+    flex-direction: column
+    height: 100%
+    +tablet
+      margin-bottom: 0
+
+  .post-news__img
+    height: 100%
+
+  .post-news__img img
+    object-fit: cover
+    max-height: initial
+    height: 100%
+
+.news-user-add
+  display: block
+  +adaptiv-value-mob('padding-top', 50)
+  +adaptiv-value-mob('padding-bottom', 60)
+  +tablet
+    +adaptiv-value-desc('padding-top', 100)
+    +adaptiv-value-desc('padding-bottom', 160)
+
+  .news__title
+    display: flex
+
+  .news-in
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    +tablet
+      +adaptiv-value-desc('column-gap', 50)
+      grid-template-columns: repeat(3, 1fr)
+  .post-news
+    margin-bottom: 0
+  .news-wrap
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    flex-grow: 1
+
+    +tablet
+      +adaptiv-value-desc('column-gap', 80)
+
+  .line
+    &::after
+      display: none
+      +tablet
+        display: inline-block
+
+.post-news-btm
+  display: grid
+  grid-template-columns: auto auto
+  +tablet
+    +adaptiv-value-desc('column-gap', 10)
+
+
+
+
+
+.post-news__ava
+  grid-row: span 2
+  +tablet
+    +adaptiv-value-desc('width', 59)
+    +adaptiv-value-desc('height', 59)
+    +adaptiv-value-desc('min-width', 59)
+    +adaptiv-value-desc('min-height', 59)
+
+.news
+  .post-news__img--vert
+    display: flex
+    +adaptiv-value-desc('height', 320)
+    +adaptiv-value-desc('max-height', 320)
+    +adaptiv-value-desc('max-width', 320)
+    img
+      object-fit: cover
+      +tablet
+        +adaptiv-value-desc('max-height', 320)
+
+

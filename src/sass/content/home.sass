@@ -16,6 +16,10 @@
     +adaptiv-value-desc('min-height', 472)
     +adaptiv-value-desc('margin-bottom', 130)
 
+  &.banner-news-user
+    background:
+      color: var(--bgcolor)
+      image: url("../images/content/banner3.jpg")
   .banner-in
     display: inline-block
     width: 100%
@@ -259,7 +263,15 @@
       +tablet
         +adaptiv-value-desc('margin-bottom', 40)
 
-
+  .post-news__text
+    line-height: 1.7
+    +adaptiv-value-mob('margin-bottom', 20)
+    +tablet
+      +adaptiv-value-desc('margin-bottom', 20)
+    &--sm
+      +adaptiv-value-mob('font-size', 21.48)
+      +tablet
+        +adaptiv-value-desc('font-size', 14.43)
 
   .news_foot
     +tablet
