@@ -8,9 +8,16 @@
   .news-in
     display: grid
     grid-template-columns: repeat(1, 1fr)
+
+    +adaptiv-value-mob('padding-top', 50)
+    +adaptiv-value-mob('padding-bottom', 50)
+
     +tablet
+      +adaptiv-value-desc('padding-top', 100)
+      +adaptiv-value-desc('padding-bottom', 100)
       +adaptiv-value-desc('column-gap', 150)
       grid-template-columns: repeat(2, 1fr)
+
   .news-wrap
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -40,9 +47,9 @@
 
 .news-user-add
   display: block
-  +adaptiv-value-mob('padding-top', 50)
-  +adaptiv-value-mob('padding-bottom', 60)
-  +tablet
+  //+adaptiv-value-mob('padding-top', 50)
+  //+adaptiv-value-mob('padding-bottom', 60)
+  //+tablet
     +adaptiv-value-desc('padding-top', 100)
     +adaptiv-value-desc('padding-bottom', 160)
 
