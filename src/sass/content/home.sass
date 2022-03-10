@@ -6,17 +6,22 @@
   //+adaptiv-value('margin-bottom', 130, 20)
   +adaptiv-value-mob('min-height', 264)
   +adaptiv-value-mob('margin-bottom', 0)
-  background:
-    color: var(--bgcolor)
-    image: url("../images/content/banner.jpg")
-    size: cover
-    repeat: no-repeat
-    position: center
+  position: relative
+
   +tablet
     +adaptiv-value-desc('min-height', 472)
     +adaptiv-value-desc('margin-bottom', 130)
 
-  &.banner-news-user
+  img
+    width: 100vw
+    height: 100%
+    object-fit: cover
+    z-index: -1
+    position: absolute
+    top: 0
+    left: 0
+
+  //&.banner-news-user
     background:
       color: var(--bgcolor)
       image: url("../images/content/banner3.jpg")
@@ -51,12 +56,10 @@
   .title
     //+adaptiv-value('font-size', 100, 67)
     //+adaptiv-value('margin-bottom', 81, 14)
-    +adaptiv-value-mob('font-size', 67)
     +adaptiv-value-mob('margin-bottom', 14)
     +adaptiv-value-mob('letter-spacing', 8)
-    font-family: $InterExtraBold
+
     +tablet
-      +adaptiv-value-desc('font-size', 100)
       +adaptiv-value-desc('margin-bottom', 0)
       +adaptiv-value-desc('margin-left', 17)
       +adaptiv-value-desc('letter-spacing', 8)
