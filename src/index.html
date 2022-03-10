@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../public/css/styles.min.css">
 
     <!--
@@ -330,7 +331,7 @@
     </section>
 
     <!-----------------------------Лента пользователя----------------------------->
-    <section class="banner banner-news-user">
+    <section class="banner">
         <div class="container">
             <div class="banner-in ">
                 <img src="/public/images/content/banner3.jpg" alt="banner">
@@ -457,7 +458,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -645,6 +645,53 @@
             </div>
         </div>
     </section>
+
+    <!----------------------------- Просчитывайте расчеты роста крипты  ----------------------------->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-in ">
+                <img src="/public/images/content/banner2.jpg" alt="banner">
+                <p class="breadcrumbs">Cryptocurrencies &gt; Coins &gt; <span>Bitcoin</span> </p>
+                <h2 class="title">
+                    <span>Просчитывайте</span>
+                    <span class="text-grey">расчеты роста крипты</span>
+                </h2>
+                <ul class="menu">
+                    <li class="menu__item active" ><a href="" class="menu__link">Новинки</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Рейтинги</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Мои NFT</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="bitcoin">
+        <div class="container">
+            <div class="section-in">
+                <div class="bitcoin-in">
+                    <table id="myTable" class="display">
+                        <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
     <!----------------------------- Исследуйте коллекции ----------------------------->
     <section class="banner banner-news-user">
         <div class="container">
@@ -775,9 +822,17 @@
         </symbol>
     </svg>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
+</script>
 <script src="../public/main.min.js"></script>
 </body>
 </html>
