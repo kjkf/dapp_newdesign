@@ -1,0 +1,221 @@
+
+//.table-scroll
+  overflow-x: scroll
+
+.table-general
+  //width: 1200px !important
+  //max-width: 1200px !important
+  color: $fontColorMain
+  +adaptiv-value-mob('font-size', 31.19)
+  +tablet
+    +adaptiv-value-desc('font-size', 34.96)
+
+
+table.table-general
+  thead
+    th, td
+      border-bottom: none
+      +tablet
+        +adaptiv-value-desc('padding-top', 27)
+        +adaptiv-value-desc('padding-bottom', 27)
+        +adaptiv-value-desc('padding-left', 28)
+        +adaptiv-value-desc('padding-right', 30)
+
+table.table-general
+  tbody
+    th, td
+      box-sizing: border-box
+      background-color: $bgColor
+      +tablet
+        +adaptiv-value-desc('padding-top', 27)
+        +adaptiv-value-desc('padding-bottom', 20)
+        +adaptiv-value-desc('padding-left', 28)
+        +adaptiv-value-desc('padding-right', 30)
+
+
+
+.crypto-name-link
+  display: grid
+  grid-template-columns: 1fr 3fr
+  row-gap: 10px
+  column-gap: 20px
+  +adaptiv-value-mob('font-size', 23.39)
+  +tablet
+    +adaptiv-value-desc('font-size', 26.15)
+
+.crypto-logo
+  grid-row: span 2
+  overflow: hidden
+  border-radius: 10px
+  background-color: #ffffff
+  +adaptiv-value-mob('padding', 20)
+  +adaptiv-value-mob('width', 100)
+  +adaptiv-value-mob('height', 100)
+  +adaptiv-value-mob('max-width', 100)
+  +adaptiv-value-mob('max-height', 100)
+  +tablet
+    +adaptiv-value-desc('padding', 20)
+    +adaptiv-value-desc('width', 114)
+    +adaptiv-value-desc('height', 114)
+    +adaptiv-value-desc('max-width', 114)
+    +adaptiv-value-desc('max-height', 114)
+
+.crypto-logo img
+  width: 100%
+  height: auto
+  object-fit: cover
+
+
+.crypto-title
+  font-family: $InterExtraBold
+  +adaptiv-value-mob('font-size', 47.93)
+  +tablet
+    +adaptiv-value-desc('font-size', 42.88)
+
+.crypto-shortname
+  color: $grey3
+
+.crypto-ratenum
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $fontColorMain
+  background-color: $grey3
+  border-radius: 4px
+  +adaptiv-value-mob('border-radius', 4)
+
+  +adaptiv-value-mob('width', 30)
+  +adaptiv-value-mob('height', 30)
+  +adaptiv-value-mob('min-width', 30)
+  +adaptiv-value-mob('min-height', 30)
+  +tablet
+    +adaptiv-value-desc('border-radius', 4)
+
+    +adaptiv-value-desc('width', 35)
+    +adaptiv-value-desc('height', 35)
+    +adaptiv-value-desc('min-width', 35)
+    +adaptiv-value-desc('min-height', 35)
+
+.crypto-star
+  background-color: $grey3
+
+.crypto-shortname-ic
+  +adaptiv-value-mob('width', 22)
+  +adaptiv-value-mob('height', 22)
+  +tablet
+    +adaptiv-value-desc('width', 22)
+    +adaptiv-value-desc('height', 22)
+
+  img
+    width: 100%
+    height: auto
+    object-fit: contain
+
+.crypto-btm
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.graph-ic
+  width: 100%
+  height: auto
+
+.crypto-item
+  +adaptiv-value-mob('margin-right', 10)
+  +tablet
+    +adaptiv-value-desc('margin-right', 10)
+
+.col
+  &-name
+    +adaptiv-value-mob_imp('width', 367)
+    +tablet
+      +adaptiv-value-desc_imp('width', 422)
+  &-users
+    +adaptiv-value-mob_imp('width', 90)
+    +tablet
+      +adaptiv-value-desc_imp('width', 100)
+  &-24h
+    +adaptiv-value-mob_imp('width', 115)
+    +tablet
+      +adaptiv-value-desc_imp('width', 143)
+  &-7d
+    +adaptiv-value-mob_imp('width', 115)
+    +tablet
+      +adaptiv-value-desc_imp('width', 130)
+  &-trans
+    +adaptiv-value-mob_imp('width', 300)
+    +tablet
+      +adaptiv-value-desc_imp('width', 300)
+  &-price
+    +adaptiv-value-mob_imp('width', 136)
+    +tablet
+      +adaptiv-value-desc_imp('width', 136)
+  &-volume24
+    +adaptiv-value-mob_imp('width', 270)
+    +tablet
+      +adaptiv-value-desc_imp('width', 270)
+  &-volume
+    +adaptiv-value-mob_imp('width', 350)
+    +tablet
+      +adaptiv-value-desc_imp('width', 350)
+
+
+table.dataTable.row-border tbody tr:first-child th,
+table.dataTable.row-border tbody tr:first-child td,
+table.dataTable.display tbody tr:first-child th,
+table.dataTable.display tbody tr:first-child td
+  border-top: 1px solid #ffffff
+
+
+.crypto-top
+  display: grid
+  grid-template-columns: 1fr 1fr
+  +adaptiv-value-mob('column-gap', 60)
+  +adaptiv-value-mob('font-size', 25)
+  +adaptiv-value-desc('margin-bottom', 50)
+  +tablet
+    +adaptiv-value-desc('font-size', 27.94)
+    +adaptiv-value-desc('column-gap', 160)
+    +adaptiv-value-desc('margin-bottom', 70)
+
+  .btn, .dropdown-menu
+    +adaptiv-value-mob('font-size', 41.67)
+    +tablet
+      +adaptiv-value-desc('font-size', 46.57)
+
+  .dropdown-menu
+    background-color: $bgColor
+  .dropdown-item
+    color: $fontColorMain
+    &:hover
+      background-color: $bgColor
+      opacity: 0.2
+
+  .menu-list
+    margin-top: 20px
+    +tablet
+      margin-top: 0
+
+
+.crypto-top-col
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  +tablet
+    flex-direction: row
+
+.crypto
+  .dataTables_wrapper
+    +adaptiv-value-mob('margin-bottom', 55)
+    +tablet
+      +adaptiv-value-desc('margin-bottom', 55)
+
+  .section-in
+    +adaptiv-value-mob('padding-bottom', 155)
+    +tablet
+      +adaptiv-value-desc('padding-bottom', 155)
+
+.btn-seemore
+  +adaptiv-value-mob('font-size', 29.21)
+  +tablet
+    +adaptiv-value-desc('font-size', 33.33)

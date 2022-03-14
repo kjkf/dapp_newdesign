@@ -1,4 +1,5 @@
 *
+	box-sizing: border-box
 	&:focus, &:active
 		outline: none !important
 
@@ -335,3 +336,69 @@ h4.title.title--xs
 	.triangle-border
 		border-right-width: 44vw
 		width: 100%
+
+
+.percentVal
+	display: inline-flex
+	align-items: center
+	column-gap: 2px
+	margin-left: 3px
+	
+	&::after
+		content: ""
+		width: 0
+		height: 0
+		border-style: solid
+		line-height: 0
+	
+	&--up
+		color: #35ba0c
+		&::after
+			border-color: transparent transparent #35ba0c transparent
+			//border-width: 0 8px 15px 8px
+			border-top-width: 0
+			+adaptiv-value-mob('border-right-width', 8)
+			+adaptiv-value-mob('border-bottom-width', 12)
+			+adaptiv-value-mob('border-left-width', 8)
+			+tablet
+				+adaptiv-value-desc('border-right-width', 8)
+				+adaptiv-value-desc('border-bottom-width', 15)
+				+adaptiv-value-desc('border-left-width', 8)
+	
+	&--down
+		color: #c50606
+		&::after
+			border-color: #c50606 transparent transparent transparent
+			//border-width: 15px 8px 0 8px
+			border-bottom-width: 0
+			+adaptiv-value-mob('border-top-width', 12)
+			+adaptiv-value-mob('border-right-width', 8)
+			+adaptiv-value-mob('border-left-width', 8)
+			+tablet
+				+adaptiv-value-desc('border-top-width', 15)
+				+adaptiv-value-desc('border-right-width', 8)
+				+adaptiv-value-desc('border-left-width', 8)
+
+
+.menu-list
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&__item
+		+adaptiv-value-mob('margin-right', 70)
+		+tablet
+			+adaptiv-value-desc('margin-right', 70)
+		&:last-child
+			margin-right: 0
+		&>a
+			color: $fontColorMain
+
+.btn
+	color: $fontColorMain
+	+adaptiv-value-mob('padding', 30)
+	+tablet
+		+adaptiv-value-desc('padding', 30)
+
+	&-w100
+		width: 100%
+		background-color: #1b1b1b

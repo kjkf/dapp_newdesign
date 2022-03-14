@@ -1,0 +1,44 @@
+/* полоса прокрутки (скроллбар)
+
+\::-webkit-scrollbar
+  +adaptiv-value-mob("width", 12)
+  +tablet
+    +adaptiv-value-desc("width", 12)
+
+  /* ширина для вертикального скролла
+  height: 8px
+
+  /* высота для горизонтального скролла
+  background-color: #202020
+
+/* ползунок скроллбара
+
+\::-webkit-scrollbar-thumb
+  background-color: #b0b0b0
+  border-radius: 5px
+  box-shadow: none
+
+  &:hover
+    background-color: #c3c3c3
+
+/* Стрелки
+
+\::-webkit-scrollbar-button
+  display: none
+  &:vertical
+    &:start:decrement
+      background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+      background-color: #f6f8f4
+
+    &:end:increment
+      background: linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+      background-color: #f6f8f4
+
+  &:horizontal
+    &:start:decrement
+      background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+      background-color: #f6f8f4
+
+    &:end:increment
+      background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+      background-color: #f6f8f4
