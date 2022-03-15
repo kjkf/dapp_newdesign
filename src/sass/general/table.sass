@@ -32,6 +32,8 @@ table.table-general
         +adaptiv-value-desc('padding-left', 28)
         +adaptiv-value-desc('padding-right', 30)
 
+table.table-general.no-footer
+  border-bottom: none
 
 
 .crypto-name-link
@@ -47,14 +49,11 @@ table.table-general
   grid-row: span 2
   overflow: hidden
   border-radius: 10px
-  background-color: #ffffff
-  +adaptiv-value-mob('padding', 20)
   +adaptiv-value-mob('width', 100)
   +adaptiv-value-mob('height', 100)
   +adaptiv-value-mob('max-width', 100)
   +adaptiv-value-mob('max-height', 100)
   +tablet
-    +adaptiv-value-desc('padding', 20)
     +adaptiv-value-desc('width', 114)
     +adaptiv-value-desc('height', 114)
     +adaptiv-value-desc('max-width', 114)
@@ -82,6 +81,7 @@ table.table-general
   color: $fontColorMain
   background-color: $grey3
   border-radius: 4px
+  line-height: 2
   +adaptiv-value-mob('border-radius', 4)
 
   +adaptiv-value-mob('width', 30)
@@ -97,7 +97,13 @@ table.table-general
     +adaptiv-value-desc('min-height', 35)
 
 .crypto-star
-  background-color: $grey3
+  +adaptiv-value-mob('font-size', 30)
+  +tablet
+    +adaptiv-value-desc('font-size', 33)
+  &--filled
+    .icon-star
+      color: $red1
+
 
 .crypto-shortname-ic
   +adaptiv-value-mob('width', 22)
@@ -121,15 +127,17 @@ table.table-general
   height: auto
 
 .crypto-item
-  +adaptiv-value-mob('margin-right', 10)
+  +adaptiv-value-mob('margin-right', 5)
   +tablet
-    +adaptiv-value-desc('margin-right', 10)
+    +adaptiv-value-desc('margin-right', 5)
 
 .col
   &-name
     +adaptiv-value-mob_imp('width', 367)
+    +adaptiv-value-mob_imp('min-width', 367)
     +tablet
       +adaptiv-value-desc_imp('width', 422)
+      +adaptiv-value-desc_imp('min-width', 422)
   &-users
     +adaptiv-value-mob_imp('width', 90)
     +tablet
@@ -158,6 +166,20 @@ table.table-general
     +adaptiv-value-mob_imp('width', 350)
     +tablet
       +adaptiv-value-desc_imp('width', 350)
+
+
+table.table-general
+  td, th
+    &.col-name
+      min-width: 20px
+      background-color: $bgColor
+      position: sticky
+      left: 0
+      z-index: 100
+
+.col-name-wrap
+  display: grid
+  grid-template-columns: 0.6fr 1fr
 
 
 table.dataTable.row-border tbody tr:first-child th,
@@ -204,6 +226,10 @@ table.dataTable.display tbody tr:first-child td
   +tablet
     flex-direction: row
 
+  .dropdown-toggle::after
+    color: $green1
+    vertical-align: 0.055em
+
 .crypto
   .dataTables_wrapper
     +adaptiv-value-mob('margin-bottom', 55)
@@ -219,3 +245,4 @@ table.dataTable.display tbody tr:first-child td
   +adaptiv-value-mob('font-size', 29.21)
   +tablet
     +adaptiv-value-desc('font-size', 33.33)
+
