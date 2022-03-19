@@ -1,9 +1,9 @@
 /* HEADER styles */
-
-
-//.header
+.header
   background-color: $bgColor
   +adaptiv-value-mob("font-size", 40)
+
+
   .container
     max-width: 100%
     padding: 0
@@ -116,6 +116,7 @@
     .menu-item
       position: relative
       font-size: inherit
+      font-family: $InterSemiBold
       &::after
         content: ""
         position: absolute
@@ -142,12 +143,9 @@
       +adaptiv-value-mob("margin-left", 20)
       +adaptiv-value-mob("margin-bottom", 45)
 
-  .btn-login
-    margin-top: 0
-    margin-bottom: 0
-    +adaptiv-value-mob("margin-right", 0)
 
-//.burger
+
+.burger
   order: 2
   +adaptiv-value-mob("margin-left", 70)
   display: block
@@ -201,7 +199,7 @@
       transform: rotate(-45deg)
       bottom: 16px
 
-//.search
+.search
   +adaptiv-value-mob("width", 32)
   transition: all 500ms ease-out 0ms
   order: 1
@@ -219,7 +217,7 @@
     .search-wrap
       flex-grow: 1
 
-//.search-field
+.search-field
   background: $grey1
   color: $fontColorMain
   +adaptiv-value-mob("padding-top", 10)
@@ -236,34 +234,34 @@
     color: $fontColorMain
 
 
-//.search-label
+.search-label
   display: flex
   align-items: center
   justify-content: space-between
   margin: 0
 
-//.search-wrap
+.search-wrap
   display: flex
   align-items: center
   justify-content: space-between
 
 
-//.search-icon
+.search-icon
   +adaptiv-value-mob("width", 52)
   +adaptiv-value-mob("min-width", 52)
   +adaptiv-value-mob("height", 52)
   fill: #ffffff
 
-//.search-icon+.search-field
+.search-icon+.search-field
   +adaptiv-value-mob("margin-left", 10)
 
 
-//.lang-dropdown
+.lang-dropdown
   .dropdown-select > span
     &:before,&:after
       display: none
 
-//.headerSign
+.headerSign
   .search,.menu--right li:not(.signUp-link)
     display: none
   .menu--right
@@ -272,7 +270,5 @@
     margin-left: 24px
 
 
-//@import "header_desc"
-
-
+@import "header_desc"
 /* HEADER styles end */

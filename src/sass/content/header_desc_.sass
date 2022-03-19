@@ -1,15 +1,15 @@
 /* HEADER DECT styles */
 
-//.header
+.header
   +tablet
-    +adaptiv-value-desc("font-size", 24.97)
+    +adaptiv-value-desc("font-size", 22)
 
   &__inner
     +tablet
-      +adaptiv-value-desc("padding-left", 75)
-      +adaptiv-value-desc("padding-right", 75)
-      +adaptiv-value-desc("padding-top", 25)
-      +adaptiv-value-desc("padding-bottom", 18)
+      +adaptiv-value-desc("padding-left", 120)
+      +adaptiv-value-desc("padding-right", 120)
+      +adaptiv-value-desc("padding-top", 5)
+      +adaptiv-value-desc("padding-bottom", 5)
 
     &.searching
       .nav, .logo, .menu--right
@@ -28,11 +28,11 @@
 
   .logo
     +tablet
-      +adaptiv-value-desc("margin-right", 65)
-      +adaptiv-value-desc("width", 342)
-      +adaptiv-value-desc("min-width", 342)
-      +adaptiv-value-desc("height", 60)
-      +adaptiv-value-desc("min-height", 60)
+      +adaptiv-value-desc("margin-right", -9)
+      +adaptiv-value-desc("width", 240)
+      +adaptiv-value-desc("min-width", 240)
+      +adaptiv-value-desc("height", 80)
+      +adaptiv-value-desc("min-height", 80)
 
   .profile-dropdown
     //+phone-down
@@ -95,15 +95,27 @@
       flex-direction: row
     &-item
       +tablet
-        +adaptiv-value-desc("margin-left", 75)
+        +adaptiv-value-desc("margin-left", 78)
         margin-bottom: 0
 
   .btn-login
     +tablet
       +adaptiv-value-desc("margin-right", 45)
 
+  .btn
+    +tablet
+      +adaptiv-value-desc("padding-top", 10)
+      +adaptiv-value-desc("padding-bottom", 10)
+      +adaptiv-value-desc("margin-left", 13)
+      border-radius: 10px
 
-//.burger
+  .dropdown-select
+    +tablet
+      +adaptiv-value-desc("margin-left", 34)
+
+
+
+.burger
   +tablet
     display: none
     order: unset
@@ -111,41 +123,42 @@
 
 
 
-//.search
+.search
   +tablet
     margin-left: auto
     margin-right: auto
     order: 0
-    +adaptiv-value-desc("width", 406)
+    +adaptiv-value-desc("width", 307)
+    +adaptiv-value-desc("margin-right", -25)
 
 
   &.active
     +tablet
       +adaptiv-value-desc("margin-left", 28)
 
-//.search-field
+.search-field
   +tablet
     +adaptiv-value-desc("padding-top", 12)
     +adaptiv-value-desc("padding-bottom", 12)
-    +adaptiv-value-desc("padding-left", 40)
+    +adaptiv-value-desc("padding-left", 20)
     +adaptiv-value-desc("padding-right", 10)
 
 
-//.search-icon
+.search-icon
   +tablet
-    +adaptiv-value-desc("width", 45)
-    +adaptiv-value-desc("min-width", 45)
-    +adaptiv-value-desc("height", 50)
+    +adaptiv-value-desc("width", 44)
+    +adaptiv-value-desc("min-width", 44)
+    +adaptiv-value-desc("height", 44)
 
-//.search-icon+.search-field
+.search-icon+.search-field
   +tablet
-    +adaptiv-value-desc("margin-left", 25)
+    +adaptiv-value-desc("margin-left", 20)
 
 
-//.header .menu--right
+.header .menu--right
   .menu-item
     +tablet
-      +adaptiv-value-desc("margin-left", 60)
+      +adaptiv-value-desc("margin-left", 20)
 
 
 /* HEADER DECT styles end */
