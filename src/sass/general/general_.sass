@@ -1,0 +1,406 @@
+*
+	box-sizing: border-box
+	&:focus, &:active
+		outline: none !important
+
+html
+	//overflow: hidden
+	+adaptiv-value-mob("font-size", 19.58)
+	+tablet
+		+adaptiv-value-desc("font-size", 25)
+
+body
+	font:
+		family: $InterRegular
+		size: $fs_body
+		weight: 400
+	color: $fontColorMain
+	line-height: 1
+	min-width: $phone-width-min
+	margin: 0
+	padding: 0
+	height: 100vh
+	background-color: var(--bgcolor)
+
+
+h1, h2, h3, h4, p, ul
+	margin: 0px
+	padding: 0px
+
+a
+	display: inline-block
+	text-decoration: none
+	color: inherit
+	&:hover, &:active
+		text-decoration: none
+		color: inherit
+	//&.active, &:hover, &:focus, &:active
+		color: $violetta
+
+
+ul
+	list-style: none
+
+//h1
+	font-size: $fontSize_h1
+	line-height: $lineHeight_h1
+	font-weight: normal
+
+h2
+	line-height: 1.4
+	+adaptiv-value-mob('font-size', 24)
+	+tablet
+		+adaptiv-value-desc('font-size', 24)
+
+h3
+	line-height: $lineHeight_h3
+	+adaptiv-value-mob("font-size", 50)
+	+tablet
+		+adaptiv-value-desc("font-size", 58)
+
+
+.title
+	//font-family: $InterBold
+	color: red
+
+.news__title h3.title //news__title??
+	line-height: 1
+	+adaptiv-value-mob("font-size", 45.88) //?
+	+tablet
+		+adaptiv-value-desc("font-size", 58.33)
+
+h3.title.title--sm
+	line-height: 1
+	+adaptiv-value-mob("font-size", 45.88)
+	+tablet
+		+adaptiv-value-desc("font-size", 36.17)
+
+h4.title.title--sm
+	line-height: 1.5
+	+adaptiv-value-mob("font-size", 35.8)
+	+tablet
+		+adaptiv-value-desc("font-size", 24.04)
+
+h4.title.title--xs
+	line-height: 1.5
+	//+adaptiv-value-mob("font-size", 35.8)
+	+tablet
+		+adaptiv-value-desc("font-size", 23.21)
+
+
+.container
+	max-width: 89vw
+	width: 100%
+	margin: 0 auto
+	+adaptiv-value-mob('padding-left', 10)
+	+adaptiv-value-mob('padding-right', 10)
+	+tablet
+		+adaptiv-value-desc('max-width', 1186)
+		+adaptiv-value-desc('padding-left', 8)
+		+adaptiv-value-desc('padding-right', 8)
+
+
+
+
+.green
+	color: $green
+
+.bg--grey
+	background-color: $grey
+
+.blue-text
+	color: $blue-text
+
+.red-text
+	color: $red-text
+
+.bold-text
+	//font-family: $font-Gilroy-ExtraBold
+	font-weight: bold
+
+.red-text
+	color: $red-text
+
+
+.text-upper
+	text-transform: uppercase
+
+.logo
+	display: flex
+	align-items: center
+	&>a
+		width: 100%
+		height: 100%
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.btn
+	position: relative
+	//font-family: $ff_InterMedium, $ff_apple !important
+	//font-size: $fs_body!important
+	//line-height: $lh_body
+	text-decoration: none
+	-webkit-appearance: none
+	border: 0
+	cursor: pointer
+	user-select: none
+	outline: none
+	background-color: transparent
+	padding: 0
+	font-size: inherit
+	&:focus, &:active, &.focus, &:hover
+		outline: none
+		box-shadow: none
+		color: inherit
+
+	&--filled
+		//padding: 3px 46px!important
+		color: $fontColorMain
+		border-radius: $br_btn
+		background: rgb(96,19,182) !important
+		background: linear-gradient(90deg, rgba(96,19,182,1) 0%, rgba(136,14,216,1) 50%, rgba(181,8,253,1) 100%) !important
+		+tablet
+			+adaptiv-value-desc("padding-left", 47)
+			+adaptiv-value-desc("padding-right", 43)
+			+adaptiv-value-desc("padding-top", 5)
+			+adaptiv-value-desc("padding-bottom", 5)
+
+		&:hover
+			opacity: 0.8!important
+			background-color: $violetta!important
+			border: 0!important
+.btn-close
+	display: inline-block
+	width: 24px
+	height: 24px
+	min-width: 24px
+	min-height: 24px
+	background:
+		color: transparent
+		image: url("../images/icons/close.svg")
+		repeat: no-repeat
+		size: auto
+		position: center
+
+.dropdown-menu
+	display: none
+	flex-direction: column
+	//padding: $p_menu
+	//background: $bg_body
+	//box-shadow: $bsh_menu
+	//border-radius: $br_menu
+	//color: $fc_body
+	//min-width: $mw_menu
+	border: none
+	//font-size: $fs_body
+
+	.menu-item
+		//margin-bottom: $mb_menuItem
+		margin-right: 0
+		&:last-child
+			margin-bottom: 0
+		&>a
+			display: flex
+			align-items: center
+			padding: 0
+			line-height: inherit
+			color: inherit
+			&:hover
+				//color: $violetta1
+				background-color: transparent
+				.menu__icon
+					//fill: $violetta1
+
+		&:hover
+			.menu__icon
+				//fill: $violetta1
+
+    .menu__icon
+        width: 24px
+        height: 24px
+        min-width: 24px
+        min-height: 24px
+        display: inline-block
+        //fill: $fc_body
+        margin-right: 10px
+
+//.dropdown-toggle::after
+  display: none
+
+.dib
+	display: inline
+
+.mb-0
+	margin-bottom: 0
+
+.triangle-border
+	display: none
+	+tablet
+		display: block
+		//+adaptiv-value('height', 10, 10)
+		//background-color: grey
+		width: 0
+		height: 0
+		border-top: 0.17vw solid transparent
+		border-right: 68.8vw solid var(--border-color)
+		border-bottom: 0.17vw solid transparent
+
+.details
+	color: #747474
+	//+adaptiv-value('font-size', 19, 15)
+	+adaptiv-value-mob('font-size', 15)
+
+	display: flex
+	justify-content: space-between
+	align-items: center
+	+tablet
+		+adaptiv-value-desc('font-size', 12)
+
+	&.dib
+		display: flex
+		justify-content: flex-end
+		span
+			margin-right: 8%
+			line-height: 4.83
+			+tablet
+				line-height: 2.13
+
+	&-text
+		display: inline-block
+		width: 100%
+		line-height: 1.7
+		+adaptiv-value-mob('font-size', 20.6) //??
+		+tablet
+			+adaptiv-value-desc('font-size', 12)
+	&__source
+		margin-right: 6%
+
+	&__btn
+		display: inline-block
+		//+adaptiv-value('width', 35, 24)
+		//+adaptiv-value('height', 25, 20)
+		+adaptiv-value-mob('width', 22)
+		+adaptiv-value-mob('height', 20)
+		align-self: flex-end
+		background:
+			image: url("../images/icons/open-arrow.png")
+			size: contain
+			repeat: no-repeat
+		+tablet
+			+adaptiv-value-desc('width', 16)
+			+adaptiv-value-desc('height', 16)
+
+	&--sm
+		+adaptiv-value-mob('font-size', 20.6)
+		+tablet
+			+adaptiv-value-desc('font-size', 13.84)
+	&--m
+		line-height: 2
+		+tablet
+			+adaptiv-value-desc('font-size', 17.41)
+
+
+.img-round
+	border-radius: 50%
+	overflow: hidden
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.d-mob-none
+	display: none !important
+	+tablet
+		display: flex !important
+
+.line
+	position: relative
+	&::after
+		content: ""
+		position: absolute
+		right: 0
+		+adaptiv-value-mob('right', -10)
+		top: 0
+		height: 100%
+		width: 2px
+		display: inline-block
+	&--grey
+		&::after
+			background-color: $grey2
+
+
+.title-divider
+	display: grid
+	grid-template-columns: 17vw auto
+	align-items: center
+	.triangle-border
+		border-right-width: 44vw
+		width: 100%
+
+
+.percentVal
+	display: inline-flex
+	align-items: center
+	column-gap: 2px
+	margin-left: 3px
+	
+	&::after
+		content: ""
+		width: 0
+		height: 0
+		border-style: solid
+		line-height: 0
+	
+	&--up
+		color: $green1
+		&::after
+			border-color: transparent transparent #35ba0c transparent
+			//border-width: 0 8px 15px 8px
+			border-top-width: 0
+			+adaptiv-value-mob('border-right-width', 8)
+			+adaptiv-value-mob('border-bottom-width', 12)
+			+adaptiv-value-mob('border-left-width', 8)
+			+tablet
+				+adaptiv-value-desc('border-right-width', 8)
+				+adaptiv-value-desc('border-bottom-width', 15)
+				+adaptiv-value-desc('border-left-width', 8)
+	
+	&--down
+		color: $red1
+		&::after
+			border-color: #c50606 transparent transparent transparent
+			//border-width: 15px 8px 0 8px
+			border-bottom-width: 0
+			+adaptiv-value-mob('border-top-width', 12)
+			+adaptiv-value-mob('border-right-width', 8)
+			+adaptiv-value-mob('border-left-width', 8)
+			+tablet
+				+adaptiv-value-desc('border-top-width', 15)
+				+adaptiv-value-desc('border-right-width', 8)
+				+adaptiv-value-desc('border-left-width', 8)
+
+
+.menu-list
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&__item
+		+adaptiv-value-mob('margin-right', 70)
+		+tablet
+			+adaptiv-value-desc('margin-right', 70)
+		&:last-child
+			margin-right: 0
+		&>a
+			color: $fontColorMain
+
+.btn
+	color: $fontColorMain
+	+adaptiv-value-mob('padding', 30)
+	+tablet
+		+adaptiv-value-desc('padding', 30)
+
+	&-w100
+		width: 100%
+		background-color: #1b1b1b

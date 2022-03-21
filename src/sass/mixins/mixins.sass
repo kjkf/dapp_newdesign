@@ -46,7 +46,8 @@ $tablet-width: 768px
 	@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5), only screen and (-o-min-device-pixel-ratio : 1.5)
 		@content
 
-$maxWidth: 2880
+//$maxWidth: 2880
+$maxWidth: 1920
 =adaptiv-value($property, $startSize, $minSize)
 	$addSize: $startSize - $minSize
 
@@ -72,13 +73,13 @@ $maxWidth: 2880
 
 
 =adaptiv-value-desc($property, $val)
-	#{$property}: calc(#{$val + vw} * 100 / 2880)
+	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth})
 
 =adaptiv-value-mob($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / 1170)
 
 =adaptiv-value-desc_imp($property, $val)
-	#{$property}: calc(#{$val + vw} * 100 / 2880)+'!important'
+	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth})+'!important'
 
 =adaptiv-value-mob_imp($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / 1170)+'!important'
