@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../public/css/font-icon.min.css">
+    <link rel="stylesheet" href="../public/css/styles.min.css">
+
+    <!--
+  darkmode
+      --bgcolor:#191919;
+      --menubg:#1b1b1b;
+      --menucolor:#ffffff;
+      --submenu-color: #adadad;
+      --submenu-active-bg: #1d1d1d;
+      --submenu-active-color: #5c5c5c;
+      --submenu-title-color: #7c729c;
+      --block-menu-color: #191919;
+      --block-menu-bg: #ffffff;
+      --post-title-color: #ffffff;
+      --post-col-title-color: #858585;
+      --seemore-btn-color: #ffffff;
+      --seemore-btn-bg: #1e1e1e;
+      --border-color: #252525;
+
+  lightmode
+      --bgcolor:#ffffff;
+      --menubg:#ffffff;
+      --menucolor:#000000;
+      --submenu-color: #adadad;
+      --submenu-active-bg: #ebebeb;
+      --submenu-active-color: #5c5c5c;
+      --submenu-title-color: #7c729c;
+      --block-menu-color: #191919;
+      --block-menu-bg: #ffffff;
+      --post-title-color: #242424;
+      --post-col-title-color: #858585;
+      --seemore-btn-color: #ffffff;
+      --seemore-btn-bg: #1e1e1e;
+      --border-color: #252525;
+
+  -->
+    <style>
+
+        body {
+            --bgcolor:#191919;
+            --menubg:#1b1b1b;
+            --menucolor:#ffffff;
+            --fontcolor:#ffffff;
+            --menucolor:#ffffff;
+            --submenu-color: #adadad;
+            --submenu-active-bg: #1d1d1d;
+            --submenu-active-color: #5c5c5c;
+            --submenu-title-color: #7c729c;
+            --block-menu-color: #191919;
+            --block-menu-bg: #ffffff;
+            --post-title-color: #ffffff;
+            --post-col-title-color: #858585;
+            --seemore-btn-color: #ffffff;
+            --seemore-btn-bg: #1e1e1e;
+            --border-color: #252525;
+
+
+        }
+        </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <button class="btn btn-left header__btn-left"></button>
+            <div class="logo"><img src="../public/images/content/logo.png" alt="dappexpert"></div>
+            <div class="burger"><span></span></div>
+            <nav class="nav">
+                <ul class="menu nav__menu">
+                    <li class="menu-item"><a href="#">Главная</a></li>
+                    <li class="menu-item"><a href="#">Галлерея</a></li>
+                    <li class="menu-item"><a href="#">Dapps</a></li>
+                    <li class="menu-item"><a href="#">Блокчейны</a></li>
+                    <li class="menu-item"><a href="#">NFT</a></li>
+                    <li class="menu-item"><a href="#">Криптовалюты</a></li>
+                    <li class="menu-item"><a href="#">Потрфолио</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <form action="#">
+                    <label for="search" class="search-label">
+                        <div class="search-wrap">
+                            <svg class="search-icon"><use xlink:href="#search-icon"/></svg>
+                            <input type="text" placeholder="Поиск" name="search" id="search" class="search-field">
+                        </div>
+                        <button class="search-close btn btn-close" type="button" ></button>
+                    </label>
+                </form>
+            </div>
+            <ul class="menu menu--right">
+                <!--<li class="menu-item"><a href="#">My Account</a></li>-->
+                <!--<li class="menu-item dropdown profile-dropdown ">
+                    <a class="dropdown-toggle a-profile" data-toggle="dropdown" href="#" aria-expanded="false" role="button">
+                        <span class="a-profile__name">Alex Krivov</span>
+                        <div class="a-profile__img">
+                            <img src="assets/img/upload/user.png" alt="Alex Krivov">
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <li class="menu-item">
+                            <a href="#">
+                                <svg class="menu__icon panel-icon"><use xlink:href="#panel-icon"/></svg>
+                                Admin Panel
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <svg class="menu__icon profile-icon"><use xlink:href="#profile-icon"/></svg>
+                                My Profile
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <svg class="menu__icon bookmark-icon"><use xlink:href="#bookmark-icon"/></svg>
+                                Bookmarks
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <svg class="menu__icon settings-icon"><use xlink:href="#settings-icon"/></svg>
+                                Settings
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="logout">
+                                <svg class="menu__icon logout-icon"><use xlink:href="#logout-icon"/></svg>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>-->
+                <li class="menu-item lang-dropdown">
+                    <select class="dropdown-select">
+                        <option>En</option>
+                        <option>Ru</option>
+                        <option>Ch</option>
+                    </select>
+                </li>
+                <li class="menu-item">
+                    <button class="btn btn--filled">Регистрация</button>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Войти</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="body-wrap">
+    <section class="banner" style="background-image:url('public/images/content/banner1.jpg') ">
+        <div class="container">
+            <div class="banner-in ">
+                <img src="/public/images/content/banner.jpg" alt="banner">
+                <p class="breadcrumbs">Cryptocurrencies &gt; Coins &gt; <span>Bitcoin</span> </p>
+                <h2 class="title">
+                    <span>Открой глаза</span>
+                    <span class="text-grey">на мир криптовалюты</span>
+                </h2>
+                <ul class="menu">
+                    <li class="menu__item active" ><a href="" class="menu__link">Новинки</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Рейтинги</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Мои NFT</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-submenu">
+        <div class="container">
+            <div class=" section-in submenu">
+                <ul class="submenu-list">
+                    <li class="submenu__item active"><a href="#" class="submenu__link">Тренды</a></li>
+                    <li class="submenu__item"><a href="#" class="submenu__link">Топ</a></li>
+                    <li class="submenu__item"><a href="#" class="submenu__link">Исскуство</a></li>
+                    <li class="submenu__item"><a href="#" class="submenu__link">Коллекции</a></li>
+                    <li class="submenu__item"><a href="#" class="submenu__link">Доменные имена</a></li>
+                </ul>
+                <a href="#" class="submenu__btn">Подробнее</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block-menu">
+        <div class="container">
+            <div class="section-in">
+                <ul class="block-menu__list">
+                    <li class="block-menu__item active"><a href="#" class="block-menu__link">Последнее</a></li>
+                    <li class="block-menu__item"><a href="#" class="block-menu__link">Главное</a></li>
+                    <li class="block-menu__item"><a href="#" class="block-menu__link">Современное</a></li>
+                    <li class="block-menu__item"><a href="#" class="block-menu__link">Криптовалюта</a></li>
+                    <li class="block-menu__item"><a href="#" class="block-menu__link">Блокчейн</a></li>
+                    <li class="block-menu__item"><a href="#" class="block-menu__link">Дапп</a></li>
+                    <li class="block-menu__item"><a href="#" class="block-menu__link">Жизнь</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <div class="section-in">
+                <div class="news__title">
+                    <h4 class="title">Что нового на блокчейн?</h4>
+                    <button class="btn see-more">Показать всё</button>
+                </div>
+                <div class="news-in">
+                    <div class="news__left">
+                        <div class="news__post post-news img__post">
+                            <div class="img-wrapper post-news__img">
+                                <img src="/public/images/content/post1.jpg" alt="post image">
+                            </div>
+                            <h5 class="title post-news__title dib">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                            <p class="post-news__details details dib">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                                <a class="details__btn"></a>
+                            </p>
+                        </div>
+                        <div class="news__post post-news img__post">
+                            <div class="img-wrapper post-news__img">
+                                <img src="/public/images/content/post2.jpg" alt="post image">
+                            </div>
+                            <h5 class="title post-news__title dib">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                            <p class="post-news__details details dib">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                                <a class="details__btn"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news__right">
+                        <div class="news__right-col">
+                            <div class="news__post post-news">
+                                <h5 class="title post-news__title">LUNA от Terra установила новый рекорд - выше 90 долларов</h5>
+                                <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h5 class="title post-news__title">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                                <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news mb-0">
+                                <h5 class="title post-news__title">Объем торгов крупнейшей криптовалютной биржи Индии </h5>
+                                <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+
+                            <div class="news_foot">
+                                <h5 class="news__col_title">Other news</h5>
+                            </div>
+                        </div>
+                        <div class="news__right-col">
+                            <div class="news__post post-news">
+                                <h5 class="title post-news__title">LUNA от Terra установила новый рекорд - выше 90 долларов</h5>
+                                <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h5 class="title post-news__title">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                                <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news mb-0">
+                                <h5 class="title post-news__title">Объем торгов крупнейшей криптовалютной биржи Индии  </h5>
+                                <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+
+                            <div class="news_foot btn-wrapper">
+                                <button class="btn see-more">Показать ещё</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangle-border"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news news-add">
+        <div class="container">
+            <div class="section-in">
+                <div class="news-in">
+                    <div class="news-col">
+                        <div class="news__post post-news">
+                            <h5 class="post-news__title">Объем торгов крупнейшей криптовалютной биржи Индии</h5>
+                            <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                <a class="details__btn"></a>
+                            </p>
+                        </div>
+                        <div class="news__post post-news">
+                            <h5 class="post-news__title">Объем торгов крупнейшей криптовалютной биржи Индии </h5>
+                            <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                <a class="details__btn"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-col">
+                        <div class="news__post post-news">
+                            <h5 class="post-news__title">Объем торгов крупнейшей криптовалютной биржи Индии </h5>
+                            <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                <a class="details__btn"></a>
+                            </p>
+                        </div>
+                        <div class="news__post post-news">
+                            <h5 class="post-news__title">Объем торгов крупнейшей криптовалютной биржи Индии</h5>
+                            <p class="post-news__details details">
+                            <span class="details-text">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                            </span>
+                                <a class="details__btn"></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-col">
+                        <div class="news__post post-news img__post">
+                            <div class="img-wrapper post-news__img">
+                                <img src="/public/images/content/post2.jpg" alt="post image">
+                            </div>
+                            <h5 class="post-news__title dib">Биткойн остается стабильным, поскольку  Банк Англии повышает </h5>
+                            <p class="post-news__details details dib">
+                                <span class="details__source">BSCnews</span>
+                                <span class="details__time">3 day ago</span>
+                                <a class="details__btn"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner" style="background-image:url('public/images/content/banner2.jpg')">
+        <div class="container">
+            <div class="banner-in ">
+                <p class="breadcrumbs">Cryptocurrencies &gt; Coins &gt; <span>Bitcoin</span> </p>
+                <h3 class="title">
+                    <p>Просчитывайте </p>
+                    <p class="text-grey">расчеты роста крипты</p>
+                </h3>
+                <ul class="menu">
+                    <li class="menu__item active" ><a href="" class="menu__link">Новинки</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Рейтинги</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Мои NFT</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-----------------------------Лента пользователя----------------------------->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-in ">
+                <img src="/public/images/content/banner3.jpg" alt="banner">
+                <p class="breadcrumbs">Cryptocurrencies &gt; Coins &gt; <span>Bitcoin</span> </p>
+                <h2 class="title">
+                    <span>Лента</span>
+                    <span class="text-grey">Пользователя</span>
+                </h2>
+                <ul class="menu">
+                    <li class="menu__item active" ><a href="" class="menu__link">Новинки</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Рейтинги</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Мои NFT</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="news news-user">
+        <div class="container">
+            <div class="section-in">
+                <div class="news-in">
+                    <div>
+                        <div class="news__title">
+                            <h3 class="title">Что нового на блокчейн?</h3>
+                            <button class="btn see-more">Показать всё</button>
+                        </div>
+                        <div class="news-wrap">
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот </p>
+                                <p class="post-news__details details">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                        <a class="details__btn"></a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <div class="news__post post-news img__post">
+                                    <div class="img-wrapper post-news__img">
+                                        <img src="/public/images/content/post3.jpg" alt="post image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот </p>
+                                <p class="post-news__details details">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                        <a class="details__btn"></a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <div class="news__post post-news img__post">
+                                    <div class="img-wrapper post-news__img">
+                                        <img src="/public/images/content/post4.jpg" alt="post image">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="news__title">
+                            <h3 class="title">Что нового на блокчейн?</h3>
+                            <button class="btn see-more">Показать всё</button>
+                        </div>
+                        <div class="news-wrap">
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот </p>
+                                <p class="post-news__details details">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                        <a class="details__btn"></a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот </p>
+                                <p class="post-news__details details">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                        <a class="details__btn"></a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот </p>
+                                <p class="post-news__details details">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                        <a class="details__btn"></a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот </p>
+                                <p class="post-news__details details">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                        <a class="details__btn"></a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news news-user news-user-add">
+        <div class="container">
+            <div class="section-in">
+                <div class="title-divider">
+                    <h5 class="news__col_title">Other news</h5>
+                    <div class="triangle-border"></div>
+                </div>
+                <div class="news-in">
+                    <div class="d-flex flex-column">
+                        <div class="news__title">
+                            <h3 class="title title--sm">Свежие новости</h3>
+                            <button class="btn see-more">Показать всё</button>
+                        </div>
+                        <div class="news-wrap line line--grey">
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text post-news__text--sm">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот</p>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text post-news__text--sm">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот</p>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text post-news__text--sm">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот</p>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Ну сколько можно? А! Сколько можно?</h4>
+                                <p class="post-news__text post-news__text--sm">Остаются сильными, несмотря на падение на 20 тысяч долларов с максимума прошлого месяца и все вот</p>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column d-mob-none">
+                        <div class="news__title">
+                            <h3 class="title title--sm">Какой стиль NFT по душе?</h3>
+                            <button class="btn see-more">Показать всё</button>
+                        </div>
+                        <div class="news-wrap line line--grey">
+                            <div class="news__post post-news img__post">
+                                <div class="img-wrapper post-news__img post-news__img--vert">
+                                    <img src="/public/images/content/post5.jpg" alt="post image">
+                                </div>
+                                <div class="post-news-btm">
+                                    <h4 class="title title--sm">Crypto Rapper Girl</h4>
+                                    <div class="post-news__ava img img-round">
+                                        <img src="/public/images/content/avatar1.jpg" alt="post avatar">
+                                    </div>
+                                    <p class="post-news__details details details--sm">
+                                        <span class="details-text">
+                                            <span class="details__ic ic-1"></span>
+                                            <span content="details__num">0.76</span>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="news__post post-news img__post">
+                                <div class="img-wrapper post-news__img post-news__img--vert">
+                                    <img src="/public/images/content/post6.jpg" alt="post image">
+                                </div>
+                                <div class="post-news-btm">
+                                    <h4 class="title title--sm">Crypto Rapper Girl</h4>
+                                    <div class="post-news__ava img img-round">
+                                        <img src="/public/images/content/avatar2.jpg" alt="post avatar">
+                                    </div>
+                                    <p class="post-news__details details details--sm">
+                                        <span class="details-text">
+                                            <span class="details__ic ic-1"></span>
+                                            <span content="details__num">0.76</span>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column d-mob-none">
+                        <div class="news__title">
+                            <h3 class="title title--sm">Что нового на блокчейн?</h3>
+                            <button class="btn see-more">Показать всё</button>
+                        </div>
+                        <div class="news-wrap">
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">LUNA от Terra установила новый рекорд - выше 90 долларов</h4>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">LUNA от Terra установила новый рекорд - выше 90 долларов</h4>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Биткойн остается стабильным, поскольку Банк Англии повышает</h4>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Биткойн остается стабильным, поскольку Банк Англии повышает</h4>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Объем торгов крупнейшей криптовалютной биржи Индии</h4>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                            <div class="news__post post-news">
+                                <h4 class="title post-news__title title--sm">Объем торгов крупнейшей криптовалютной биржи Индии </h4>
+                                <p class="post-news__details details details--sm">
+                                    <span class="details-text">
+                                        <span class="details__source">BSCnews</span>
+                                        <span content="details__author">Pinova</span>
+                                        <span class="details__time">3 day ago</span>
+                                    </span>
+                                    <a class="details__btn"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------- Просчитывайте расчеты роста крипты  ----------------------------->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-in ">
+                <img src="/public/images/content/banner2.jpg" alt="banner">
+                <p class="breadcrumbs">Cryptocurrencies &gt; Coins &gt; <span>Bitcoin</span> </p>
+                <h2 class="title">
+                    <span>Просчитывайте</span>
+                    <span class="text-grey">расчеты роста крипты</span>
+                </h2>
+                <ul class="menu">
+                    <li class="menu__item active" ><a href="" class="menu__link">Новинки</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Рейтинги</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Мои NFT</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="crypto">
+        <div class="container">
+            <div class="section-in">
+                <div class="crypto-top">
+                    <div class="crypto-top-col">
+                        <div class="dropdown show">
+                            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Все блокчейны
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Etherium</a>
+                                <a class="dropdown-item" href="#">Binance</a>
+                                <a class="dropdown-item" href="#">Bitcoin</a>
+                            </div>
+                        </div>
+                        <ul class="menu-list">
+                            <li class="menu-list__item"><a href="#">Все</a></li>
+                            <li class="menu-list__item"><a href="#">Новые</a></li>
+                            <li class="menu-list__item"><a href="#">Токены</a></li>
+                        </ul>
+                    </div>
+                    <div class="crypto-top-col">
+                        <div class="dropdown show">
+                            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Все категории
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">DeFi</a>
+                                <a class="dropdown-item" href="#">Finance</a>
+                                <a class="dropdown-item" href="#">Game</a>
+                            </div>
+                        </div>
+                        <ul class="menu-list">
+                            <li class="menu-list__item"><a href="#">24 часа</a></li>
+                            <li class="menu-list__item"><a href="#">7 дней</a></li>
+                            <li class="menu-list__item"><a href="#">30 дней</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                <table id="crypto_table" class="table-general row-border">
+                    <thead>
+                        <tr>
+                            <th class="col-name">
+                                <div class="col-name-wrap">
+                                    <span>#</span><span>Name</span>
+                                </div>
+                            </th>
+                            <th class="col-users">Users</th>
+                            <th class="col-24h">24h %</th>
+                            <th class="col-7d">7d %</th>
+                            <th class="col-trans">Transactions</th>
+                            <th class="col-price">Price</th>
+                            <th class="col-volume24">Volume(24h)</th>
+                            <th class="col-volume">Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-name">
+                                <a class="crypto-name-link" href="#">
+                                    <div class="crypto-logo"><img src="/public/images/content/unicorn.png" alt="crypto logo"></div>
+                                    <div class="crypto-title">Uniswap V3</div>
+                                    <div class="crypto-btm">
+                                        <span class="crypto-item crypto-star crypto-star--filled">
+                                            <i class="icon-star"></i>
+                                        </span>
+                                        <span class="crypto-item crypto-ratenum">1</span>
+                                        <span class="crypto-item crypto-shortname-ic">
+                                            <img src="/public/images/content/cripto-ic.png" alt="cripto icon">
+                                        </span>
+                                        <span class="crypto-item crypto-shortname">BTC</span>
+                                        <span class="crypto-rate percentVal percentVal--up">+2</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>4630</td>
+                            <td><span class="percentVal percentVal--up">1.20%</span></td>
+                            <td><span class="percentVal percentVal--down">7.91%</span></td>
+                            <td>$808.518.20.245</td>
+                            <td>$25.458</td>
+                            <td>18.926.575 BTC</td>
+                            <td>
+                                <!--<img class="graph-ic" src="/public/images/content/graphic.png" alt="crypto graphic">-->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="20" viewBox="0 0 100 20"><script xmlns=""></script><polyline xmlns="http://www.w3.org/2000/svg" points="0.0,16.779502042147456 0.5952380952380952,17.550018519187667 1.1904761904761905,17.182108253483545 1.7857142857142856,16.632718844352866 2.380952380952381,16.777717962294023 2.9761904761904763,16.14987558725461 3.571428571428571,14.942960528966196 4.166666666666667,13.830270121943975 4.761904761904762,13.653563300853719 5.357142857142857,13.37754967278098 5.9523809523809526,14.19195919890847 6.5476190476190474,14.287791700022517 7.142857142857142,17.225336963559315 7.738095238095238,20 8.333333333333334,19.05365031442549 8.928571428571429,17.583475251833356 9.523809523809524,16.895526584377052 10.119047619047619,17.273413932038398 10.714285714285714,16.41585122463143 11.30952380952381,15.962379214434769 11.904761904761905,14.872655876833718 12.5,14.756395822856039 13.095238095238095,15.329128799486634 13.69047619047619,16.08754726058943 14.285714285714285,16.56480830271722 14.880952380952381,15.443045286669125 15.476190476190476,14.37584598552036 16.071428571428573,13.682845854663276 16.666666666666668,13.724350741721945 17.261904761904763,13.593446881279547 17.857142857142858,14.6716246484154 18.452380952380953,13.861827305724585 19.047619047619047,14.266102216877549 19.642857142857142,15.146792078212977 20.238095238095237,15.948592263920336 20.833333333333332,13.311349345275802 21.428571428571427,14.409174698540271 22.023809523809522,14.411916786777223 22.61904761904762,15.443834626130663 23.214285714285715,15.579054195720765 23.80952380952381,15.175768612782798 24.404761904761905,14.674043409918628 25,13.879977873251963 25.595238095238095,12.77952461531973 26.19047619047619,11.747439480194773 26.785714285714285,4.856120821091187 27.38095238095238,3.336730407248943 27.976190476190474,3.94553198376666 28.57142857142857,3.2503240002399423 29.166666666666668,2.6867628804386534 29.761904761904763,0.6266634864660858 30.357142857142858,1.3587221321423684 30.952380952380953,1.0125308314841739 31.547619047619047,1.0357867528144808 32.142857142857146,1.986389053643144 32.73809523809524,2.44127988981516 33.333333333333336,1.2387455560095724 33.92857142857143,0 34.523809523809526,0.7844197085311251 35.11904761904762,0.4600772821743284 35.714285714285715,1.5009698499180075 36.30952380952381,0.6777192061678114 36.904761904761905,2.351090477532132 37.5,2.0132700420044323 38.095238095238095,2.01319049087223 38.69047619047619,1.7924937261722924 39.285714285714285,2.407658764061914 39.88095238095238,5.90365769928597 40.476190476190474,6.260968416665287 41.07142857142857,6.369714731667381 41.666666666666664,11.341067291751363 42.26190476190476,12.63060654743055 42.857142857142854,12.231334859684926 43.45238095238095,12.40681945843114 44.047619047619044,12.606804434495128 44.642857142857146,12.712752191648262 45.23809523809524,13.245962899813168 45.833333333333336,13.083889364646994 46.42857142857143,12.486375293277256 47.023809523809526,13.545924314579677 47.61904761904762,12.314924752208697 48.214285714285715,12.684353122205536 48.80952380952381,13.038722779853783 49.404761904761905,12.746221363004842 50,12.731580467478658 50.595238095238095,12.195837471774244 51.19047619047619,10.989789219389994 51.785714285714285,12.128700139635662 52.38095238095238,11.72195532943868 52.976190476190474,11.761950978503895 53.57142857142857,12.395055080188484 54.166666666666664,14.848756860638186 54.76190476190476,15.778731811248718 55.357142857142854,14.348783777919628 55.95238095238095,15.166308238455034 56.547619047619044,14.510694688441928 57.14285714285714,13.928244088838357 57.73809523809524,12.830020735607093 58.333333333333336,13.6620426982535 58.92857142857143,13.450376373386657 59.523809523809526,13.449437589077984 60.11904761904762,13.313915444479392 60.714285714285715,10.457984783322 61.30952380952381,10.357421393853743 61.904761904761905,12.648571346020354 62.5,12.29762063218961 63.095238095238095,13.197183637225724 63.69047619047619,14.548364338646689 64.28571428571429,14.108340700471246 64.88095238095238,14.788158857417905 65.47619047619048,14.300888719274457 66.07142857142857,15.675213204418458 66.66666666666667,14.216928005114788 67.26190476190476,13.627035140877908 67.85714285714286,14.506787949995342 68.45238095238095,13.069211715868477 69.04761904761905,12.800231276348576 69.64285714285714,13.061445548832161 70.23809523809524,13.084005993435134 70.83333333333333,13.210690613007543 71.42857142857143,12.934481014923144 72.02380952380952,13.025235697633565 72.61904761904762,13.152527631313546 73.21428571428571,13.049721924460478 73.80952380952381,12.822834858554103 74.4047619047619,12.687212002779022 75,13.017058395210327 75.59523809523809,12.75793901553989 76.19047619047619,13.05279959026854 76.78571428571429,13.917929504516534 77.38095238095238,13.045188085280392 77.97619047619048,13.051533002690892 78.57142857142857,13.11375171311334 79.16666666666667,13.162150391596978 79.76190476190476,13.347650657537358 80.35714285714286,12.885662741108945 80.95238095238095,13.069379445734656 81.54761904761905,12.903047120695772 82.14285714285714,13.997885122489658 82.73809523809524,13.930306244051746 83.33333333333333,13.483447473357764 83.92857142857143,12.89891485063061 84.52380952380952,12.838778823374076 85.11904761904762,12.954666420318386 85.71428571428571,12.894128672452329 86.30952380952381,12.896772356648182 86.9047619047619,13.069266816614673 87.5,13.277133767366326 88.09523809523809,13.576880812291382 88.69047619047619,13.586374639921717 89.28571428571429,14.554154915296415 89.88095238095238,15.449416165875554 90.47619047619048,14.487283790763275 91.07142857142857,14.093242767279303 91.66666666666667,13.672531104653512 92.26190476190476,13.726566474174763 92.85714285714286,13.767397433464547 93.45238095238095,13.560280539057306 94.04761904761905,13.91508678839855 94.64285714285714,14.735301714536682 95.23809523809524,14.573535955034682 95.83333333333333,17.768357841682274 96.42857142857143,18.104864548051147 97.02380952380952,18.201821619158665 97.61904761904762,17.113588161004106 98.21428571428571,17.31016349531461 98.80952380952381,16.872928862933357 99.4047619047619,15.652911234917376" fill="none" stroke="#57bd0f" stroke-width="1.25"></polyline></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-name">
+                                <a class="crypto-name-link" href="#">
+                                    <div class="crypto-logo"><img src="/public/images/content/maker.png" alt="crypto logo"></div>
+                                    <div class="crypto-title">Maker DAO</div>
+                                    <div class="crypto-btm">
+                                        <span class="crypto-item crypto-star">
+                                            <i class="icon-star"></i>
+                                        </span>
+                                        <span class="crypto-item crypto-ratenum">2</span>
+                                        <span class="crypto-item crypto-shortname-ic">
+                                            <img src="/public/images/content/cripto-ic.png" alt="cripto icon">
+                                        </span>
+                                        <span class="crypto-item crypto-shortname">ETH</span>
+                                        <span class="crypto-rate percentVal percentVal--up">+2</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>4630</td>
+                            <td><span class="percentVal percentVal--up">1.20%</span></td>
+                            <td><span class="percentVal percentVal--down">7.91%</span></td>
+                            <td>$808.518.20.245</td>
+                            <td>$25.458</td>
+                            <td>18.926.575 BTC</td>
+                            <td>
+                                <!--<img class="graph-ic" src="/public/images/content/graphic.png" alt="crypto graphic">-->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="20" viewBox="0 0 100 20"><script xmlns=""></script><polyline xmlns="http://www.w3.org/2000/svg" points="0.0,16.779502042147456 0.5952380952380952,17.550018519187667 1.1904761904761905,17.182108253483545 1.7857142857142856,16.632718844352866 2.380952380952381,16.777717962294023 2.9761904761904763,16.14987558725461 3.571428571428571,14.942960528966196 4.166666666666667,13.830270121943975 4.761904761904762,13.653563300853719 5.357142857142857,13.37754967278098 5.9523809523809526,14.19195919890847 6.5476190476190474,14.287791700022517 7.142857142857142,17.225336963559315 7.738095238095238,20 8.333333333333334,19.05365031442549 8.928571428571429,17.583475251833356 9.523809523809524,16.895526584377052 10.119047619047619,17.273413932038398 10.714285714285714,16.41585122463143 11.30952380952381,15.962379214434769 11.904761904761905,14.872655876833718 12.5,14.756395822856039 13.095238095238095,15.329128799486634 13.69047619047619,16.08754726058943 14.285714285714285,16.56480830271722 14.880952380952381,15.443045286669125 15.476190476190476,14.37584598552036 16.071428571428573,13.682845854663276 16.666666666666668,13.724350741721945 17.261904761904763,13.593446881279547 17.857142857142858,14.6716246484154 18.452380952380953,13.861827305724585 19.047619047619047,14.266102216877549 19.642857142857142,15.146792078212977 20.238095238095237,15.948592263920336 20.833333333333332,13.311349345275802 21.428571428571427,14.409174698540271 22.023809523809522,14.411916786777223 22.61904761904762,15.443834626130663 23.214285714285715,15.579054195720765 23.80952380952381,15.175768612782798 24.404761904761905,14.674043409918628 25,13.879977873251963 25.595238095238095,12.77952461531973 26.19047619047619,11.747439480194773 26.785714285714285,4.856120821091187 27.38095238095238,3.336730407248943 27.976190476190474,3.94553198376666 28.57142857142857,3.2503240002399423 29.166666666666668,2.6867628804386534 29.761904761904763,0.6266634864660858 30.357142857142858,1.3587221321423684 30.952380952380953,1.0125308314841739 31.547619047619047,1.0357867528144808 32.142857142857146,1.986389053643144 32.73809523809524,2.44127988981516 33.333333333333336,1.2387455560095724 33.92857142857143,0 34.523809523809526,0.7844197085311251 35.11904761904762,0.4600772821743284 35.714285714285715,1.5009698499180075 36.30952380952381,0.6777192061678114 36.904761904761905,2.351090477532132 37.5,2.0132700420044323 38.095238095238095,2.01319049087223 38.69047619047619,1.7924937261722924 39.285714285714285,2.407658764061914 39.88095238095238,5.90365769928597 40.476190476190474,6.260968416665287 41.07142857142857,6.369714731667381 41.666666666666664,11.341067291751363 42.26190476190476,12.63060654743055 42.857142857142854,12.231334859684926 43.45238095238095,12.40681945843114 44.047619047619044,12.606804434495128 44.642857142857146,12.712752191648262 45.23809523809524,13.245962899813168 45.833333333333336,13.083889364646994 46.42857142857143,12.486375293277256 47.023809523809526,13.545924314579677 47.61904761904762,12.314924752208697 48.214285714285715,12.684353122205536 48.80952380952381,13.038722779853783 49.404761904761905,12.746221363004842 50,12.731580467478658 50.595238095238095,12.195837471774244 51.19047619047619,10.989789219389994 51.785714285714285,12.128700139635662 52.38095238095238,11.72195532943868 52.976190476190474,11.761950978503895 53.57142857142857,12.395055080188484 54.166666666666664,14.848756860638186 54.76190476190476,15.778731811248718 55.357142857142854,14.348783777919628 55.95238095238095,15.166308238455034 56.547619047619044,14.510694688441928 57.14285714285714,13.928244088838357 57.73809523809524,12.830020735607093 58.333333333333336,13.6620426982535 58.92857142857143,13.450376373386657 59.523809523809526,13.449437589077984 60.11904761904762,13.313915444479392 60.714285714285715,10.457984783322 61.30952380952381,10.357421393853743 61.904761904761905,12.648571346020354 62.5,12.29762063218961 63.095238095238095,13.197183637225724 63.69047619047619,14.548364338646689 64.28571428571429,14.108340700471246 64.88095238095238,14.788158857417905 65.47619047619048,14.300888719274457 66.07142857142857,15.675213204418458 66.66666666666667,14.216928005114788 67.26190476190476,13.627035140877908 67.85714285714286,14.506787949995342 68.45238095238095,13.069211715868477 69.04761904761905,12.800231276348576 69.64285714285714,13.061445548832161 70.23809523809524,13.084005993435134 70.83333333333333,13.210690613007543 71.42857142857143,12.934481014923144 72.02380952380952,13.025235697633565 72.61904761904762,13.152527631313546 73.21428571428571,13.049721924460478 73.80952380952381,12.822834858554103 74.4047619047619,12.687212002779022 75,13.017058395210327 75.59523809523809,12.75793901553989 76.19047619047619,13.05279959026854 76.78571428571429,13.917929504516534 77.38095238095238,13.045188085280392 77.97619047619048,13.051533002690892 78.57142857142857,13.11375171311334 79.16666666666667,13.162150391596978 79.76190476190476,13.347650657537358 80.35714285714286,12.885662741108945 80.95238095238095,13.069379445734656 81.54761904761905,12.903047120695772 82.14285714285714,13.997885122489658 82.73809523809524,13.930306244051746 83.33333333333333,13.483447473357764 83.92857142857143,12.89891485063061 84.52380952380952,12.838778823374076 85.11904761904762,12.954666420318386 85.71428571428571,12.894128672452329 86.30952380952381,12.896772356648182 86.9047619047619,13.069266816614673 87.5,13.277133767366326 88.09523809523809,13.576880812291382 88.69047619047619,13.586374639921717 89.28571428571429,14.554154915296415 89.88095238095238,15.449416165875554 90.47619047619048,14.487283790763275 91.07142857142857,14.093242767279303 91.66666666666667,13.672531104653512 92.26190476190476,13.726566474174763 92.85714285714286,13.767397433464547 93.45238095238095,13.560280539057306 94.04761904761905,13.91508678839855 94.64285714285714,14.735301714536682 95.23809523809524,14.573535955034682 95.83333333333333,17.768357841682274 96.42857142857143,18.104864548051147 97.02380952380952,18.201821619158665 97.61904761904762,17.113588161004106 98.21428571428571,17.31016349531461 98.80952380952381,16.872928862933357 99.4047619047619,15.652911234917376" fill="none" stroke="#57bd0f" stroke-width="1.25"></polyline></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-name">
+                                <a class="crypto-name-link" href="#">
+                                    <div class="crypto-logo"><img src="/public/images/content/unicorn.png" alt="crypto logo"></div>
+                                    <div class="crypto-title">Uniswap V3</div>
+                                    <div class="crypto-btm">
+                                        <span class="crypto-item crypto-star crypto-star--filled">
+                                            <i class="icon-star"></i>
+                                        </span>
+                                        <span class="crypto-item crypto-ratenum">1</span>
+                                        <span class="crypto-item crypto-shortname-ic">
+                                            <img src="/public/images/content/cripto-ic.png" alt="cripto icon">
+                                        </span>
+                                        <span class="crypto-item crypto-shortname">BTC</span>
+                                        <span class="crypto-rate percentVal percentVal--up">+2</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>4630</td>
+                            <td><span class="percentVal percentVal--up">1.20%</span></td>
+                            <td><span class="percentVal percentVal--down">7.91%</span></td>
+                            <td>$808.518.20.245</td>
+                            <td>$25.458</td>
+                            <td>18.926.575 BTC</td>
+                            <td>
+                                <!--<img class="graph-ic" src="/public/images/content/graphic.png" alt="crypto graphic">-->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="20" viewBox="0 0 100 20"><script xmlns=""></script><polyline xmlns="http://www.w3.org/2000/svg" points="0.0,16.779502042147456 0.5952380952380952,17.550018519187667 1.1904761904761905,17.182108253483545 1.7857142857142856,16.632718844352866 2.380952380952381,16.777717962294023 2.9761904761904763,16.14987558725461 3.571428571428571,14.942960528966196 4.166666666666667,13.830270121943975 4.761904761904762,13.653563300853719 5.357142857142857,13.37754967278098 5.9523809523809526,14.19195919890847 6.5476190476190474,14.287791700022517 7.142857142857142,17.225336963559315 7.738095238095238,20 8.333333333333334,19.05365031442549 8.928571428571429,17.583475251833356 9.523809523809524,16.895526584377052 10.119047619047619,17.273413932038398 10.714285714285714,16.41585122463143 11.30952380952381,15.962379214434769 11.904761904761905,14.872655876833718 12.5,14.756395822856039 13.095238095238095,15.329128799486634 13.69047619047619,16.08754726058943 14.285714285714285,16.56480830271722 14.880952380952381,15.443045286669125 15.476190476190476,14.37584598552036 16.071428571428573,13.682845854663276 16.666666666666668,13.724350741721945 17.261904761904763,13.593446881279547 17.857142857142858,14.6716246484154 18.452380952380953,13.861827305724585 19.047619047619047,14.266102216877549 19.642857142857142,15.146792078212977 20.238095238095237,15.948592263920336 20.833333333333332,13.311349345275802 21.428571428571427,14.409174698540271 22.023809523809522,14.411916786777223 22.61904761904762,15.443834626130663 23.214285714285715,15.579054195720765 23.80952380952381,15.175768612782798 24.404761904761905,14.674043409918628 25,13.879977873251963 25.595238095238095,12.77952461531973 26.19047619047619,11.747439480194773 26.785714285714285,4.856120821091187 27.38095238095238,3.336730407248943 27.976190476190474,3.94553198376666 28.57142857142857,3.2503240002399423 29.166666666666668,2.6867628804386534 29.761904761904763,0.6266634864660858 30.357142857142858,1.3587221321423684 30.952380952380953,1.0125308314841739 31.547619047619047,1.0357867528144808 32.142857142857146,1.986389053643144 32.73809523809524,2.44127988981516 33.333333333333336,1.2387455560095724 33.92857142857143,0 34.523809523809526,0.7844197085311251 35.11904761904762,0.4600772821743284 35.714285714285715,1.5009698499180075 36.30952380952381,0.6777192061678114 36.904761904761905,2.351090477532132 37.5,2.0132700420044323 38.095238095238095,2.01319049087223 38.69047619047619,1.7924937261722924 39.285714285714285,2.407658764061914 39.88095238095238,5.90365769928597 40.476190476190474,6.260968416665287 41.07142857142857,6.369714731667381 41.666666666666664,11.341067291751363 42.26190476190476,12.63060654743055 42.857142857142854,12.231334859684926 43.45238095238095,12.40681945843114 44.047619047619044,12.606804434495128 44.642857142857146,12.712752191648262 45.23809523809524,13.245962899813168 45.833333333333336,13.083889364646994 46.42857142857143,12.486375293277256 47.023809523809526,13.545924314579677 47.61904761904762,12.314924752208697 48.214285714285715,12.684353122205536 48.80952380952381,13.038722779853783 49.404761904761905,12.746221363004842 50,12.731580467478658 50.595238095238095,12.195837471774244 51.19047619047619,10.989789219389994 51.785714285714285,12.128700139635662 52.38095238095238,11.72195532943868 52.976190476190474,11.761950978503895 53.57142857142857,12.395055080188484 54.166666666666664,14.848756860638186 54.76190476190476,15.778731811248718 55.357142857142854,14.348783777919628 55.95238095238095,15.166308238455034 56.547619047619044,14.510694688441928 57.14285714285714,13.928244088838357 57.73809523809524,12.830020735607093 58.333333333333336,13.6620426982535 58.92857142857143,13.450376373386657 59.523809523809526,13.449437589077984 60.11904761904762,13.313915444479392 60.714285714285715,10.457984783322 61.30952380952381,10.357421393853743 61.904761904761905,12.648571346020354 62.5,12.29762063218961 63.095238095238095,13.197183637225724 63.69047619047619,14.548364338646689 64.28571428571429,14.108340700471246 64.88095238095238,14.788158857417905 65.47619047619048,14.300888719274457 66.07142857142857,15.675213204418458 66.66666666666667,14.216928005114788 67.26190476190476,13.627035140877908 67.85714285714286,14.506787949995342 68.45238095238095,13.069211715868477 69.04761904761905,12.800231276348576 69.64285714285714,13.061445548832161 70.23809523809524,13.084005993435134 70.83333333333333,13.210690613007543 71.42857142857143,12.934481014923144 72.02380952380952,13.025235697633565 72.61904761904762,13.152527631313546 73.21428571428571,13.049721924460478 73.80952380952381,12.822834858554103 74.4047619047619,12.687212002779022 75,13.017058395210327 75.59523809523809,12.75793901553989 76.19047619047619,13.05279959026854 76.78571428571429,13.917929504516534 77.38095238095238,13.045188085280392 77.97619047619048,13.051533002690892 78.57142857142857,13.11375171311334 79.16666666666667,13.162150391596978 79.76190476190476,13.347650657537358 80.35714285714286,12.885662741108945 80.95238095238095,13.069379445734656 81.54761904761905,12.903047120695772 82.14285714285714,13.997885122489658 82.73809523809524,13.930306244051746 83.33333333333333,13.483447473357764 83.92857142857143,12.89891485063061 84.52380952380952,12.838778823374076 85.11904761904762,12.954666420318386 85.71428571428571,12.894128672452329 86.30952380952381,12.896772356648182 86.9047619047619,13.069266816614673 87.5,13.277133767366326 88.09523809523809,13.576880812291382 88.69047619047619,13.586374639921717 89.28571428571429,14.554154915296415 89.88095238095238,15.449416165875554 90.47619047619048,14.487283790763275 91.07142857142857,14.093242767279303 91.66666666666667,13.672531104653512 92.26190476190476,13.726566474174763 92.85714285714286,13.767397433464547 93.45238095238095,13.560280539057306 94.04761904761905,13.91508678839855 94.64285714285714,14.735301714536682 95.23809523809524,14.573535955034682 95.83333333333333,17.768357841682274 96.42857142857143,18.104864548051147 97.02380952380952,18.201821619158665 97.61904761904762,17.113588161004106 98.21428571428571,17.31016349531461 98.80952380952381,16.872928862933357 99.4047619047619,15.652911234917376" fill="none" stroke="#57bd0f" stroke-width="1.25"></polyline></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-name">
+                                <a class="crypto-name-link" href="#">
+                                    <div class="crypto-logo"><img src="/public/images/content/maker.png" alt="crypto logo"></div>
+                                    <div class="crypto-title">Maker DAO</div>
+                                    <div class="crypto-btm">
+                                        <span class="crypto-item crypto-star">
+                                            <i class="icon-star"></i>
+                                        </span>
+                                        <span class="crypto-item crypto-ratenum">2</span>
+                                        <span class="crypto-item crypto-shortname-ic">
+                                            <img src="/public/images/content/cripto-ic.png" alt="cripto icon">
+                                        </span>
+                                        <span class="crypto-item crypto-shortname">ETH</span>
+                                        <span class="crypto-rate percentVal percentVal--up">+2</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>4630</td>
+                            <td><span class="percentVal percentVal--up">1.20%</span></td>
+                            <td><span class="percentVal percentVal--down">7.91%</span></td>
+                            <td>$808.518.20.245</td>
+                            <td>$25.458</td>
+                            <td>18.926.575 BTC</td>
+                            <td>
+                                <!--<img class="graph-ic" src="/public/images/content/graphic.png" alt="crypto graphic">-->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="20" viewBox="0 0 100 20"><script xmlns=""></script><polyline xmlns="http://www.w3.org/2000/svg" points="0.0,16.779502042147456 0.5952380952380952,17.550018519187667 1.1904761904761905,17.182108253483545 1.7857142857142856,16.632718844352866 2.380952380952381,16.777717962294023 2.9761904761904763,16.14987558725461 3.571428571428571,14.942960528966196 4.166666666666667,13.830270121943975 4.761904761904762,13.653563300853719 5.357142857142857,13.37754967278098 5.9523809523809526,14.19195919890847 6.5476190476190474,14.287791700022517 7.142857142857142,17.225336963559315 7.738095238095238,20 8.333333333333334,19.05365031442549 8.928571428571429,17.583475251833356 9.523809523809524,16.895526584377052 10.119047619047619,17.273413932038398 10.714285714285714,16.41585122463143 11.30952380952381,15.962379214434769 11.904761904761905,14.872655876833718 12.5,14.756395822856039 13.095238095238095,15.329128799486634 13.69047619047619,16.08754726058943 14.285714285714285,16.56480830271722 14.880952380952381,15.443045286669125 15.476190476190476,14.37584598552036 16.071428571428573,13.682845854663276 16.666666666666668,13.724350741721945 17.261904761904763,13.593446881279547 17.857142857142858,14.6716246484154 18.452380952380953,13.861827305724585 19.047619047619047,14.266102216877549 19.642857142857142,15.146792078212977 20.238095238095237,15.948592263920336 20.833333333333332,13.311349345275802 21.428571428571427,14.409174698540271 22.023809523809522,14.411916786777223 22.61904761904762,15.443834626130663 23.214285714285715,15.579054195720765 23.80952380952381,15.175768612782798 24.404761904761905,14.674043409918628 25,13.879977873251963 25.595238095238095,12.77952461531973 26.19047619047619,11.747439480194773 26.785714285714285,4.856120821091187 27.38095238095238,3.336730407248943 27.976190476190474,3.94553198376666 28.57142857142857,3.2503240002399423 29.166666666666668,2.6867628804386534 29.761904761904763,0.6266634864660858 30.357142857142858,1.3587221321423684 30.952380952380953,1.0125308314841739 31.547619047619047,1.0357867528144808 32.142857142857146,1.986389053643144 32.73809523809524,2.44127988981516 33.333333333333336,1.2387455560095724 33.92857142857143,0 34.523809523809526,0.7844197085311251 35.11904761904762,0.4600772821743284 35.714285714285715,1.5009698499180075 36.30952380952381,0.6777192061678114 36.904761904761905,2.351090477532132 37.5,2.0132700420044323 38.095238095238095,2.01319049087223 38.69047619047619,1.7924937261722924 39.285714285714285,2.407658764061914 39.88095238095238,5.90365769928597 40.476190476190474,6.260968416665287 41.07142857142857,6.369714731667381 41.666666666666664,11.341067291751363 42.26190476190476,12.63060654743055 42.857142857142854,12.231334859684926 43.45238095238095,12.40681945843114 44.047619047619044,12.606804434495128 44.642857142857146,12.712752191648262 45.23809523809524,13.245962899813168 45.833333333333336,13.083889364646994 46.42857142857143,12.486375293277256 47.023809523809526,13.545924314579677 47.61904761904762,12.314924752208697 48.214285714285715,12.684353122205536 48.80952380952381,13.038722779853783 49.404761904761905,12.746221363004842 50,12.731580467478658 50.595238095238095,12.195837471774244 51.19047619047619,10.989789219389994 51.785714285714285,12.128700139635662 52.38095238095238,11.72195532943868 52.976190476190474,11.761950978503895 53.57142857142857,12.395055080188484 54.166666666666664,14.848756860638186 54.76190476190476,15.778731811248718 55.357142857142854,14.348783777919628 55.95238095238095,15.166308238455034 56.547619047619044,14.510694688441928 57.14285714285714,13.928244088838357 57.73809523809524,12.830020735607093 58.333333333333336,13.6620426982535 58.92857142857143,13.450376373386657 59.523809523809526,13.449437589077984 60.11904761904762,13.313915444479392 60.714285714285715,10.457984783322 61.30952380952381,10.357421393853743 61.904761904761905,12.648571346020354 62.5,12.29762063218961 63.095238095238095,13.197183637225724 63.69047619047619,14.548364338646689 64.28571428571429,14.108340700471246 64.88095238095238,14.788158857417905 65.47619047619048,14.300888719274457 66.07142857142857,15.675213204418458 66.66666666666667,14.216928005114788 67.26190476190476,13.627035140877908 67.85714285714286,14.506787949995342 68.45238095238095,13.069211715868477 69.04761904761905,12.800231276348576 69.64285714285714,13.061445548832161 70.23809523809524,13.084005993435134 70.83333333333333,13.210690613007543 71.42857142857143,12.934481014923144 72.02380952380952,13.025235697633565 72.61904761904762,13.152527631313546 73.21428571428571,13.049721924460478 73.80952380952381,12.822834858554103 74.4047619047619,12.687212002779022 75,13.017058395210327 75.59523809523809,12.75793901553989 76.19047619047619,13.05279959026854 76.78571428571429,13.917929504516534 77.38095238095238,13.045188085280392 77.97619047619048,13.051533002690892 78.57142857142857,13.11375171311334 79.16666666666667,13.162150391596978 79.76190476190476,13.347650657537358 80.35714285714286,12.885662741108945 80.95238095238095,13.069379445734656 81.54761904761905,12.903047120695772 82.14285714285714,13.997885122489658 82.73809523809524,13.930306244051746 83.33333333333333,13.483447473357764 83.92857142857143,12.89891485063061 84.52380952380952,12.838778823374076 85.11904761904762,12.954666420318386 85.71428571428571,12.894128672452329 86.30952380952381,12.896772356648182 86.9047619047619,13.069266816614673 87.5,13.277133767366326 88.09523809523809,13.576880812291382 88.69047619047619,13.586374639921717 89.28571428571429,14.554154915296415 89.88095238095238,15.449416165875554 90.47619047619048,14.487283790763275 91.07142857142857,14.093242767279303 91.66666666666667,13.672531104653512 92.26190476190476,13.726566474174763 92.85714285714286,13.767397433464547 93.45238095238095,13.560280539057306 94.04761904761905,13.91508678839855 94.64285714285714,14.735301714536682 95.23809523809524,14.573535955034682 95.83333333333333,17.768357841682274 96.42857142857143,18.104864548051147 97.02380952380952,18.201821619158665 97.61904761904762,17.113588161004106 98.21428571428571,17.31016349531461 98.80952380952381,16.872928862933357 99.4047619047619,15.652911234917376" fill="none" stroke="#57bd0f" stroke-width="1.25"></polyline></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-name">
+                                <a class="crypto-name-link" href="#">
+                                    <div class="crypto-logo"><img src="/public/images/content/unicorn.png" alt="crypto logo"></div>
+                                    <div class="crypto-title">Uniswap V3</div>
+                                    <div class="crypto-btm">
+                                        <span class="crypto-item crypto-star crypto-star--filled">
+                                            <i class="icon-star"></i>
+                                        </span>
+                                        <span class="crypto-item crypto-ratenum">1</span>
+                                        <span class="crypto-item crypto-shortname-ic">
+                                            <img src="/public/images/content/cripto-ic.png" alt="cripto icon">
+                                        </span>
+                                        <span class="crypto-item crypto-shortname">BTC</span>
+                                        <span class="crypto-rate percentVal percentVal--up">+2</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>4630</td>
+                            <td><span class="percentVal percentVal--up">1.20%</span></td>
+                            <td><span class="percentVal percentVal--down">7.91%</span></td>
+                            <td>$808.518.20.245</td>
+                            <td>$25.458</td>
+                            <td>18.926.575 BTC</td>
+                            <td>
+                                <!--<img class="graph-ic" src="/public/images/content/graphic.png" alt="crypto graphic">-->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="20" viewBox="0 0 100 20"><script xmlns=""></script><polyline xmlns="http://www.w3.org/2000/svg" points="0.0,16.779502042147456 0.5952380952380952,17.550018519187667 1.1904761904761905,17.182108253483545 1.7857142857142856,16.632718844352866 2.380952380952381,16.777717962294023 2.9761904761904763,16.14987558725461 3.571428571428571,14.942960528966196 4.166666666666667,13.830270121943975 4.761904761904762,13.653563300853719 5.357142857142857,13.37754967278098 5.9523809523809526,14.19195919890847 6.5476190476190474,14.287791700022517 7.142857142857142,17.225336963559315 7.738095238095238,20 8.333333333333334,19.05365031442549 8.928571428571429,17.583475251833356 9.523809523809524,16.895526584377052 10.119047619047619,17.273413932038398 10.714285714285714,16.41585122463143 11.30952380952381,15.962379214434769 11.904761904761905,14.872655876833718 12.5,14.756395822856039 13.095238095238095,15.329128799486634 13.69047619047619,16.08754726058943 14.285714285714285,16.56480830271722 14.880952380952381,15.443045286669125 15.476190476190476,14.37584598552036 16.071428571428573,13.682845854663276 16.666666666666668,13.724350741721945 17.261904761904763,13.593446881279547 17.857142857142858,14.6716246484154 18.452380952380953,13.861827305724585 19.047619047619047,14.266102216877549 19.642857142857142,15.146792078212977 20.238095238095237,15.948592263920336 20.833333333333332,13.311349345275802 21.428571428571427,14.409174698540271 22.023809523809522,14.411916786777223 22.61904761904762,15.443834626130663 23.214285714285715,15.579054195720765 23.80952380952381,15.175768612782798 24.404761904761905,14.674043409918628 25,13.879977873251963 25.595238095238095,12.77952461531973 26.19047619047619,11.747439480194773 26.785714285714285,4.856120821091187 27.38095238095238,3.336730407248943 27.976190476190474,3.94553198376666 28.57142857142857,3.2503240002399423 29.166666666666668,2.6867628804386534 29.761904761904763,0.6266634864660858 30.357142857142858,1.3587221321423684 30.952380952380953,1.0125308314841739 31.547619047619047,1.0357867528144808 32.142857142857146,1.986389053643144 32.73809523809524,2.44127988981516 33.333333333333336,1.2387455560095724 33.92857142857143,0 34.523809523809526,0.7844197085311251 35.11904761904762,0.4600772821743284 35.714285714285715,1.5009698499180075 36.30952380952381,0.6777192061678114 36.904761904761905,2.351090477532132 37.5,2.0132700420044323 38.095238095238095,2.01319049087223 38.69047619047619,1.7924937261722924 39.285714285714285,2.407658764061914 39.88095238095238,5.90365769928597 40.476190476190474,6.260968416665287 41.07142857142857,6.369714731667381 41.666666666666664,11.341067291751363 42.26190476190476,12.63060654743055 42.857142857142854,12.231334859684926 43.45238095238095,12.40681945843114 44.047619047619044,12.606804434495128 44.642857142857146,12.712752191648262 45.23809523809524,13.245962899813168 45.833333333333336,13.083889364646994 46.42857142857143,12.486375293277256 47.023809523809526,13.545924314579677 47.61904761904762,12.314924752208697 48.214285714285715,12.684353122205536 48.80952380952381,13.038722779853783 49.404761904761905,12.746221363004842 50,12.731580467478658 50.595238095238095,12.195837471774244 51.19047619047619,10.989789219389994 51.785714285714285,12.128700139635662 52.38095238095238,11.72195532943868 52.976190476190474,11.761950978503895 53.57142857142857,12.395055080188484 54.166666666666664,14.848756860638186 54.76190476190476,15.778731811248718 55.357142857142854,14.348783777919628 55.95238095238095,15.166308238455034 56.547619047619044,14.510694688441928 57.14285714285714,13.928244088838357 57.73809523809524,12.830020735607093 58.333333333333336,13.6620426982535 58.92857142857143,13.450376373386657 59.523809523809526,13.449437589077984 60.11904761904762,13.313915444479392 60.714285714285715,10.457984783322 61.30952380952381,10.357421393853743 61.904761904761905,12.648571346020354 62.5,12.29762063218961 63.095238095238095,13.197183637225724 63.69047619047619,14.548364338646689 64.28571428571429,14.108340700471246 64.88095238095238,14.788158857417905 65.47619047619048,14.300888719274457 66.07142857142857,15.675213204418458 66.66666666666667,14.216928005114788 67.26190476190476,13.627035140877908 67.85714285714286,14.506787949995342 68.45238095238095,13.069211715868477 69.04761904761905,12.800231276348576 69.64285714285714,13.061445548832161 70.23809523809524,13.084005993435134 70.83333333333333,13.210690613007543 71.42857142857143,12.934481014923144 72.02380952380952,13.025235697633565 72.61904761904762,13.152527631313546 73.21428571428571,13.049721924460478 73.80952380952381,12.822834858554103 74.4047619047619,12.687212002779022 75,13.017058395210327 75.59523809523809,12.75793901553989 76.19047619047619,13.05279959026854 76.78571428571429,13.917929504516534 77.38095238095238,13.045188085280392 77.97619047619048,13.051533002690892 78.57142857142857,13.11375171311334 79.16666666666667,13.162150391596978 79.76190476190476,13.347650657537358 80.35714285714286,12.885662741108945 80.95238095238095,13.069379445734656 81.54761904761905,12.903047120695772 82.14285714285714,13.997885122489658 82.73809523809524,13.930306244051746 83.33333333333333,13.483447473357764 83.92857142857143,12.89891485063061 84.52380952380952,12.838778823374076 85.11904761904762,12.954666420318386 85.71428571428571,12.894128672452329 86.30952380952381,12.896772356648182 86.9047619047619,13.069266816614673 87.5,13.277133767366326 88.09523809523809,13.576880812291382 88.69047619047619,13.586374639921717 89.28571428571429,14.554154915296415 89.88095238095238,15.449416165875554 90.47619047619048,14.487283790763275 91.07142857142857,14.093242767279303 91.66666666666667,13.672531104653512 92.26190476190476,13.726566474174763 92.85714285714286,13.767397433464547 93.45238095238095,13.560280539057306 94.04761904761905,13.91508678839855 94.64285714285714,14.735301714536682 95.23809523809524,14.573535955034682 95.83333333333333,17.768357841682274 96.42857142857143,18.104864548051147 97.02380952380952,18.201821619158665 97.61904761904762,17.113588161004106 98.21428571428571,17.31016349531461 98.80952380952381,16.872928862933357 99.4047619047619,15.652911234917376" fill="none" stroke="#57bd0f" stroke-width="1.25"></polyline></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-name">
+                                <a class="crypto-name-link" href="#">
+                                    <div class="crypto-logo"><img src="/public/images/content/maker.png" alt="crypto logo"></div>
+                                    <div class="crypto-title">Maker DAO</div>
+                                    <div class="crypto-btm">
+                                        <span class="crypto-item crypto-star">
+                                            <i class="icon-star"></i>
+                                        </span>
+                                        <span class="crypto-item crypto-ratenum">2</span>
+                                        <span class="crypto-item crypto-shortname-ic">
+                                            <img src="/public/images/content/cripto-ic.png" alt="cripto icon">
+                                        </span>
+                                        <span class="crypto-item crypto-shortname">ETH</span>
+                                        <span class="crypto-rate percentVal percentVal--up">+2</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>4630</td>
+                            <td><span class="percentVal percentVal--up">1.20%</span></td>
+                            <td><span class="percentVal percentVal--down">7.91%</span></td>
+                            <td>$808.518.20.245</td>
+                            <td>$25.458</td>
+                            <td>18.926.575 BTC</td>
+                            <td>
+                                <!--<img class="graph-ic" src="/public/images/content/graphic.png" alt="crypto graphic">-->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="20" viewBox="0 0 100 20"><script xmlns=""></script><polyline xmlns="http://www.w3.org/2000/svg" points="0.0,16.779502042147456 0.5952380952380952,17.550018519187667 1.1904761904761905,17.182108253483545 1.7857142857142856,16.632718844352866 2.380952380952381,16.777717962294023 2.9761904761904763,16.14987558725461 3.571428571428571,14.942960528966196 4.166666666666667,13.830270121943975 4.761904761904762,13.653563300853719 5.357142857142857,13.37754967278098 5.9523809523809526,14.19195919890847 6.5476190476190474,14.287791700022517 7.142857142857142,17.225336963559315 7.738095238095238,20 8.333333333333334,19.05365031442549 8.928571428571429,17.583475251833356 9.523809523809524,16.895526584377052 10.119047619047619,17.273413932038398 10.714285714285714,16.41585122463143 11.30952380952381,15.962379214434769 11.904761904761905,14.872655876833718 12.5,14.756395822856039 13.095238095238095,15.329128799486634 13.69047619047619,16.08754726058943 14.285714285714285,16.56480830271722 14.880952380952381,15.443045286669125 15.476190476190476,14.37584598552036 16.071428571428573,13.682845854663276 16.666666666666668,13.724350741721945 17.261904761904763,13.593446881279547 17.857142857142858,14.6716246484154 18.452380952380953,13.861827305724585 19.047619047619047,14.266102216877549 19.642857142857142,15.146792078212977 20.238095238095237,15.948592263920336 20.833333333333332,13.311349345275802 21.428571428571427,14.409174698540271 22.023809523809522,14.411916786777223 22.61904761904762,15.443834626130663 23.214285714285715,15.579054195720765 23.80952380952381,15.175768612782798 24.404761904761905,14.674043409918628 25,13.879977873251963 25.595238095238095,12.77952461531973 26.19047619047619,11.747439480194773 26.785714285714285,4.856120821091187 27.38095238095238,3.336730407248943 27.976190476190474,3.94553198376666 28.57142857142857,3.2503240002399423 29.166666666666668,2.6867628804386534 29.761904761904763,0.6266634864660858 30.357142857142858,1.3587221321423684 30.952380952380953,1.0125308314841739 31.547619047619047,1.0357867528144808 32.142857142857146,1.986389053643144 32.73809523809524,2.44127988981516 33.333333333333336,1.2387455560095724 33.92857142857143,0 34.523809523809526,0.7844197085311251 35.11904761904762,0.4600772821743284 35.714285714285715,1.5009698499180075 36.30952380952381,0.6777192061678114 36.904761904761905,2.351090477532132 37.5,2.0132700420044323 38.095238095238095,2.01319049087223 38.69047619047619,1.7924937261722924 39.285714285714285,2.407658764061914 39.88095238095238,5.90365769928597 40.476190476190474,6.260968416665287 41.07142857142857,6.369714731667381 41.666666666666664,11.341067291751363 42.26190476190476,12.63060654743055 42.857142857142854,12.231334859684926 43.45238095238095,12.40681945843114 44.047619047619044,12.606804434495128 44.642857142857146,12.712752191648262 45.23809523809524,13.245962899813168 45.833333333333336,13.083889364646994 46.42857142857143,12.486375293277256 47.023809523809526,13.545924314579677 47.61904761904762,12.314924752208697 48.214285714285715,12.684353122205536 48.80952380952381,13.038722779853783 49.404761904761905,12.746221363004842 50,12.731580467478658 50.595238095238095,12.195837471774244 51.19047619047619,10.989789219389994 51.785714285714285,12.128700139635662 52.38095238095238,11.72195532943868 52.976190476190474,11.761950978503895 53.57142857142857,12.395055080188484 54.166666666666664,14.848756860638186 54.76190476190476,15.778731811248718 55.357142857142854,14.348783777919628 55.95238095238095,15.166308238455034 56.547619047619044,14.510694688441928 57.14285714285714,13.928244088838357 57.73809523809524,12.830020735607093 58.333333333333336,13.6620426982535 58.92857142857143,13.450376373386657 59.523809523809526,13.449437589077984 60.11904761904762,13.313915444479392 60.714285714285715,10.457984783322 61.30952380952381,10.357421393853743 61.904761904761905,12.648571346020354 62.5,12.29762063218961 63.095238095238095,13.197183637225724 63.69047619047619,14.548364338646689 64.28571428571429,14.108340700471246 64.88095238095238,14.788158857417905 65.47619047619048,14.300888719274457 66.07142857142857,15.675213204418458 66.66666666666667,14.216928005114788 67.26190476190476,13.627035140877908 67.85714285714286,14.506787949995342 68.45238095238095,13.069211715868477 69.04761904761905,12.800231276348576 69.64285714285714,13.061445548832161 70.23809523809524,13.084005993435134 70.83333333333333,13.210690613007543 71.42857142857143,12.934481014923144 72.02380952380952,13.025235697633565 72.61904761904762,13.152527631313546 73.21428571428571,13.049721924460478 73.80952380952381,12.822834858554103 74.4047619047619,12.687212002779022 75,13.017058395210327 75.59523809523809,12.75793901553989 76.19047619047619,13.05279959026854 76.78571428571429,13.917929504516534 77.38095238095238,13.045188085280392 77.97619047619048,13.051533002690892 78.57142857142857,13.11375171311334 79.16666666666667,13.162150391596978 79.76190476190476,13.347650657537358 80.35714285714286,12.885662741108945 80.95238095238095,13.069379445734656 81.54761904761905,12.903047120695772 82.14285714285714,13.997885122489658 82.73809523809524,13.930306244051746 83.33333333333333,13.483447473357764 83.92857142857143,12.89891485063061 84.52380952380952,12.838778823374076 85.11904761904762,12.954666420318386 85.71428571428571,12.894128672452329 86.30952380952381,12.896772356648182 86.9047619047619,13.069266816614673 87.5,13.277133767366326 88.09523809523809,13.576880812291382 88.69047619047619,13.586374639921717 89.28571428571429,14.554154915296415 89.88095238095238,15.449416165875554 90.47619047619048,14.487283790763275 91.07142857142857,14.093242767279303 91.66666666666667,13.672531104653512 92.26190476190476,13.726566474174763 92.85714285714286,13.767397433464547 93.45238095238095,13.560280539057306 94.04761904761905,13.91508678839855 94.64285714285714,14.735301714536682 95.23809523809524,14.573535955034682 95.83333333333333,17.768357841682274 96.42857142857143,18.104864548051147 97.02380952380952,18.201821619158665 97.61904761904762,17.113588161004106 98.21428571428571,17.31016349531461 98.80952380952381,16.872928862933357 99.4047619047619,15.652911234917376" fill="none" stroke="#57bd0f" stroke-width="1.25"></polyline></svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <button class="btn btn-w100 btn-seemore" type="button">Показать еще</button>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- Исследуйте коллекции ----------------------------->
+    <section class="banner banner-news-user">
+        <div class="container">
+            <div class="banner-in ">
+                <img src="/public/images/content/banner5.jpg" alt="banner">
+                <p class="breadcrumbs">Cryptocurrencies &gt; Coins &gt; <span>Bitcoin</span> </p>
+                <h2 class="title">
+                    <span>Исследуйте</span>
+                    <span class="text-grey">коллекции</span>
+                </h2>
+                <ul class="menu">
+                    <li class="menu__item active" ><a href="" class="menu__link">Новинки</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Рейтинги</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Мои NFT</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item" ><a href="" class="menu__link">Доменные имена</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+        <div class="container">
+            <div class="section-in">
+                <div class="explore-top">
+
+                    <p class="breadcrumbs">Buy Now > Azuki > <span>Ethereum</span></p>
+
+                    <a href="#">Clear All</a>
+
+                    <p class="select select-all-items">All Items</p>
+
+                    <p>Sort by</p>
+
+                    <button class="btn-grid btn-grid-9"></button>
+                    <button class="btn-grid btn-grid-4"></button>
+
+
+                </div>
+                <div class="explore-left">
+
+                </div>
+                <div class="explore-content">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- Исследуйте коллекции end ----------------------------->
+</div>
+<br><br><br>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="copyright">Copyright 2021 Dapp.Expert - Все права защищены.</div>
+            <div class="footer__btm">
+                <div class="logo"><img src="../public/images/content/logo_short.jpg" alt="dappexpert"></div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#">Условия и положения</a></li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
+                    <li class="menu-item"><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+                <ul class="social-menu">
+                    <li class="">
+                        <a href="#" class="social-menu-link twitter">
+                            <svg class="social-menu__icon"><use xlink:href="#twitter-icon"/></svg>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="#" class="social-menu-link facebook">
+                            <svg class="social-menu__icon"><use xlink:href="#facebook-icon"/></svg>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="#" class="social-menu-link instagram">
+                            <svg class="social-menu__icon"><use xlink:href="#instagram-icon"/></svg>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="#" class="social-menu-link telegram">
+                            <svg class="social-menu__icon"><use xlink:href="#telegram-icon"/></svg>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="#" class="social-menu-link vcontacte">
+                            <svg class="social-menu__icon"><use xlink:href="#vcontacte-icon"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="svg-icon-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="search-icon" viewBox="0 0 19 19">
+            <path d="M1.75 9C1.75 4.99594 4.99594 1.75 9 1.75C13.0041 1.75 16.25 4.99594 16.25 9C16.25 13.0041 13.0041 16.25 9 16.25C4.99594 16.25 1.75 13.0041 1.75 9ZM9 0.25C4.16751 0.25 0.25 4.16751 0.25 9C0.25 13.8325 4.16751 17.75 9 17.75C11.1462 17.75 13.112 16.9773 14.6342 15.6949L17.4697 18.5303C17.7626 18.8232 18.2374 18.8232 18.5303 18.5303C18.8232 18.2374 18.8232 17.7626 18.5303 17.4697L15.6949 14.6342C16.9773 13.112 17.75 11.1462 17.75 9C17.75 4.16751 13.8325 0.25 9 0.25Z"/>
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="facebook-icon" viewBox="0 0 24 24">
+            <path d="M12.0012 0.335632C5.55886 0.335632 0.335693 5.5588 0.335693 12.0011C0.335693 17.8228 4.60103 22.6481 10.1789 23.5266V15.374H7.21553V12.0011H10.1789V9.43097C10.1789 6.50497 11.9207 4.89147 14.5842 4.89147C15.8605 4.89147 17.1975 5.11897 17.1975 5.11897V7.9878H15.7229C14.2762 7.9878 13.8235 8.88846 13.8235 9.8113V11.9988H17.0564L16.5395 15.3716H13.8235V23.5243C19.4014 22.6505 23.6667 17.824 23.6667 12.0011C23.6667 5.5588 18.4435 0.335632 12.0012 0.335632Z"/>
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="instagram-icon" viewBox="0 0 22 22">
+            <path d="M21.4378 6.68939C21.426 5.80579 21.2606 4.93096 20.9489 4.10406C20.6787 3.40657 20.2659 2.77312 19.737 2.24419C19.208 1.71526 18.5746 1.30248 17.8771 1.03222C17.0608 0.725808 16.1985 0.560123 15.3268 0.542225C14.2044 0.492058 13.8486 0.478058 10.9996 0.478058C8.15059 0.478058 7.78543 0.478058 6.67126 0.542225C5.79995 0.560254 4.938 0.725937 4.12209 1.03222C3.42449 1.3023 2.79095 1.71501 2.262 2.24396C1.73305 2.77292 1.32033 3.40646 1.05026 4.10406C0.74323 4.91971 0.577904 5.78185 0.561427 6.65323C0.51126 7.77673 0.496094 8.13256 0.496094 10.9816C0.496094 13.8306 0.496094 14.1946 0.561427 15.3099C0.578927 16.1826 0.743427 17.0436 1.05026 17.8614C1.32078 18.5588 1.73381 19.1921 2.26294 19.7208C2.79207 20.2495 3.42567 20.6621 4.12326 20.9321C4.93693 21.2508 5.79903 21.4283 6.67243 21.4571C7.79593 21.5072 8.15176 21.5224 11.0008 21.5224C13.8498 21.5224 14.2149 21.5224 15.3291 21.4571C16.2008 21.4399 17.0632 21.2746 17.8794 20.9682C18.5767 20.6977 19.21 20.2848 19.7389 19.7559C20.2678 19.227 20.6807 18.5937 20.9513 17.8964C21.2581 17.0797 21.4226 16.2187 21.4401 15.3449C21.4903 14.2226 21.5054 13.8667 21.5054 11.0166C21.5031 8.16756 21.5031 7.80589 21.4378 6.68939ZM10.9926 16.3692C8.01293 16.3692 5.59909 13.9554 5.59909 10.9757C5.59909 7.99606 8.01293 5.58222 10.9926 5.58222C12.423 5.58222 13.7949 6.15047 14.8064 7.16195C15.8179 8.17342 16.3861 9.54528 16.3861 10.9757C16.3861 12.4062 15.8179 13.778 14.8064 14.7895C13.7949 15.801 12.423 16.3692 10.9926 16.3692ZM16.6008 6.64039C16.4356 6.64054 16.2719 6.60812 16.1193 6.54497C15.9666 6.48182 15.8279 6.38919 15.7111 6.27237C15.5943 6.15556 15.5017 6.01685 15.4385 5.86419C15.3754 5.71154 15.3429 5.54793 15.3431 5.38272C15.3431 5.21764 15.3756 5.05418 15.4388 4.90166C15.502 4.74914 15.5946 4.61056 15.7113 4.49383C15.828 4.3771 15.9666 4.28451 16.1191 4.22133C16.2716 4.15816 16.4351 4.12564 16.6002 4.12564C16.7653 4.12564 16.9287 4.15816 17.0812 4.22133C17.2338 4.28451 17.3723 4.3771 17.4891 4.49383C17.6058 4.61056 17.6984 4.74914 17.7616 4.90166C17.8247 5.05418 17.8573 5.21764 17.8573 5.38272C17.8573 6.07806 17.2949 6.64039 16.6008 6.64039Z"/>
+            <path d="M10.9926 14.4788C12.9275 14.4788 14.4961 12.9102 14.4961 10.9753C14.4961 9.04034 12.9275 7.47176 10.9926 7.47176C9.05769 7.47176 7.48912 9.04034 7.48912 10.9753C7.48912 12.9102 9.05769 14.4788 10.9926 14.4788Z"/>
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="telegram-icon" viewBox="0 0 24 20">
+            <path d="M22.1074 0.336778L1.42241 8.31328C0.0107388 8.88028 0.0189056 9.66778 1.16341 10.0189L6.47407 11.6756L18.7614 3.92311C19.3424 3.56961 19.8732 3.75978 19.4369 4.14711L9.48174 13.1316H9.47941L9.48174 13.1328L9.11541 18.6068C9.65207 18.6068 9.88891 18.3606 10.1899 18.0701L12.7694 15.5618L18.1349 19.5249C19.1242 20.0698 19.8347 19.7898 20.0809 18.6091L23.6031 2.00978C23.9636 0.564279 23.0512 -0.0902216 22.1074 0.336778Z"/>
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="twitter-icon" viewBox="0 0 24 20">
+            <path d="M20.9039 5.32948C20.919 5.53364 20.919 5.73664 20.919 5.93964C20.919 12.1521 16.1905 19.3108 7.54903 19.3108C4.8867 19.3108 2.41336 18.5396 0.332031 17.2003C0.710031 17.2435 1.07403 17.2586 1.4672 17.2586C3.58236 17.2638 5.63762 16.5565 7.3017 15.2508C6.32102 15.2331 5.37037 14.9095 4.58248 14.3253C3.79458 13.7412 3.20878 12.9255 2.90686 11.9923C3.19736 12.0355 3.48903 12.0646 3.7947 12.0646C4.21586 12.0646 4.63936 12.0063 5.03253 11.9048C3.96825 11.6899 3.01125 11.1131 2.32425 10.2723C1.63726 9.4315 1.26267 8.37873 1.2642 7.29298V7.23464C1.8907 7.58348 2.61753 7.80164 3.38753 7.83081C2.74247 7.40216 2.21354 6.8205 1.84793 6.13773C1.48232 5.45496 1.2914 4.69231 1.2922 3.91781C1.2922 3.04514 1.52436 2.24481 1.93153 1.54714C3.11236 2.99967 4.58512 4.18797 6.25442 5.03508C7.92373 5.88219 9.75235 6.36923 11.6219 6.46464C11.5495 6.11464 11.5052 5.75181 11.5052 5.38781C11.5049 4.7706 11.6262 4.15938 11.8623 3.58909C12.0983 3.0188 12.4445 2.50063 12.8809 2.0642C13.3174 1.62776 13.8355 1.28162 14.4058 1.04557C14.9761 0.809513 15.5873 0.68817 16.2045 0.688477C17.5579 0.688477 18.7794 1.25548 19.638 2.17248C20.6901 1.96903 21.699 1.58497 22.62 1.03731C22.2693 2.12326 21.5347 3.0441 20.5539 3.62731C21.4869 3.52089 22.3989 3.2755 23.2594 2.89931C22.6167 3.83626 21.8203 4.65788 20.9039 5.32948Z"/>
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="youtube-icon" viewBox="0 0 24 18">
+            <path d="M23.1919 3.40353C23.059 2.9105 22.7993 2.46086 22.4386 2.09939C22.078 1.73791 21.6289 1.4772 21.1362 1.34319C19.3092 0.841526 12 0.83336 12 0.83336C12 0.83336 4.69205 0.825193 2.86388 1.30469C2.37146 1.44486 1.92334 1.70927 1.56254 2.07252C1.20174 2.43577 0.940382 2.88567 0.803549 3.37903C0.321716 5.20603 0.317049 8.99536 0.317049 8.99536C0.317049 8.99536 0.312382 12.8034 0.790715 14.6117C1.05905 15.6115 1.84655 16.4014 2.84755 16.6709C4.69322 17.1725 11.9825 17.1807 11.9825 17.1807C11.9825 17.1807 19.2917 17.1889 21.1187 16.7105C21.6116 16.5768 22.0611 16.3166 22.4226 15.9559C22.7842 15.5952 23.0453 15.1463 23.1802 14.6537C23.6632 12.8279 23.6667 9.03969 23.6667 9.03969C23.6667 9.03969 23.69 5.23053 23.1919 3.40353ZM9.66205 12.5059L9.66788 5.50586L15.7427 9.01169L9.66205 12.5059Z"/>
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="vcontacte-icon" viewBox="0 0 24 14">
+            <path d="M23.1742 0.996974C23.3375 0.454474 23.1742 0.0566406 22.4019 0.0566406H19.8434C19.1924 0.0566406 18.8949 0.400808 18.7315 0.778808C18.7315 0.778808 17.4307 3.95097 15.5874 6.00781C14.9924 6.60631 14.7205 6.79531 14.3962 6.79531C14.234 6.79531 13.9984 6.60631 13.9984 6.06381V0.996974C13.9984 0.345974 13.8105 0.0566406 13.268 0.0566406H9.2477C8.8417 0.0566406 8.5967 0.357641 8.5967 0.644641C8.5967 1.26064 9.51836 1.40297 9.61286 3.13897V6.90497C9.61286 7.72981 9.4647 7.88031 9.13803 7.88031C8.2712 7.88031 6.16186 4.69647 4.91003 1.05181C4.6662 0.343641 4.42003 0.0578078 3.7667 0.0578078H1.20936C0.477865 0.0578078 0.332031 0.401974 0.332031 0.779974C0.332031 1.45897 1.19886 4.81897 4.36986 9.26281C6.48386 12.2973 9.46003 13.9423 12.1714 13.9423C13.7965 13.9423 13.9972 13.5771 13.9972 12.9471V10.6535C13.9972 9.92314 14.1524 9.77614 14.6669 9.77614C15.0449 9.77614 15.6959 9.96747 17.2137 11.4293C18.9474 13.163 19.2344 13.9411 20.2085 13.9411H22.7659C23.4962 13.9411 23.8614 13.576 23.6514 12.855C23.4215 12.1375 22.5932 11.0933 21.4942 9.85781C20.8969 9.15314 20.0044 8.39481 19.7325 8.01564C19.3534 7.52681 19.463 7.31097 19.7325 6.87697C19.7337 6.87814 22.8499 2.48914 23.1742 0.996974Z"/>
+        </symbol>
+    </svg>
+</div>
+<script src="../public/main.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+<script>
+    $('#crypto_table').DataTable({
+        "scrollX": true,
+        "bPaginate": false,
+        "bFilter": false,
+        "bInfo": false,
+        "targets": 'no-sort',
+        "bSort": false,
+        "order": [],
+        responsive: true
+    });
+</script>
+
+</body>
+</html>
