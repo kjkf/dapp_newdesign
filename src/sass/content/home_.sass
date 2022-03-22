@@ -9,12 +9,12 @@
   position: relative
 
   +tablet
-    +adaptiv-value-desc('min-height', 177)
-    +adaptiv-value-desc('margin-bottom', 70)
+    +adaptiv-value-desc('min-height', 300)
+    +adaptiv-value-desc('margin-bottom', 80)
 
   .container
     +tablet
-      +adaptiv-value-desc('max-width', 1464)
+      +adaptiv-value-desc('max-width', 1480)
 
   img
     width: 100vw
@@ -52,7 +52,7 @@
     +adaptiv-value-mob('margin-bottom', 45)
     +tablet
       +adaptiv-value-desc('font-size', 12)
-      +adaptiv-value-desc('margin-bottom', 28)
+      +adaptiv-value-desc('margin-bottom', 60)
       +adaptiv-value-desc('margin-left', 0)
     span
       color: $white
@@ -67,7 +67,7 @@
     flex-direction: row
 
     +tablet
-      +adaptiv-value-desc('margin-bottom', 0)
+      +adaptiv-value-desc('margin-bottom', 30)
       +adaptiv-value-desc('margin-left', 0)
       letter-spacing: initial
     color: $white
@@ -88,11 +88,11 @@
       //+adaptiv-value('padding-bottom', 37, 10)
       //+adaptiv-value('padding-left', 106, 50)
       //+adaptiv-value('border-radius', 15, 12)
-      +adaptiv-value-desc('font-size', 14)
+      +adaptiv-value-desc('font-size', 16)
       +adaptiv-value-desc('padding-top', 10)
-      +adaptiv-value-desc('padding-right', 100)
+      +adaptiv-value-desc('padding-right', 90)
       +adaptiv-value-desc('padding-bottom', 9)
-      +adaptiv-value-desc('padding-left', 106)
+      +adaptiv-value-desc('padding-left', 90)
       +adaptiv-value-desc('border-radius', 7)
       +adaptiv-value-desc('max-width', 872)
       +adaptiv-value-desc('margin-left', 0)
@@ -125,12 +125,13 @@
     justify-content: space-between
     align-items: center
     color: var(--submenu-color)
+    position: relative
     //+adaptiv-value('font-size', 37, 41)
     +adaptiv-value-mob('font-size', 41)
     +tablet
-      +adaptiv-value-desc('font-size', 14)
-      +adaptiv-value-desc('max-width', 2135)
-    position: relative
+      +adaptiv-value-desc('font-size', 16)
+      //+adaptiv-value-desc('max-width', 2135)
+
     +tablet
       position: static
     &-list
@@ -162,13 +163,13 @@
       display: none
       +tablet
         display: block
-        +adaptiv-value-desc('font-size', 12)
+        +adaptiv-value-desc('font-size', 14)
         //+adaptiv-value-desc('letter-spacing', 7)
 
 .block-menu
   +tablet
     //margin-bottom: 60px
-    +adaptiv-value-desc('margin-bottom', 20)
+    +adaptiv-value-desc('margin-bottom', 40)
   &__list
     display: none
     +tablet
@@ -191,10 +192,10 @@
       +adaptiv-value-mob('padding-bottom',  25)
       +adaptiv-value-mob('border-radius',  12)
       +tablet
-        +adaptiv-value-desc('font-size', 14)
-        +adaptiv-value-desc('padding-right', 100)
+        +adaptiv-value-desc('font-size', 16)
+        +adaptiv-value-desc('padding-right', 80)
         +adaptiv-value-desc('padding-top', 10)
-        +adaptiv-value-desc('padding-left', 100)
+        +adaptiv-value-desc('padding-left', 80)
         +adaptiv-value-desc('padding-bottom', 10)
         +adaptiv-value-desc('border-radius', 5)
         +adaptiv-value-desc('max-width', 2027)
@@ -215,14 +216,14 @@
     //align-items: center
     +tablet
       //width: 50vw
-      +adaptiv-value-desc('width', 1370)
+      +adaptiv-value-desc('width', 985)
       +adaptiv-value-desc('column-gap', 50)
-      +adaptiv-value-desc('margin-left', 50)
+      +adaptiv-value-desc('margin-left', 40)
       +adaptiv-value-desc('margin-bottom', 10)
     &-col
       +adaptiv-value-mob('padding-top', 25)
       +tablet
-        +adaptiv-value-desc('padding-top', 0)
+        +adaptiv-value-desc('padding-top', 3)
   .news-in
     display: flex
     justify-content: space-between
@@ -235,7 +236,7 @@
     .news-in
       justify-content: flex-start
       display: grid
-      grid-template-columns: 1fr 1fr 0.73fr
+      grid-template-columns: 1fr 1fr 1fr
       column-gap: 50px
     //.news-col
       +tablet
@@ -247,14 +248,16 @@
         +tablet
            +adaptiv-value-desc('padding-top', 20)
            margin-right: 0
-
+    .post-news__title
+      +tablet
+        +adaptiv-value-desc('padding-top', 5)
   .post-news
     //max-width: 39vw
     //+adaptiv-value('margin-bottom', 100, 100)
     +adaptiv-value-mob('margin-bottom', 90)
     +tablet
       //max-width: 20.5vw
-      +adaptiv-value-desc('margin-bottom', 36)
+      +adaptiv-value-desc('margin-bottom', 54)
     &.mb-0
       margin-bottom: 0
     &__img
@@ -265,11 +268,11 @@
       overflow: hidden
       +tablet
         +adaptiv-value-desc('border-radius', 15)
-        +adaptiv-value-desc('margin-bottom', 3)
+        +adaptiv-value-desc('margin-bottom', 10)
       img
         width: 100%
         height: auto
-        +adaptiv-value-desc('max-height', 136)
+        +adaptiv-value-desc('max-height', 200)
         object-fit: cover
 
     &.img__post
@@ -277,34 +280,40 @@
       +tablet
         max-width: 24vw
         //margin-bottom: 70px
-        +adaptiv-value-desc('margin-bottom', 40)
+        +adaptiv-value-desc('margin-bottom', 15)
         display: block
       &:last-child
         margin-bottom: 0
 
+
+
   .post-news__title
+    display: block
     color: var(--post-title-color)
     //+adaptiv-value('font-size', 32, 25)
     //+adaptiv-value('margin-bottom', 40, 25)
     +adaptiv-value-mob('font-size', 25)
     +adaptiv-value-mob('margin-bottom', 10)
-    line-height: 1.7
+    font-family: $InterBold
+    line-height: 1.21
     +tablet
-      +adaptiv-value-desc('font-size', 14)
+      +adaptiv-value-desc('font-size', 18)
       +adaptiv-value-desc('margin-bottom', 4)
 
     &.dib
       //margin-right: 5%
       +adaptiv-value-mob('margin-bottom', 25)
       +tablet
-        +adaptiv-value-desc('margin-bottom', 40)
-        line-height: 1
+        +adaptiv-value-desc('margin-bottom', 8)
+
 
   .post-news__text
     line-height: 1.7
     +adaptiv-value-mob('margin-bottom', 20)
     +tablet
-      +adaptiv-value-desc('margin-bottom', 20)
+      +adaptiv-value-desc('margin-bottom', 8)
+      +adaptiv-value-desc('font-size', 14)
+      line-height: 1.2
     &--sm
       +adaptiv-value-mob('font-size', 21.48)
       +tablet
@@ -313,7 +322,7 @@
   .news_foot
     grid-column: span 2
     +tablet
-      +adaptiv-value-desc('margin-top', 5)
+      +adaptiv-value-desc('margin-top', 33)
       +adaptiv-value-desc('min-height', 81.5)
       display: flex
       justify-content: flex-start
@@ -353,14 +362,14 @@
     //margin-left: 50%
     +tablet
       display: block
-      +adaptiv-value-desc('font-size', 12)
+      +adaptiv-value-desc('font-size', 14)
       //+adaptiv-value-desc('margin-top', 65)
       +adaptiv-value-desc('padding-right', 12)
       +adaptiv-value-desc('padding-top', 13)
       +adaptiv-value-desc('padding-left', 12)
       +adaptiv-value-desc('padding-bottom', 12)
       +adaptiv-value-desc('width', 200)
-      +adaptiv-value-mob('margin-left', 30)
+      +adaptiv-value-mob('margin-left', 33)
 
 
   &__title
