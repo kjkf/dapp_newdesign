@@ -4,8 +4,8 @@
     //+adaptiv-value-desc('padding-right', 120)
 .banner
   //+adaptiv-value('margin-bottom', 130, 20)
-  +adaptiv-value-mob('min-height', 264)
-  +adaptiv-value-mob('margin-bottom', 35)
+  +adaptiv-value-mob('min-height', 88)
+  +adaptiv-value-mob('margin-bottom', 5)
   position: relative
 
   +tablet
@@ -35,9 +35,8 @@
     //margin-top: 70px
     //+adaptiv-value('margin-top', 70, 30)
     //+adaptiv-value('margin-bottom', 50, 30)
-    +adaptiv-value-mob('margin-top', 30)
-    +adaptiv-value-mob('margin-bottom', 30)
-    +adaptiv-value-mob('padding-left', 30)
+    +adaptiv-value-mob('margin-top', 12)
+    +adaptiv-value-mob('margin-bottom', 0)
     +tablet
       +adaptiv-value-desc('margin-top', 32)
       +adaptiv-value-desc('margin-bottom', 25)
@@ -48,11 +47,11 @@
     font-family: $InterRegular
     //+adaptiv-value('font-size', 25, 17)
     //+adaptiv-value('margin-bottom', 57, 51)
-    +adaptiv-value-mob('font-size', 17)
-    +adaptiv-value-mob('margin-bottom', 45)
+    +adaptiv-value-mob('font-size', 11)
+    +adaptiv-value-mob('margin-bottom', 13)
     +tablet
       +adaptiv-value-desc('font-size', 12)
-      +adaptiv-value-desc('margin-bottom', 60)
+      +adaptiv-value-desc('margin-bottom', 67)
       +adaptiv-value-desc('margin-left', 0)
     span
       color: $white
@@ -61,15 +60,13 @@
     //+adaptiv-value('font-size', 100, 67)
     //+adaptiv-value('margin-bottom', 81, 14)
     +adaptiv-value-mob('margin-bottom', 14)
-    +adaptiv-value-mob('letter-spacing', 8)
     font-family: $InterExtraBold
     display: flex
     flex-direction: row
 
     +tablet
-      +adaptiv-value-desc('margin-bottom', 30)
+      +adaptiv-value-desc('margin-bottom', 38)
       +adaptiv-value-desc('margin-left', 0)
-      letter-spacing: initial
     color: $white
     .text-grey
       color: $lightgrey
@@ -96,8 +93,8 @@
       +adaptiv-value-desc('border-radius', 7)
       +adaptiv-value-desc('max-width', 872)
       +adaptiv-value-desc('margin-left', 0)
-      -webkit-box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
-      box-shadow: 0px 0px 50px 36px rgba(0,0,0,0.27)
+      -webkit-box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
+      box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
       background-color: var(--menubg)
       transform: translateY(163%)
     &__item
@@ -116,9 +113,9 @@
   position: relative
   overflow: hidden
   //margin-bottom: 18px
-  +adaptiv-value-mob('margin-bottom', 20)
+  +adaptiv-value-mob('margin-bottom', 35)
   +tablet
-    +adaptiv-value-desc('margin-bottom', 23)
+    +adaptiv-value-desc('margin-bottom', 20)
   .submenu
     position: absolute
     display: flex
@@ -127,7 +124,8 @@
     color: var(--submenu-color)
     position: relative
     //+adaptiv-value('font-size', 37, 41)
-    +adaptiv-value-mob('font-size', 41)
+    +adaptiv-value-mob('font-size', 14)
+    line-height: 1.21
     +tablet
       +adaptiv-value-desc('font-size', 16)
       //+adaptiv-value-desc('max-width', 2135)
@@ -145,11 +143,11 @@
       //+adaptiv-value('padding-right', 46, 35)
       //+adaptiv-value('padding-bottom', 30, 20)
       //+adaptiv-value('padding-left', 46, 35)
-      +adaptiv-value-mob('border-radius', 12)
-      +adaptiv-value-mob('padding-top', 20)
-      +adaptiv-value-mob('padding-right', 35)
-      +adaptiv-value-mob('padding-bottom', 20)
-      +adaptiv-value-mob('padding-left', 35)
+      +adaptiv-value-mob('border-radius', 3)
+      +adaptiv-value-mob('padding-top', 4)
+      +adaptiv-value-mob('padding-right', 11)
+      +adaptiv-value-mob('padding-bottom', 4)
+      +adaptiv-value-mob('padding-left', 11)
       +tablet
         +adaptiv-value-desc('border-radius', 5)
         +adaptiv-value-desc('padding-top', 8)
@@ -208,11 +206,11 @@
       +adaptiv-value-desc('padding-left', 0)
       +adaptiv-value-desc('padding-right', 0)
   &__right
-    //width: 100vw
-    +adaptiv-value-mob('width', 990)
+    width: 100%
     display: grid
     grid-template-columns: 1fr 1fr
     justify-content: space-between
+    +adaptiv-value-mob('column-gap', 25)
     //align-items: center
     +tablet
       //width: 50vw
@@ -224,10 +222,19 @@
       +adaptiv-value-mob('padding-top', 25)
       +tablet
         +adaptiv-value-desc('padding-top', 3)
+
+      .post-news
+        &:last-child
+          display: none
+          +tablet
+            display: block
   .news-in
     display: flex
     justify-content: space-between
     //align-items: center
+    flex-direction: column
+    +tablet
+      flex-direction: row
   &-add
     display: none
     +tablet
@@ -254,8 +261,13 @@
   .post-news
     //max-width: 39vw
     //+adaptiv-value('margin-bottom', 100, 100)
-    +adaptiv-value-mob('margin-bottom', 90)
+    +adaptiv-value-mob('margin-bottom', 9)
+    display: flex
+    flex-direction: row
+
     +tablet
+      display: flex
+      flex-direction: column
       //max-width: 20.5vw
       +adaptiv-value-desc('margin-bottom', 54)
     &.mb-0
@@ -263,20 +275,26 @@
     &__img
       //+adaptiv-value('border-radius', 15, 12)
       //margin-bottom: 30px
-      +adaptiv-value-mob('border-radius', 12)
-      +adaptiv-value-mob('margin-bottom', 30)
+      +adaptiv-value-mob('border-radius', 10)
+      +adaptiv-value-mob('min-width', 64)
+      +adaptiv-value-mob('min-height', 64)
+      +adaptiv-value-mob('margin-right', 10)
       overflow: hidden
       +tablet
+        min-height: unset
         +adaptiv-value-desc('border-radius', 15)
         +adaptiv-value-desc('margin-bottom', 10)
+        +adaptiv-value-desc('margin-right', 0)
       img
         width: 100%
-        height: auto
-        +adaptiv-value-desc('max-height', 200)
+        height: 100%
+        +adaptiv-value-mob('max-height', 64)
         object-fit: cover
+        +tablet
+          +adaptiv-value-desc('max-height', 200)
 
     &.img__post
-      display: none
+
       +tablet
         max-width: 24vw
         //margin-bottom: 70px
@@ -288,7 +306,7 @@
 
 
   .post-news__title
-    display: block
+    display: none
     color: var(--post-title-color)
     //+adaptiv-value('font-size', 32, 25)
     //+adaptiv-value('margin-bottom', 40, 25)
@@ -297,6 +315,7 @@
     font-family: $InterBold
     line-height: 1.21
     +tablet
+      display: block
       +adaptiv-value-desc('font-size', 18)
       +adaptiv-value-desc('margin-bottom', 4)
 
@@ -308,17 +327,31 @@
 
 
   .post-news__text
-    line-height: 1.7
-    +adaptiv-value-mob('margin-bottom', 20)
+    line-height: 1.2
+    +adaptiv-value-mob('font-size', 14)
+    +adaptiv-value-mob('margin-bottom', 14)
+
+
+
+    overflow: hidden
+    //text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    height: 2.4em
+
+
     +tablet
       +adaptiv-value-desc('margin-bottom', 8)
       +adaptiv-value-desc('font-size', 14)
-      line-height: 1.2
     &--sm
       +adaptiv-value-mob('font-size', 21.48)
       +tablet
         +adaptiv-value-desc('font-size', 14.43)
-
+  .post-news__details
+    display: none
+    +tablet
+      display: flex
   .news_foot
     grid-column: span 2
     +tablet
@@ -349,12 +382,13 @@
     //+adaptiv-value('padding-top', 22, 18)
     //+adaptiv-value('padding-left', 54, 30)
     //+adaptiv-value('padding-bottom', 22, 18)
-    +adaptiv-value-mob('font-size', 20)
+    +adaptiv-value-mob('font-size', 12)
     +adaptiv-value-mob('margin-left', 0)
     +adaptiv-value-mob('padding-right', 51)
-    +adaptiv-value-mob('padding-top', 15)
+    +adaptiv-value-mob('padding-top', 9)
     +adaptiv-value-mob('padding-left', 51)
-    +adaptiv-value-mob('padding-bottom', 13)
+    +adaptiv-value-mob('padding-bottom', 9)
+    width: 100%
     font-family: $InterRegular
     color: var(--seemore-btn-color)
     background-color: var(--seemore-btn-bg)
@@ -369,7 +403,7 @@
       +adaptiv-value-desc('padding-left', 12)
       +adaptiv-value-desc('padding-bottom', 12)
       +adaptiv-value-desc('width', 200)
-      +adaptiv-value-mob('margin-left', 33)
+      +adaptiv-value-mob('margin-left', 10)
 
 
   &__title
@@ -377,6 +411,7 @@
     justify-content: space-between
     align-items: center
     +adaptiv-value-mob('margin-bottom',15)
+    display: none
     +tablet
       display: none
     .title

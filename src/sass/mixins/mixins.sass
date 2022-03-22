@@ -75,14 +75,17 @@ $maxWidth: 1920
 =adaptiv-value-desc($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth})
 
+
+//$maxWidth_mob: 1170
+$maxWidth_mob: 375
 =adaptiv-value-mob($property, $val)
-	#{$property}: calc(#{$val + vw} * 100 / 1170)
+	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth_mob})
 
 =adaptiv-value-desc_imp($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth})+'!important'
 
 =adaptiv-value-mob_imp($property, $val)
-	#{$property}: calc(#{$val + vw} * 100 / 1170)+'!important'
+	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth_mob})+'!important'
 
 
 

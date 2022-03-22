@@ -47,8 +47,8 @@ ul
 	font-weight: normal
 
 h2
-	line-height: 1.4
-	+adaptiv-value-mob('font-size', 24)
+	line-height: 1.21
+	+adaptiv-value-mob('font-size', 14)
 	+tablet
 		+adaptiv-value-desc('font-size', 64)
 
@@ -89,11 +89,12 @@ h4.title.title--xs
 
 
 .container
-	max-width: 89vw
+	//+adaptiv-value-mob('max-width', 335)
+	max-width: 100%
 	width: 100%
 	margin: 0 auto
-	+adaptiv-value-mob('padding-left', 10)
-	+adaptiv-value-mob('padding-right', 10)
+	+adaptiv-value-mob('padding-left', 20)
+	+adaptiv-value-mob('padding-right', 20)
 	+tablet
 		+adaptiv-value-desc('max-width', 1186)
 		+adaptiv-value-desc('padding-left', 8)
@@ -397,10 +398,16 @@ h4.title.title--xs
 
 .btn
 	color: $fontColorMain
-	+adaptiv-value-mob('padding', 30)
+	+adaptiv-value-mob('padding', 10)
 	+tablet
 		+adaptiv-value-desc('padding', 30)
 
 	&-w100
 		width: 100%
 		background-color: #1b1b1b
+		
+.mob-d
+	display: block!important
+
+
+		
