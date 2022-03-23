@@ -207,10 +207,10 @@
       +adaptiv-value-desc('padding-right', 0)
   &__right
     width: 100%
-    display: grid
-    grid-template-columns: 1fr 1fr
+    //display: grid
+    //grid-template-columns: 1fr 1fr
     justify-content: space-between
-    +adaptiv-value-mob('column-gap', 25)
+    //+adaptiv-value-mob('column-gap', 25)
     //align-items: center
     +tablet
       //width: 50vw
@@ -219,15 +219,40 @@
       +adaptiv-value-desc('margin-left', 40)
       +adaptiv-value-desc('margin-bottom', 10)
     &-col
+      display: grid
+      grid-template-columns: 1fr 1fr
       +adaptiv-value-mob('padding-top', 25)
+      +adaptiv-value-mob('grid-row-gap', 9)
+      +adaptiv-value-desc('grid-column-gap', 25)
+
       +tablet
+        grid-template-columns: 1fr 1fr
         +adaptiv-value-desc('padding-top', 3)
+        +adaptiv-value-desc('grid-row-gap', 55)
+        +adaptiv-value-desc('grid-column-gap', 50)
+
 
       .post-news
-        &:last-child
+        //&:last-child, &:nth-last-child(2)
           display: none
           +tablet
             display: block
+
+        &:nth-child(1), &:nth-child(2), &:nth-child(3)
+          grid-column: span 2
+          +tablet
+            grid-column: unset
+          .img-wrapper
+            display: block
+            +tablet
+              display: none
+
+        .img-wrapper
+          display: none
+          +tablet
+            display: none
+
+
   .news-in
     display: flex
     justify-content: space-between
@@ -304,7 +329,9 @@
         +adaptiv-value-desc('margin-bottom', 15)
         display: block
       &:last-child
-        margin-bottom: 0
+        display: none
+        +tablet
+          display: block
 
 
 
