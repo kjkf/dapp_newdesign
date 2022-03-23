@@ -277,7 +277,9 @@
       //margin-bottom: 30px
       +adaptiv-value-mob('border-radius', 10)
       +adaptiv-value-mob('min-width', 64)
+      +adaptiv-value-mob('width', 64)
       +adaptiv-value-mob('min-height', 64)
+      +adaptiv-value-mob('height', 64)
       +adaptiv-value-mob('margin-right', 10)
       overflow: hidden
       +tablet
@@ -306,14 +308,23 @@
 
 
   .post-news__title
-    display: none
+    //display: none
     color: var(--post-title-color)
     //+adaptiv-value('font-size', 32, 25)
     //+adaptiv-value('margin-bottom', 40, 25)
-    +adaptiv-value-mob('font-size', 25)
+    +adaptiv-value-mob('font-size', 14)
     +adaptiv-value-mob('margin-bottom', 10)
     font-family: $InterBold
     line-height: 1.21
+
+    overflow: hidden
+    //text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    height: 2.4em
+
+
     +tablet
       display: block
       +adaptiv-value-desc('font-size', 18)
@@ -331,19 +342,11 @@
     +adaptiv-value-mob('font-size', 14)
     +adaptiv-value-mob('margin-bottom', 14)
 
-
-
-    overflow: hidden
-    //text-overflow: ellipsis
-    display: -webkit-box
-    -webkit-line-clamp: 2
-    -webkit-box-orient: vertical
-    height: 2.4em
-
-
+    display: none
     +tablet
       +adaptiv-value-desc('margin-bottom', 8)
       +adaptiv-value-desc('font-size', 14)
+      display: block
     &--sm
       +adaptiv-value-mob('font-size', 21.48)
       +tablet
