@@ -221,7 +221,6 @@
     &-col
       display: grid
       grid-template-columns: 1fr 1fr
-      +adaptiv-value-mob('padding-top', 25)
       +adaptiv-value-mob('grid-row-gap', 9)
       +adaptiv-value-desc('grid-column-gap', 25)
 
@@ -246,6 +245,10 @@
             display: block
             +tablet
               display: none
+        &:last-child
+          display: none
+          +tablet
+            display: block
 
         .img-wrapper
           display: none
@@ -328,7 +331,7 @@
         //margin-bottom: 70px
         +adaptiv-value-desc('margin-bottom', 15)
         display: block
-      &:last-child
+      //&:last-child
         display: none
         +tablet
           display: block
