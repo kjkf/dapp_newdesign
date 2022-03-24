@@ -61,8 +61,7 @@
     //+adaptiv-value('margin-bottom', 81, 14)
     +adaptiv-value-mob('margin-bottom', 14)
     font-family: $InterExtraBold
-    display: flex
-    flex-direction: row
+    display: block
 
     +tablet
       +adaptiv-value-desc('margin-bottom', 38)
@@ -70,6 +69,8 @@
     color: $white
     .text-grey
       color: $lightgrey
+    span:first-child
+      float: left
 
   .menu
     display: none
