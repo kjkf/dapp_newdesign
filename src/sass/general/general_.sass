@@ -390,15 +390,24 @@ h4.title.title--xs
 	align-items: center
 	justify-content: space-between
 	&__item
+		border-radius: 6px
 		+adaptiv-value-mob('margin-right', 70)
 		+tablet
-			+adaptiv-value-desc('margin-right', 12)
-			+adaptiv-value-desc('padding-left', 10)
-			+adaptiv-value-desc('padding-right', 10)
+			+adaptiv-value-desc('margin-right', 6)
+			+adaptiv-value-desc('padding-left', 13)
+			+adaptiv-value-desc('padding-right', 13)
+			+adaptiv-value-desc('padding-top', 9)
+			+adaptiv-value-desc('padding-bottom', 9)
 		&:last-child
 			margin-right: 0
 		&>a
 			color: $fontColorMain
+
+		&.active
+			background-color: $grey6
+			+tablet
+				background-color: $grey5
+
 
 .btn
 	color: $fontColorMain
