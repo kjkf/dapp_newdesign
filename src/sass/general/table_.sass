@@ -1,0 +1,335 @@
+
+//.table-scroll
+  overflow-x: scroll
+
+.table-general
+  //width: 1200px !important
+  //max-width: 1200px !important
+  color: $fontColorMain
+  +adaptiv-value-mob('font-size', 14)
+  line-height: 1.21
+  +tablet
+    +adaptiv-value-desc('font-size', 14)
+    line-height: 1.6
+
+
+
+table.table-general
+  thead
+    th, td
+      text-align: center
+      border-bottom: none
+      font-family: $InterBold
+      +adaptiv-value-mob('font-size', 12)
+      line-height: 1.5
+      +adaptiv-value-mob('padding-top', 10)
+      +adaptiv-value-mob('padding-bottom', 10)
+      +tablet
+        line-height: 1.5
+        +adaptiv-value-desc('font-size', 12)
+        +adaptiv-value-desc('padding-top', 14)
+        +adaptiv-value-desc('padding-bottom', 12)
+        +adaptiv-value-desc('padding-left', 0)
+        +adaptiv-value-desc('padding-right', 0)
+
+
+table.table-general
+  tbody
+    th, td
+      box-sizing: border-box
+      background-color: $bgColor
+      +adaptiv-value-mob('padding-top', 10)
+      +adaptiv-value-mob('padding-bottom', 10)
+      +tablet
+        +adaptiv-value-desc('padding-top', 19)
+        +adaptiv-value-desc('padding-bottom', 7)
+        +adaptiv-value-desc('padding-left', 22)
+        +adaptiv-value-desc('padding-right', 23)
+
+table.table-general
+  tbody
+    td:first-child
+      +tablet
+        +adaptiv-value-desc('padding-top', 10)
+        +adaptiv-value-desc('padding-left', 22)
+
+
+
+table.table-general.no-footer
+  border-bottom: none
+
+
+.crypto-name-link
+  display: grid
+  grid-template-columns: 1fr 3fr
+  line-height: 1.21
+  +adaptiv-value-mob('font-size', 14)
+  +adaptiv-value-mob('row-gap', 9)
+  +adaptiv-value-mob('column-gap', 9)
+  +tablet
+    +adaptiv-value-desc('font-size', 14)
+    +adaptiv-value-desc('row-gap', 7)
+    +adaptiv-value-desc('column-gap', 9)
+
+.crypto-logo
+  grid-row: span 2
+  overflow: hidden
+  border-radius: 10px
+  +adaptiv-value-mob('width', 53)
+  +adaptiv-value-mob('height', 53)
+  +adaptiv-value-mob('max-width', 53)
+  +adaptiv-value-mob('max-height', 53)
+  +tablet
+    +adaptiv-value-desc('width', 53)
+    +adaptiv-value-desc('height', 53)
+    +adaptiv-value-desc('max-width', 53)
+    +adaptiv-value-desc('max-height', 53)
+
+.crypto-logo img
+  width: 100%
+  height: auto
+  object-fit: cover
+
+
+.crypto-title
+  font-family: $InterSemiBold
+  +adaptiv-value-mob('font-size', 14)
+  line-height: 1.7
+  +tablet
+    +adaptiv-value-desc('font-size', 14)
+    line-height: 1.7
+
+.crypto-shortname
+  color: $grey3
+
+.crypto-ratenum
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $fontColorMain
+  background-color: $grey3
+  line-height: 2
+  +adaptiv-value-mob('border-radius', 5)
+  +adaptiv-value-mob('width', 30)
+  +adaptiv-value-mob('height', 30)
+  +adaptiv-value-mob('min-width', 30)
+  +adaptiv-value-mob('min-height', 30)
+  +tablet
+    +adaptiv-value-desc('border-radius', 5)
+    +adaptiv-value-desc('width', 20)
+    +adaptiv-value-desc('height', 20)
+    +adaptiv-value-desc('min-width', 20)
+    +adaptiv-value-desc('min-height', 20)
+
+.crypto-star
+  +adaptiv-value-mob('font-size', 30)
+  +tablet
+    +adaptiv-value-desc('font-size', 20)
+  .icon-star
+    color: $grey3
+  &--filled
+    .icon-star
+      color: $red1
+
+
+.crypto-shortname-ic
+  text-transform: uppercase
+  +adaptiv-value-mob('width', 22)
+  +adaptiv-value-mob('height', 22)
+  +tablet
+    +adaptiv-value-desc('width', 22)
+    +adaptiv-value-desc('height', 22)
+
+  img
+    width: 100%
+    height: auto
+    object-fit: contain
+
+.crypto-btm
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.graph-ic
+  width: 100%
+  height: auto
+
+.crypto-item
+  +adaptiv-value-mob('margin-right', 5)
+  +tablet
+    +adaptiv-value-desc('margin-right', 5)
+
+.col
+  &-name
+    +adaptiv-value-mob_imp('width', 367)
+    +adaptiv-value-mob_imp('min-width', 367)
+    +tablet
+      +adaptiv-value-desc_imp('width', 253)
+      +adaptiv-value-desc_imp('min-width', 253)
+  &-users
+    +adaptiv-value-mob_imp('width', 90)
+    +tablet
+      +adaptiv-value-desc_imp('width', 120)
+      +adaptiv-value-desc_imp('min-width', 120)
+  &-24h
+    +adaptiv-value-mob_imp('width', 115)
+    +tablet
+      +adaptiv-value-desc_imp('width', 122)
+      +adaptiv-value-desc_imp('min-width', 122)
+  &-7d
+    +adaptiv-value-mob_imp('width', 115)
+    +tablet
+      +adaptiv-value-desc_imp('width', 120)
+      +adaptiv-value-desc_imp('min-width', 120)
+  &-trans
+    +adaptiv-value-mob_imp('width', 300)
+    +tablet
+      +adaptiv-value-desc_imp('width', 140)
+      +adaptiv-value-desc_imp('min-width', 140)
+  &-price
+    +adaptiv-value-mob_imp('width', 136)
+    +tablet
+      +adaptiv-value-desc_imp('width', 113)
+      +adaptiv-value-desc_imp('min-width', 113)
+  &-volume24
+    +adaptiv-value-mob_imp('width', 270)
+    +tablet
+      +adaptiv-value-desc_imp('width', 150)
+      +adaptiv-value-desc_imp('min-width', 150)
+  &-volume
+    //+adaptiv-value-mob_imp('width', 350)
+    +tablet
+      width: auto
+      //+adaptiv-value-desc_imp('width', 160)
+      //+adaptiv-value-desc_imp('min-width', 160)
+
+
+table.table-general
+  td, th
+    &.col-name
+      min-width: 20px
+      background-color: $bgColor
+      position: sticky
+      left: 0
+      z-index: 100
+
+.col-name-wrap
+  display: grid
+  grid-template-columns: 0.45fr 1fr
+  text-align: left
+  +tablet
+    +adaptiv-value-desc('margin-left', 27)
+
+
+
+//table.dataTable tbody td
+  position: relative
+  //background: red
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+
+    width: 100%
+    height: 4px
+    background-color: red
+    //background:
+      repeat: no-repeat
+      image: url("../images/drawing.svg")
+      size: cover
+
+
+
+table.dataTable.row-border
+  tbody, thead
+    th, td
+      border-top: 1px solid $grey4
+  tbody
+    tr:first-child
+      th, td
+        border-top: 1px solid $grey4
+
+
+.crypto-top
+  display: inline-grid
+  grid-template-columns: 1fr 1fr
+  +adaptiv-value-mob('column-gap', 50)
+  +adaptiv-value-mob('font-size', 14)
+  +adaptiv-value-desc('margin-bottom', 50)
+  line-height: 1.2
+  +tablet
+    +adaptiv-value-desc('font-size', 14)
+    +adaptiv-value-desc('column-gap', 43)
+    +adaptiv-value-desc('margin-bottom', 8)
+
+  .btn, .dropdown-menu
+    +adaptiv-value-mob('font-size', 14)
+    +tablet
+      +adaptiv-value-desc('font-size', 14)
+
+  .btn
+    padding-left: 0
+    padding-right: 0
+    +tablet
+      +adaptiv-value-desc('padding-top', 7)
+      +adaptiv-value-desc('padding-bottom', 7)
+
+
+  .dropdown
+    +tablet
+      +adaptiv-value-desc('margin-right', 10)
+
+
+  .dropdown-menu
+    background-color: $bgColor
+    border-radius: 0
+    +tablet
+      +adaptiv-value-desc('padding-top', 5)
+      +adaptiv-value-desc('padding-bottom', 5)
+
+  .dropdown-item
+    color: $fontColorMain
+    +tablet
+      +adaptiv-value-desc('padding-top', 5)
+      +adaptiv-value-desc('padding-bottom', 5)
+      +adaptiv-value-desc('padding-left', 10)
+      +adaptiv-value-desc('padding-right', 10)
+    &:hover
+      background-color: $bgColor
+      opacity: 0.2
+
+  .menu-list
+    margin-top: 20px
+    +tablet
+      margin-top: 0
+
+
+.crypto-top-col
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  +tablet
+    flex-direction: row
+
+  .dropdown-toggle::after
+    color: $green1
+    vertical-align: 0.055em
+
+.crypto
+  .dataTables_wrapper
+    +adaptiv-value-mob('margin-bottom', 25)
+    +tablet
+      +adaptiv-value-desc('margin-bottom', 25)
+
+  .section-in
+    +adaptiv-value-mob('padding-bottom', 155)
+    +tablet
+      +adaptiv-value-desc('padding-bottom', 155)
+
+.btn-seemore
+  line-height: 1.2
+  +adaptiv-value-mob('font-size', 14)
+  +tablet
+    +adaptiv-value-desc('font-size', 14)
+

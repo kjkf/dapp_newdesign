@@ -96,9 +96,9 @@ h4.title.title--xs
 	+adaptiv-value-mob('padding-left', 20)
 	+adaptiv-value-mob('padding-right', 20)
 	+tablet
-		+adaptiv-value-desc('max-width', 1186)
-		+adaptiv-value-desc('padding-left', 8)
-		+adaptiv-value-desc('padding-right', 8)
+		+adaptiv-value-desc('max-width', 1165)
+		+adaptiv-value-desc('padding-left', 0)
+		+adaptiv-value-desc('padding-right', 0)
 
 
 
@@ -362,13 +362,13 @@ h4.title.title--xs
 			border-color: transparent transparent #35ba0c transparent
 			//border-width: 0 8px 15px 8px
 			border-top-width: 0
-			+adaptiv-value-mob('border-right-width', 8)
-			+adaptiv-value-mob('border-bottom-width', 12)
-			+adaptiv-value-mob('border-left-width', 8)
+			+adaptiv-value-mob('border-right-width', 5)
+			+adaptiv-value-mob('border-bottom-width', 9)
+			+adaptiv-value-mob('border-left-width', 5)
 			+tablet
-				+adaptiv-value-desc('border-right-width', 8)
-				+adaptiv-value-desc('border-bottom-width', 15)
-				+adaptiv-value-desc('border-left-width', 8)
+				+adaptiv-value-desc('border-right-width', 5)
+				+adaptiv-value-desc('border-bottom-width', 9)
+				+adaptiv-value-desc('border-left-width', 5)
 	
 	&--down
 		color: $red1
@@ -376,13 +376,13 @@ h4.title.title--xs
 			border-color: #c50606 transparent transparent transparent
 			//border-width: 15px 8px 0 8px
 			border-bottom-width: 0
-			+adaptiv-value-mob('border-top-width', 12)
-			+adaptiv-value-mob('border-right-width', 8)
-			+adaptiv-value-mob('border-left-width', 8)
+			+adaptiv-value-mob('border-top-width', 9)
+			+adaptiv-value-mob('border-right-width', 5)
+			+adaptiv-value-mob('border-left-width', 5)
 			+tablet
-				+adaptiv-value-desc('border-top-width', 15)
-				+adaptiv-value-desc('border-right-width', 8)
-				+adaptiv-value-desc('border-left-width', 8)
+				+adaptiv-value-desc('border-top-width', 9)
+				+adaptiv-value-desc('border-right-width', 5)
+				+adaptiv-value-desc('border-left-width', 5)
 
 
 .menu-list
@@ -392,7 +392,9 @@ h4.title.title--xs
 	&__item
 		+adaptiv-value-mob('margin-right', 70)
 		+tablet
-			+adaptiv-value-desc('margin-right', 70)
+			+adaptiv-value-desc('margin-right', 12)
+			+adaptiv-value-desc('padding-left', 10)
+			+adaptiv-value-desc('padding-right', 10)
 		&:last-child
 			margin-right: 0
 		&>a
