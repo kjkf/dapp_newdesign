@@ -257,8 +257,10 @@
     justify-content: space-between
     //align-items: center
     flex-direction: column
+    +adaptiv-value-mob('margin-bottom', 42)
     +tablet
       flex-direction: row
+      +adaptiv-value-desc('margin-bottom', 0)
   &-add
     display: none
     +tablet

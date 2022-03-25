@@ -390,11 +390,14 @@ h4.title.title--xs
 	align-items: center
 	justify-content: space-between
 	&__item
-		border-radius: 6px
-		+adaptiv-value-mob('margin-right', 10)
-		+adaptiv-value-mob('padding-left', 7)
-		+adaptiv-value-mob('padding-right', 7)
+		border-radius: 3px
+		+adaptiv-value-mob('margin-right', 0)
+		+adaptiv-value-mob('padding-left', 14)
+		+adaptiv-value-mob('padding-right', 15)
+		+adaptiv-value-mob('padding-top', 6)
+		+adaptiv-value-mob('padding-bottom', 5)
 		+tablet
+			border-radius: 6px
 			+adaptiv-value-desc('margin-right', 6)
 			+adaptiv-value-desc('padding-left', 13)
 			+adaptiv-value-desc('padding-right', 13)
@@ -403,12 +406,19 @@ h4.title.title--xs
 		&:last-child
 			margin-right: 0
 		&>a
-			color: $fontColorMain
+			color: $grey8
+			+tablet
+				color: $fontColorMain
 
 		&.active
 			background-color: $grey6
+			color: $grey7
 			+tablet
 				background-color: $grey5
+			&>a
+				color: $grey7
+				+tablet
+					color: $fontColorMain
 
 
 .btn
