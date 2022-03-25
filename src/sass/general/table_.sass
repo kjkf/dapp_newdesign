@@ -253,12 +253,15 @@ table.dataTable.row-border
 
 .crypto-top
   display: inline-grid
-  grid-template-columns: 1fr 1fr
   +adaptiv-value-mob('column-gap', 50)
   +adaptiv-value-mob('font-size', 14)
   +adaptiv-value-desc('margin-bottom', 50)
   line-height: 1.2
+  grid-template-columns: 1fr
+  font-family: $InterRegular
   +tablet
+    font-family: $InterSemiBold
+    grid-template-columns: 1fr 1fr
     +adaptiv-value-desc('font-size', 14)
     +adaptiv-value-desc('column-gap', 43)
     +adaptiv-value-desc('margin-bottom', 8)
@@ -308,7 +311,6 @@ table.dataTable.row-border
 .crypto-top-col
   display: flex
   justify-content: space-between
-  flex-direction: column
   +tablet
     flex-direction: row
 
