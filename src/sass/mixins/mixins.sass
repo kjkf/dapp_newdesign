@@ -25,7 +25,8 @@
 
 $laptop-width1: 1366px
 $laptop-width: 1024px
-$tablet-width: 768px
+
+$tablet-width: 576px
 =laptop1
 	@media screen and (min-width: $laptop-width1)
 		@content
@@ -74,6 +75,10 @@ $maxWidth: 1920
 
 =adaptiv-value-desc($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth})
+
+$maxWidth_tablet: 768
+=adaptiv-value-tablet($property, $val)
+	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth_tablet})
 
 
 //$maxWidth_mob: 1170
