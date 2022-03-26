@@ -8,7 +8,12 @@
   color: $fontColorMain
   +adaptiv-value-mob('font-size', 14)
   line-height: 1.21
+
   +tablet
+    +adaptiv-value-tabl('font-size', 14)
+    line-height: 1.6
+
+  +laptop
     +adaptiv-value-desc('font-size', 14)
     line-height: 1.6
 
@@ -26,7 +31,17 @@ table.table-general
       +adaptiv-value-mob('padding-bottom', 7  )
       +adaptiv-value-mob('padding-left', 7)
       +adaptiv-value-mob('padding-right', 7)
+
       +tablet
+        line-height: 1.5
+        font-family: $InterBold
+        +adaptiv-value-tabl('font-size', 12)
+        +adaptiv-value-tabl('padding-top', 14)
+        +adaptiv-value-tabl('padding-bottom', 12)
+        +adaptiv-value-tabl('padding-left', 0)
+        +adaptiv-value-tabl('padding-right', 0)
+
+      +laptop
         line-height: 1.5
         font-family: $InterBold
         +adaptiv-value-desc('font-size', 12)
@@ -46,7 +61,14 @@ table.table-general
       +adaptiv-value-mob('padding-left', 0)
       +adaptiv-value-mob('padding-right', 0)
       text-align: center
+      
       +tablet
+        +adaptiv-value-tabl('padding-top', 8)
+        +adaptiv-value-tabl('padding-bottom', 8)
+        +adaptiv-value-tabl('padding-left', 5)
+        +adaptiv-value-tabl('padding-right', 5)
+        
+      +laptop
         +adaptiv-value-desc('padding-top', 19)
         +adaptiv-value-desc('padding-bottom', 7)
         +adaptiv-value-desc('padding-left', 22)
@@ -57,7 +79,11 @@ table.table-general
     td:first-child
       text-align: left
       +adaptiv-value-mob('padding-right', 10)
+
       +tablet
+        +adaptiv-value-tabl('padding-left', 20)
+
+      +laptop
         +adaptiv-value-desc('padding-top', 10)
         +adaptiv-value-desc('padding-left', 22)
         +adaptiv-value-desc('padding-right', 23)
@@ -75,7 +101,11 @@ table.table-general.no-footer
   +adaptiv-value-mob('font-size', 14)
   +adaptiv-value-mob('row-gap', 0)
   +adaptiv-value-mob('column-gap', 3)
+
   +tablet
+    +adaptiv-value-tabl('row-gap', 8)
+
+  +laptop
     +adaptiv-value-desc('font-size', 14)
     +adaptiv-value-desc('row-gap', 7)
     +adaptiv-value-desc('column-gap', 9)
@@ -88,7 +118,14 @@ table.table-general.no-footer
   +adaptiv-value-mob('height', 35)
   +adaptiv-value-mob('max-width', 35)
   +adaptiv-value-mob('max-height', 35)
+  
   +tablet
+    +adaptiv-value-tabl('width', 53)
+    +adaptiv-value-tabl('height', 53)
+    +adaptiv-value-tabl('max-width', 53)
+    +adaptiv-value-tabl('max-height', 53) 
+    
+  +laptop
     +adaptiv-value-desc('width', 53)
     +adaptiv-value-desc('height', 53)
     +adaptiv-value-desc('max-width', 53)
@@ -105,6 +142,9 @@ table.table-general.no-footer
   +adaptiv-value-mob('font-size', 14)
   line-height: 1.21
   +tablet
+    +adaptiv-value-tabl('font-size', 14)
+    line-height: 1.7
+  +laptop
     +adaptiv-value-desc('font-size', 14)
     line-height: 1.7
 
@@ -113,13 +153,15 @@ table.table-general.no-footer
   +adaptiv-value-mob('font-size', 7)
   line-height: 1.21
   +tablet
+    +adaptiv-value-tabl('font-size', 14)
+  +laptop
     font-size: inherit
     line-height: inherit
 
 .crypto-rate
   +adaptiv-value-mob('font-size', 7)
   line-height: 1.21
-  +tablet
+  +laptop
     font-size: inherit
     line-height: inherit
 
@@ -128,7 +170,12 @@ table.table-general.no-footer
       +adaptiv-value-mob('border-right-width', 3)
       +adaptiv-value-mob('border-bottom-width', 5)
       +adaptiv-value-mob('border-left-width', 3)
+      
       +tablet
+        +adaptiv-value-tabl('border-right-width', 5)
+        +adaptiv-value-tabl('border-bottom-width', 9)
+        +adaptiv-value-tabl('border-left-width', 5)      
+      +laptop
         +adaptiv-value-desc('border-right-width', 5)
         +adaptiv-value-desc('border-bottom-width', 9)
         +adaptiv-value-desc('border-left-width', 5)
@@ -146,8 +193,15 @@ table.table-general.no-footer
   +adaptiv-value-mob('min-height', 12)
   +adaptiv-value-mob('font-size', 7)
   line-height: 1
-
   +tablet
+    border-radius: 5px
+    +adaptiv-value-tabl('width', 20)
+    +adaptiv-value-tabl('height', 20)
+    +adaptiv-value-tabl('min-width', 20)
+    +adaptiv-value-tabl('min-height', 20)
+    +adaptiv-value-tabl('font-size', 14)
+    line-height: 1.2
+  +laptop
     border-radius: 5px
     +adaptiv-value-desc('width', 20)
     +adaptiv-value-desc('height', 20)
@@ -160,6 +214,8 @@ table.table-general.no-footer
 .crypto-star
   +adaptiv-value-mob('font-size', 12)
   +tablet
+    +adaptiv-value-tabl('font-size', 20)
+  +laptop
     +adaptiv-value-desc('font-size', 20)
   .icon-star
     color: $grey3
@@ -172,7 +228,11 @@ table.table-general.no-footer
   text-transform: uppercase
   +adaptiv-value-mob('width', 12)
   +adaptiv-value-mob('height', 12)
+  display: flex
   +tablet
+    +adaptiv-value-tabl('width', 20)
+    +adaptiv-value-tabl('height', 20)
+  +laptop
     +adaptiv-value-desc('width', 22)
     +adaptiv-value-desc('height', 22)
 
@@ -193,6 +253,8 @@ table.table-general.no-footer
 .crypto-item
   +adaptiv-value-mob('margin-right', 4)
   +tablet
+    +adaptiv-value-tabl('margin-right', 7)
+  +laptop
     +adaptiv-value-desc('margin-right', 5)
 
 .col
@@ -200,46 +262,61 @@ table.table-general.no-footer
     +adaptiv-value-mob_imp('width', 111)
     +adaptiv-value-mob_imp('min-width', 111)
     +tablet
+      +adaptiv-value-tabl_imp('width', 250)
+      +adaptiv-value-tabl_imp('min-width', 250)
+    +laptop
       +adaptiv-value-desc_imp('width', 253)
       +adaptiv-value-desc_imp('min-width', 253)
   &-users
     +adaptiv-value-mob_imp('width', 66)
     +adaptiv-value-mob_imp('min-width', 66)
     +tablet
+      +adaptiv-value-tabl_imp('width', 112)
+      +adaptiv-value-tabl_imp('min-width', 112)
+    +laptop
       +adaptiv-value-desc_imp('width', 120)
       +adaptiv-value-desc_imp('min-width', 120)
   &-24h
     +adaptiv-value-mob_imp('width', 68)
     +adaptiv-value-mob_imp('min-width', 68)
     +tablet
+      +adaptiv-value-tabl_imp('width', 112)
+      +adaptiv-value-tabl_imp('min-width', 112)
+    +laptop
       +adaptiv-value-desc_imp('width', 130)
       +adaptiv-value-desc_imp('min-width', 130) //122
   &-7d
     +adaptiv-value-mob_imp('width', 68)
     +adaptiv-value-mob_imp('min-width', 68)
     +tablet
+      +adaptiv-value-tabl_imp('width', 120)
+      +adaptiv-value-tabl_imp('min-width', 120)
+    +laptop
       +adaptiv-value-desc_imp('width', 130)
       +adaptiv-value-desc_imp('min-width', 130) //120
   &-trans
     +adaptiv-value-mob_imp('width', 300)
     +tablet
+      +adaptiv-value-tabl_imp('width', 170)
+      +adaptiv-value-tabl_imp('min-width', 170)
+    +laptop
       +adaptiv-value-desc_imp('width', 140)
       +adaptiv-value-desc_imp('min-width', 140)
   &-price
     +adaptiv-value-mob_imp('width', 75)
     +adaptiv-value-mob_imp('min-width', 75)
-    +tablet
+    +laptop
       +adaptiv-value-desc_imp('width', 113)
       +adaptiv-value-desc_imp('min-width', 113)
   &-volume24
     +adaptiv-value-mob_imp('width', 94)
     +adaptiv-value-mob_imp('min-width', 94)
-    +tablet
+    +laptop
       +adaptiv-value-desc_imp('width', 150)
       +adaptiv-value-desc_imp('min-width', 150)
   &-volume
     //+adaptiv-value-mob_imp('width', 350)
-    +tablet
+    +laptop
       width: auto
       //+adaptiv-value-desc_imp('width', 160)
       //+adaptiv-value-desc_imp('min-width', 160)
@@ -259,6 +336,10 @@ table.table-general
   grid-template-columns: 0.45fr 1fr
   text-align: left
   +tablet
+    grid-template-columns: 0.55fr 1fr
+    +adaptiv-value-tabl(  'margin-left', 27)
+  +laptop
+    grid-template-columns: 0.45fr 1fr
     +adaptiv-value-desc('margin-left', 27)
 
 
@@ -303,38 +384,46 @@ table.dataTable.row-border
   +tablet
     font-family: $InterSemiBold
     grid-template-columns: 1fr 1fr
+    +adaptiv-value-tabl('font-size', 14)
+    +adaptiv-value-tabl('column-gap', 60)
+    +adaptiv-value-tabl('margin-bottom', 2)
+    width: 100%
+  +laptop
     +adaptiv-value-desc('font-size', 16)
     +adaptiv-value-desc('column-gap', 43)
     +adaptiv-value-desc('margin-bottom', 8)
+    width: auto
 
   .btn, .dropdown-menu
     +adaptiv-value-mob('font-size', 14)
     +tablet
+      +adaptiv-value-tabl('font-size', 14)
+    +laptop
       +adaptiv-value-desc('font-size', 16)
 
   .btn
     padding-left: 0
     padding-right: 0
-    +tablet
+    +laptop
       +adaptiv-value-desc('padding-top', 7)
       +adaptiv-value-desc('padding-bottom', 7)
 
 
   .dropdown
-    +tablet
+    +laptop
       +adaptiv-value-desc('margin-right', 6)
 
 
   .dropdown-menu
     background-color: $bgColor
     border-radius: 0
-    +tablet
+    +laptop
       +adaptiv-value-desc('padding-top', 5)
       +adaptiv-value-desc('padding-bottom', 5)
 
   .dropdown-item
     color: $fontColorMain
-    +tablet
+    +laptop
       +adaptiv-value-desc('padding-top', 5)
       +adaptiv-value-desc('padding-bottom', 5)
       +adaptiv-value-desc('padding-left', 10)
@@ -344,14 +433,14 @@ table.dataTable.row-border
       opacity: 0.2
 
   .menu-list
-    +tablet
+    +laptop
       margin-top: 0
 
 
 .crypto-top-col
   display: flex
   justify-content: space-between
-  +tablet
+  +laptop
     flex-direction: row
 
   .dropdown-toggle::after
@@ -362,17 +451,25 @@ table.dataTable.row-border
   .dataTables_wrapper
     +adaptiv-value-mob('margin-bottom', 30)
     +tablet
+      +adaptiv-value-tabl('margin-bottom', 22)
+      +adaptiv-value-tabl('border-radius', 5)
+    +laptop
       +adaptiv-value-desc('margin-bottom', 40)
+      +adaptiv-value-desc('border-radius', 5)
 
   .section-in
     +adaptiv-value-mob('padding-bottom', 155)
-    +tablet
+    +laptop
       +adaptiv-value-desc('padding-bottom', 155)
 
 .btn-seemore
   line-height: 1.2
   +adaptiv-value-mob('font-size', 14)
   +tablet
+    +adaptiv-value-tabl('font-size', 14)
+    +adaptiv-value-tabl('padding-top', 12)
+    +adaptiv-value-tabl('padding-bottom', 12)
+  +laptop
     +adaptiv-value-desc('font-size', 14)
     +adaptiv-value-desc('padding-top', 14)
     +adaptiv-value-desc('padding-bottom', 11)
@@ -380,5 +477,5 @@ table.dataTable.row-border
 
 
 .dataTables_scrollBody
-  +tablet
+  +laptop
     overflow-x: hidden!important

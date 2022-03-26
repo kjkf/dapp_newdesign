@@ -1,5 +1,5 @@
 .section-in
-  +tablet
+  +laptop
     //+adaptiv-value-desc('padding-left', 120)
     //+adaptiv-value-desc('padding-right', 120)
 .banner
@@ -9,11 +9,15 @@
   position: relative
 
   +tablet
+    +adaptiv-value-tabl('min-height', 180)
+    +adaptiv-value-tabl('margin-bottom', 37)
+
+  +laptop
     +adaptiv-value-desc('min-height', 300)
     +adaptiv-value-desc('margin-bottom', 80)
 
   .container
-    +tablet
+    +laptop
       +adaptiv-value-desc('max-width', 1464)
 
   img
@@ -38,6 +42,9 @@
     +adaptiv-value-mob('margin-top', 12)
     +adaptiv-value-mob('margin-bottom', 0)
     +tablet
+      +adaptiv-value-tabl('margin-top', 15)
+      +adaptiv-value-tabl('margin-bottom', 0)
+    +laptop
       +adaptiv-value-desc('margin-top', 32)
       +adaptiv-value-desc('margin-bottom', 25)
       +adaptiv-value-mob('padding-left', 0)
@@ -50,6 +57,10 @@
     +adaptiv-value-mob('font-size', 11)
     +adaptiv-value-mob('margin-bottom', 10)
     +tablet
+      +adaptiv-value-tabl('font-size', 12)
+      +adaptiv-value-tabl('margin-bottom', 40)
+      line-height: 1.25
+    +laptop
       +adaptiv-value-desc('font-size', 12)
       +adaptiv-value-desc('margin-bottom', 67)
       +adaptiv-value-desc('margin-left', 0)
@@ -63,7 +74,7 @@
     font-family: $InterExtraBold
     display: block
 
-    +tablet
+    +laptop
       +adaptiv-value-desc('margin-bottom', 38)
       +adaptiv-value-desc('margin-left', 0)
     color: $white
@@ -74,18 +85,24 @@
 
   .menu
     display: none
+    list-style: none
+    align-items: center
+    justify-content: space-between
+    -webkit-box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
+    box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
+    background-color: var(--menubg)
+    transform: translateY(163%)
     +tablet
       display: flex
-      list-style: none
-      align-items: center
-      justify-content: space-between
-      //padding: 25px 100px 37px 106px
-      //+adaptiv-value('font-size', 37, 20)
-      //+adaptiv-value('padding-top', 25, 10)
-      //+adaptiv-value('padding-right', 100, 50)
-      //+adaptiv-value('padding-bottom', 37, 10)
-      //+adaptiv-value('padding-left', 106, 50)
-      //+adaptiv-value('border-radius', 15, 12)
+      +adaptiv-value-tabl('font-size', 14)
+      +adaptiv-value-tabl('border-radius', 5)
+      +adaptiv-value-tabl('padding-top', 10)
+      +adaptiv-value-tabl('padding-bottom', 10)
+      +adaptiv-value-tabl('padding-left', 62)
+      +adaptiv-value-tabl('padding-right', 62)
+      transform: translateY(70%)
+
+    +laptop
       +adaptiv-value-desc('font-size', 16)
       +adaptiv-value-desc('padding-top', 10)
       +adaptiv-value-desc('padding-right', 90)
@@ -94,10 +111,7 @@
       +adaptiv-value-desc('border-radius', 7)
       +adaptiv-value-desc('max-width', 872)
       +adaptiv-value-desc('margin-left', 0)
-      -webkit-box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
-      box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
-      background-color: var(--menubg)
-      transform: translateY(163%)
+
     &__item
       letter-spacing: initial
       &.active
@@ -115,7 +129,7 @@
   overflow: hidden
   //margin-bottom: 18px
   +adaptiv-value-mob('margin-bottom', 35)
-  +tablet
+  +laptop
     +adaptiv-value-desc('margin-bottom', 20)
   .submenu
     position: absolute
@@ -127,11 +141,11 @@
     //+adaptiv-value('font-size', 37, 41)
     +adaptiv-value-mob('font-size', 14)
     line-height: 1.21
-    +tablet
+    +laptop
       +adaptiv-value-desc('font-size', 16)
       //+adaptiv-value-desc('max-width', 2135)
 
-    +tablet
+    +laptop
       position: static
     &-list
       display: flex
@@ -149,7 +163,7 @@
       +adaptiv-value-mob('padding-right', 11)
       +adaptiv-value-mob('padding-bottom', 4)
       +adaptiv-value-mob('padding-left', 11)
-      +tablet
+      +laptop
         +adaptiv-value-desc('border-radius', 5)
         +adaptiv-value-desc('padding-top', 8)
         +adaptiv-value-desc('padding-right', 46)
@@ -160,18 +174,18 @@
         //color: var(--submenu-active-color)
     &__btn
       display: none
-      +tablet
+      +laptop
         display: block
         +adaptiv-value-desc('font-size', 14)
         //+adaptiv-value-desc('letter-spacing', 7)
 
 .block-menu
-  +tablet
+  +laptop
     //margin-bottom: 60px
     +adaptiv-value-desc('margin-bottom', 40)
   &__list
     display: none
-    +tablet
+    +laptop
       background-color: var(--block-menu-bg)
       color: var(--block-menu-color)
       font-family: $InterMedium
@@ -190,7 +204,7 @@
       +adaptiv-value-mob('padding-left', 30)
       +adaptiv-value-mob('padding-bottom',  25)
       +adaptiv-value-mob('border-radius',  12)
-      +tablet
+      +laptop
         +adaptiv-value-desc('font-size', 16)
         +adaptiv-value-desc('padding-right', 80)
         +adaptiv-value-desc('padding-top', 10)
@@ -203,7 +217,7 @@
 
 .news
   .section-in
-    +tablet
+    +laptop
       +adaptiv-value-desc('padding-left', 0)
       +adaptiv-value-desc('padding-right', 0)
   &__right
@@ -213,7 +227,7 @@
     justify-content: space-between
     //+adaptiv-value-mob('column-gap', 25)
     //align-items: center
-    +tablet
+    +laptop
       //width: 50vw
       +adaptiv-value-desc('width', 985)
       +adaptiv-value-desc('column-gap', 50)
@@ -225,7 +239,7 @@
       +adaptiv-value-mob('grid-row-gap', 0)
       +adaptiv-value-desc('grid-column-gap', 25)
 
-      +tablet
+      +laptop
         grid-template-columns: 1fr 1fr
         +adaptiv-value-desc('padding-top', 3)
         +adaptiv-value-desc('grid-row-gap', 55)
@@ -235,7 +249,7 @@
       .post-news
         //&:last-child, &:nth-last-child(2)
           display: none
-          +tablet
+          +laptop
             display: block
 
 
@@ -243,12 +257,12 @@
 
         //&:last-child
           //display: none
-          +tablet
+          +laptop
             display: block
 
         .img-wrapper
           display: none
-          +tablet
+          +laptop
             display: none
 
 
@@ -258,12 +272,12 @@
     //align-items: center
     flex-direction: column
     +adaptiv-value-mob('margin-bottom', 42)
-    +tablet
+    +laptop
       flex-direction: row
       +adaptiv-value-desc('margin-bottom', 0)
   &-add
     display: none
-    +tablet
+    +laptop
       display: block
       +adaptiv-value-desc('margin-top', 30)
       +adaptiv-value-desc('margin-bottom', 30)
@@ -273,17 +287,17 @@
       grid-template-columns: 1fr 1fr 1fr
       column-gap: 50px
     //.news-col
-      +tablet
+      +laptop
         +adaptiv-value-desc('margin-right', 60)
       //&:first-child
-        +tablet
+        +laptop
           +adaptiv-value-desc('margin-right', 117)
       //&:last-child
-        +tablet
+        +laptop
            +adaptiv-value-desc('padding-top', 20)
            margin-right: 0
     .post-news__title
-      +tablet
+      +laptop
         +adaptiv-value-desc('padding-top', 5)
   .post-news
     //max-width: 39vw
@@ -293,7 +307,7 @@
     grid-template-columns: 0.22fr 1fr
     +adaptiv-value-mob('column-gap', 10)
 
-    +tablet
+    +laptop
       column-gap: unset
       display: flex
       flex-direction: column
@@ -311,7 +325,7 @@
       +adaptiv-value-mob('height', 64)
       overflow: hidden
       grid-row: span 2
-      +tablet
+      +laptop
         min-height: unset
         +adaptiv-value-desc('border-radius', 15)
         +adaptiv-value-desc('margin-bottom', 10)
@@ -321,19 +335,19 @@
         height: 100%
         +adaptiv-value-mob('max-height', 64)
         object-fit: cover
-        +tablet
+        +laptop
           +adaptiv-value-desc('max-height', 200)
 
     &.img__post
 
-      +tablet
+      +laptop
         max-width: 24vw
         //margin-bottom: 70px
         +adaptiv-value-desc('margin-bottom', 15)
         display: block
       //&:last-child
         display: none
-        +tablet
+        +laptop
           display: block
 
 
@@ -349,7 +363,7 @@
     line-height: 1.35
 
 
-    +tablet
+    +laptop
       display: block
       +adaptiv-value-desc('font-size', 18)
       +adaptiv-value-desc('margin-bottom', 4)
@@ -357,7 +371,7 @@
     &.dib
       //margin-right: 5%
       //+adaptiv-value-mob('margin-bottom', 25)
-      +tablet
+      +laptop
         +adaptiv-value-desc('margin-bottom', 8)
 
 
@@ -367,42 +381,42 @@
     +adaptiv-value-mob('margin-bottom', 14)
 
     display: none
-    +tablet
+    +laptop
       +adaptiv-value-desc('margin-bottom', 8)
       +adaptiv-value-desc('font-size', 14)
       display: block
     &--sm
       +adaptiv-value-mob('font-size', 21.48)
-      +tablet
+      +laptop
         +adaptiv-value-desc('font-size', 14.43)
   .post-news__details
     //display: none
     grid-column: 2
     justify-content: flex-start
 
-    +tablet
+    +laptop
       display: flex
       justify-content: space-between
     .details__btn
       display: none
-      +tablet
+      +laptop
         display: block
         margin-left: auto
   .news_foot
     grid-column: span 2
     +adaptiv-value-mob('margin-top', 5)
-    +tablet
+    +laptop
       +adaptiv-value-desc('margin-top', 33)
       +adaptiv-value-desc('min-height', 81.5)
       display: flex
       justify-content: flex-start
       align-items: center
     &.btn-wrapper
-      +tablet
+      +laptop
         justify-content: flex-end
   .news__col_title
     display: none
-    +tablet
+    +laptop
       display: block
       //+adaptiv-value('font-size', 46, 30)
       //+adaptiv-value('margin-top', 70, 55)
@@ -431,7 +445,7 @@
     background-color: var(--seemore-btn-bg)
     line-height: 1.2
     //margin-left: 50%
-    +tablet
+    +laptop
       display: block
       +adaptiv-value-desc('font-size', 14)
       //+adaptiv-value-desc('margin-top', 65)
@@ -449,7 +463,7 @@
     align-items: center
     +adaptiv-value-mob('margin-bottom',15)
     display: none
-    +tablet
+    +laptop
       display: none
     .title
       color: var(--submenu-title-color)
@@ -466,23 +480,23 @@
 .news__right-col
   .post-news:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5))
     display: none
-    +tablet
+    +laptop
       display: flex
   .post-news
     grid-column: span 2
-    +tablet
+    +laptop
       grid-column: unset
 
     &:nth-child(1), &:nth-child(2), &:nth-child(3)
       //grid-column: span 2
-      +tablet
+      +laptop
         grid-column: unset
       .img-wrapper
         display: block
-        +tablet
+        +laptop
           display: none
   .post-news:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3))
     display: flex
     flex-direction: column
-    +tablet
+    +laptop
       display: flex

@@ -26,17 +26,22 @@
 $laptop-width1: 1366px
 $laptop-width: 1024px
 
-$tablet-width: 768px
+$tablet-width: 769px
+$phone-width: 577px
+
+//min-width: 768 и больше -- дескт
+
+//min-width: 576 и больше -- планшет
+
 =laptop1
 	@media screen and (min-width: $laptop-width1)
 		@content
 =laptop
-	@media screen and (min-width: $laptop-width)
-		@content
-=tablet
 	@media screen and (min-width: $tablet-width)
 		@content
-
+=tablet
+	@media screen and (min-width: $phone-width)
+		@content
 
 =scrolled($height)
 	max-height: $height
@@ -78,17 +83,21 @@ $maxWidth: 1920
 
 
 $maxWidth_tablet: 768
-=adaptiv-value-tablet($property, $val)
+=adaptiv-value-tabl($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth_tablet})
 
 
-//$maxWidth_mob: 1170
-$maxWidth_mob: 375
+$maxWidth_mob: 375 //$maxWidth_mob: 1170
 =adaptiv-value-mob($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth_mob})
 
+
+
 =adaptiv-value-desc_imp($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth})+'!important'
+
+=adaptiv-value-tabl_imp($property, $val)
+	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth_tablet})+'!important'
 
 =adaptiv-value-mob_imp($property, $val)
 	#{$property}: calc(#{$val + vw} * 100 / #{$maxWidth_mob})+'!important'

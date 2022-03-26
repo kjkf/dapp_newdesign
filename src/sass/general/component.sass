@@ -34,7 +34,7 @@
 
   .menu
     display: none
-    +tablet
+    +laptop
       display: flex
       list-style: none
       align-items: center
@@ -73,7 +73,7 @@
     color: var(--submenu-color)
     +adaptiv-value('font-size', 37, 41)
     position: relative
-    +tablet
+    +laptop
       position: static
     &-list
       display: flex
@@ -91,12 +91,12 @@
         color: var(--submenu-active-color)
     &__btn
       display: none
-      +tablet
+      +laptop
         display: block
 
 .block-menu__list
   display: none
-  +tablet
+  +laptop
     background-color: var(--block-menu-bg)
     color: var(--block-menu-color)
     font-family: $InterMedium
@@ -118,7 +118,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    +tablet
+    +laptop
       width: 50vw
   .news-in
     display: flex
@@ -128,7 +128,7 @@
   .post-news
     max-width: 36vw
     +adaptiv-value('margin-bottom', 100, 100)
-    +tablet
+    +laptop
       max-width: 20vw
     &.mb-0
       margin-bottom: 0
@@ -143,7 +143,7 @@
 
     &.img__post
       display: none
-      +tablet
+      +laptop
         max-width: 24vw
         margin-bottom: 70px
         display: block
@@ -160,7 +160,7 @@
 
   .news__col_title
     display: none
-    +tablet
+    +laptop
       display: block
       +adaptiv-value('font-size', 46, 30)
       +adaptiv-value('margin-top', 70, 55)
@@ -169,7 +169,7 @@
 
   button.btn.see-more
     display: none
-    +tablet
+    +laptop
       display: block
       +adaptiv-value('font-size', 25, 20)
       +adaptiv-value('margin-top', 65, 55)

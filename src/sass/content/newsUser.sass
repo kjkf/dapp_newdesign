@@ -1,7 +1,7 @@
 .news-user
   display: none
 
-  +tablet
+  +laptop
     display: block
   .news__title
     display: flex
@@ -12,7 +12,7 @@
     +adaptiv-value-mob('padding-top', 50)
     +adaptiv-value-mob('padding-bottom', 50)
 
-    +tablet
+    +laptop
       +adaptiv-value-desc('padding-top', 100)
       +adaptiv-value-desc('padding-bottom', 100)
       +adaptiv-value-desc('column-gap', 150)
@@ -22,7 +22,7 @@
     display: grid
     grid-template-columns: repeat(2, 1fr)
     +adaptiv-value-mob('row-gap', 50)
-    +tablet
+    +laptop
       +adaptiv-value-desc('column-gap', 80)
       +adaptiv-value-desc('row-gap', 50)
 
@@ -34,7 +34,7 @@
     display: flex
     flex-direction: column
     height: 100%
-    +tablet
+    +laptop
       margin-bottom: 0
 
   .post-news__img
@@ -54,7 +54,7 @@
   .news-in
     display: grid
     grid-template-columns: repeat(1, 1fr)
-    +tablet
+    +laptop
       +adaptiv-value-desc('column-gap', 50)
       grid-template-columns: repeat(3, 1fr)
   .post-news
@@ -64,19 +64,19 @@
     grid-template-columns: repeat(2, 1fr)
     flex-grow: 1
 
-    +tablet
+    +laptop
       +adaptiv-value-desc('column-gap', 80)
 
   .line
     &::after
       display: none
-      +tablet
+      +laptop
         display: inline-block
 
 .post-news-btm
   display: grid
   grid-template-columns: auto auto
-  +tablet
+  +laptop
     +adaptiv-value-desc('column-gap', 10)
 
 
@@ -85,7 +85,7 @@
 
 .post-news__ava
   grid-row: span 2
-  +tablet
+  +laptop
     +adaptiv-value-desc('width', 59)
     +adaptiv-value-desc('height', 59)
     +adaptiv-value-desc('min-width', 59)
@@ -99,7 +99,7 @@
     +adaptiv-value-desc('max-width', 320)
     img
       object-fit: cover
-      +tablet
+      +laptop
         +adaptiv-value-desc('max-height', 320)
 
 
