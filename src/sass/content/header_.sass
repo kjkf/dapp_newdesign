@@ -2,6 +2,8 @@
 .header
   background-color: $bgColor
   +adaptiv-value-mob("font-size", 16)
+  +tablet
+    +adaptiv-value-tabl("font-size", 16)
 
 
   .container
@@ -16,7 +18,22 @@
     display: flex
     align-items: center
 
+    +tablet
+      +adaptiv-value-tabl("padding-left", 16)
+      +adaptiv-value-tabl("padding-right", 16)
+      +adaptiv-value-tabl("padding-top", 8)
+      +adaptiv-value-tabl("padding-bottom", 10)
+
     &.searching
+      +adaptiv-value-mob("padding-top", 2)
+      +adaptiv-value-mob("padding-bottom", 2)
+      +tablet
+        +adaptiv-value-tabl("padding-top", 3.07)
+        +adaptiv-value-tabl("padding-bottom", 3)
+      +laptop
+        +adaptiv-value-desc("padding-top", 10)
+        +adaptiv-value-desc("padding-bottom", 13)
+
       .nav, .logo, .menu--right
         display: none
       .btn-left, .btn-close
@@ -28,6 +45,8 @@
       margin-right: 0
       margin-left: 15px
 
+
+
   .search-field
     display: none
 
@@ -38,6 +57,11 @@
     +adaptiv-value-mob("height", 29)
     +adaptiv-value-mob("min-height", 29)
 
+    +tablet
+      +adaptiv-value-tabl("width", 146)
+      +adaptiv-value-tabl("min-width", 146)
+      +adaptiv-value-tabl("height", 29)
+      +adaptiv-value-tabl("min-height", 29)
 
   .profile-dropdown
     .dropdown-menu
@@ -143,6 +167,8 @@
     &-item
       +adaptiv-value-mob("margin-left", 20)
       +adaptiv-value-mob("margin-bottom", 45)
+      +tablet
+        +adaptiv-value-tabl("margin-bottom", 45)
 
 
 
@@ -154,6 +180,10 @@
   width: 18px
   height: 18px
   z-index: 103
+
+  +tablet
+    +adaptiv-value-tabl("width", 18)
+    +adaptiv-value-tabl("width", 18)
 
   &::before, &::after
     content: ''
@@ -207,6 +237,9 @@
   margin-left: 0
   margin-right: 0
 
+  +tablet
+    +adaptiv-value-tabl("width", 18)
+
   &.active
     flex-grow: 1
     +adaptiv-value-mob("margin-left", 24)
@@ -230,7 +263,13 @@
   width: 100%
   border-radius: 8px
   font-size: inherit
-
+  
+  +tablet
+    +adaptiv-value-tabl("padding-top", 10)
+    +adaptiv-value-tabl("padding-bottom", 10)
+    +adaptiv-value-tabl("padding-left", 30)
+    +adaptiv-value-tabl("padding-right", 5)
+    
   +placeholder
     color: $fontColorMain
 
@@ -252,6 +291,10 @@
   +adaptiv-value-mob("min-width", 23)
   +adaptiv-value-mob("height", 24)
   fill: #ffffff
+  +tablet
+    +adaptiv-value-tabl("width", 23)
+    +adaptiv-value-tabl("min-width", 23)
+    +adaptiv-value-tabl("height", 24)
 
 .search-icon+.search-field
   +adaptiv-value-mob("margin-left", 10)

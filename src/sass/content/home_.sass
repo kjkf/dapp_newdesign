@@ -1,243 +1,46 @@
-.section-in
-  +laptop
-    //+adaptiv-value-desc('padding-left', 120)
-    //+adaptiv-value-desc('padding-right', 120)
-.banner
-  //+adaptiv-value('margin-bottom', 130, 20)
-  +adaptiv-value-mob('min-height', 88)
-  +adaptiv-value-mob('margin-bottom', 5)
-  position: relative
-
-  +tablet
-    +adaptiv-value-tabl('min-height', 180)
-    +adaptiv-value-tabl('margin-bottom', 37)
-
-  +laptop
-    +adaptiv-value-desc('min-height', 300)
-    +adaptiv-value-desc('margin-bottom', 80)
-
-  .container
-    +laptop
-      +adaptiv-value-desc('max-width', 1464)
-
-  img
-    width: 100vw
-    height: 100%
-    object-fit: cover
-    z-index: -1
-    position: absolute
-    top: 0
-    left: 0
-
-  //&.banner-news-user
-    background:
-      color: var(--bgcolor)
-      image: url("../images/content/banner3.jpg")
-  .banner-in
-    display: inline-block
-    width: 100%
-    //margin-top: 70px
-    //+adaptiv-value('margin-top', 70, 30)
-    //+adaptiv-value('margin-bottom', 50, 30)
-    +adaptiv-value-mob('margin-top', 12)
-    +adaptiv-value-mob('margin-bottom', 0)
-    +tablet
-      +adaptiv-value-tabl('margin-top', 15)
-      +adaptiv-value-tabl('margin-bottom', 0)
-    +laptop
-      +adaptiv-value-desc('margin-top', 32)
-      +adaptiv-value-desc('margin-bottom', 25)
-      +adaptiv-value-mob('padding-left', 0)
-
-  .breadcrumbs
-    color: $lightgrey
-    font-family: $InterRegular
-    //+adaptiv-value('font-size', 25, 17)
-    //+adaptiv-value('margin-bottom', 57, 51)
-    +adaptiv-value-mob('font-size', 11)
-    +adaptiv-value-mob('margin-bottom', 10)
-    +tablet
-      +adaptiv-value-tabl('font-size', 12)
-      +adaptiv-value-tabl('margin-bottom', 40)
-      line-height: 1.25
-    +laptop
-      +adaptiv-value-desc('font-size', 12)
-      +adaptiv-value-desc('margin-bottom', 67)
-      +adaptiv-value-desc('margin-left', 0)
-    span
-      color: $white
-
-  .title
-    //+adaptiv-value('font-size', 100, 67)
-    //+adaptiv-value('margin-bottom', 81, 14)
-    +adaptiv-value-mob('margin-bottom', 14)
-    font-family: $InterExtraBold
-    display: block
-
-    +laptop
-      +adaptiv-value-desc('margin-bottom', 38)
-      +adaptiv-value-desc('margin-left', 0)
-    color: $white
-    .text-grey
-      color: $lightgrey
-    span:first-child
-      float: left
-
-  .menu
-    display: none
-    list-style: none
-    align-items: center
-    justify-content: space-between
-    -webkit-box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
-    box-shadow: 0px 7px 25px rgba(34, 18, 18, 0.63)
-    background-color: var(--menubg)
-    transform: translateY(163%)
-    +tablet
-      display: flex
-      +adaptiv-value-tabl('font-size', 14)
-      +adaptiv-value-tabl('border-radius', 5)
-      +adaptiv-value-tabl('padding-top', 10)
-      +adaptiv-value-tabl('padding-bottom', 10)
-      +adaptiv-value-tabl('padding-left', 62)
-      +adaptiv-value-tabl('padding-right', 62)
-      transform: translateY(70%)
-
-    +laptop
-      +adaptiv-value-desc('font-size', 16)
-      +adaptiv-value-desc('padding-top', 10)
-      +adaptiv-value-desc('padding-right', 90)
-      +adaptiv-value-desc('padding-bottom', 9)
-      +adaptiv-value-desc('padding-left', 90)
-      +adaptiv-value-desc('border-radius', 7)
-      +adaptiv-value-desc('max-width', 872)
-      +adaptiv-value-desc('margin-left', 0)
-
-    &__item
-      letter-spacing: initial
-      &.active
-        font-weight: bold
-    &__link
-      color: var(--menucolor)
-      &:hover
-        color: var(--menucolor)
-        text-decoration: none
-        font-weight: bold
-
-.main-submenu
-  //min-height: 73px
-  position: relative
-  overflow: hidden
-  //margin-bottom: 18px
-  +adaptiv-value-mob('margin-bottom', 35)
-  +laptop
-    +adaptiv-value-desc('margin-bottom', 20)
-  .submenu
-    position: absolute
-    display: flex
-    justify-content: space-between
-    align-items: center
-    color: var(--submenu-color)
-    position: relative
-    //+adaptiv-value('font-size', 37, 41)
-    +adaptiv-value-mob('font-size', 14)
-    line-height: 1.21
-    +laptop
-      +adaptiv-value-desc('font-size', 16)
-      //+adaptiv-value-desc('max-width', 2135)
-
-    +laptop
-      position: static
-    &-list
-      display: flex
-      justify-content: space-between
-      align-items: center
-      min-width: 460px
-    &__item
-      //+adaptiv-value('border-radius', 15, 12)
-      //+adaptiv-value('padding-top', 30, 20)
-      //+adaptiv-value('padding-right', 46, 35)
-      //+adaptiv-value('padding-bottom', 30, 20)
-      //+adaptiv-value('padding-left', 46, 35)
-      +adaptiv-value-mob('border-radius', 3)
-      +adaptiv-value-mob('padding-top', 4)
-      +adaptiv-value-mob('padding-right', 11)
-      +adaptiv-value-mob('padding-bottom', 4)
-      +adaptiv-value-mob('padding-left', 11)
-      +laptop
-        +adaptiv-value-desc('border-radius', 5)
-        +adaptiv-value-desc('padding-top', 8)
-        +adaptiv-value-desc('padding-right', 46)
-        +adaptiv-value-desc('padding-bottom', 8)
-        +adaptiv-value-desc('padding-left', 46)
-      &.active
-        background-color: var(--submenu-active-bg)
-        //color: var(--submenu-active-color)
-    &__btn
-      display: none
-      +laptop
-        display: block
-        +adaptiv-value-desc('font-size', 14)
-        //+adaptiv-value-desc('letter-spacing', 7)
-
-.block-menu
-  +laptop
-    //margin-bottom: 60px
-    +adaptiv-value-desc('margin-bottom', 40)
-  &__list
-    display: none
-    +laptop
-      background-color: var(--block-menu-bg)
-      color: var(--block-menu-color)
-      font-family: $InterMedium
-      display: flex
-      justify-content: space-between
-      align-items: center
-      //+adaptiv-value('font-size', 30, 30)
-      //+adaptiv-value('padding-right', 70, 30)
-      //+adaptiv-value('padding-top', 25, 25)
-      //+adaptiv-value('padding-left', 70, 30)
-      //+adaptiv-value('padding-bottom', 25, 25)
-      //+adaptiv-value('border-radius', 15, 12)
-      +adaptiv-value-mob('font-size',  30)
-      +adaptiv-value-mob('padding-right', 30)
-      +adaptiv-value-mob('padding-top', 25)
-      +adaptiv-value-mob('padding-left', 30)
-      +adaptiv-value-mob('padding-bottom',  25)
-      +adaptiv-value-mob('border-radius',  12)
-      +laptop
-        +adaptiv-value-desc('font-size', 16)
-        +adaptiv-value-desc('padding-right', 80)
-        +adaptiv-value-desc('padding-top', 10)
-        +adaptiv-value-desc('padding-left', 80)
-        +adaptiv-value-desc('padding-bottom', 10)
-        +adaptiv-value-desc('border-radius', 5)
-        +adaptiv-value-desc('max-width', 2027)
-  &__item.active
-        font-family: $InterBold
 
 .news
   .section-in
+    +tablet
+      +adaptiv-value-tabl('padding-left', 0)
+      +adaptiv-value-tabl('padding-right', 0)    
     +laptop
       +adaptiv-value-desc('padding-left', 0)
       +adaptiv-value-desc('padding-right', 0)
+
+  &__left
+    +tablet
+      flex: 1
+    +laptop
+      flex: unset
+
   &__right
     width: 100%
-    //display: grid
-    //grid-template-columns: 1fr 1fr
     justify-content: space-between
-    //+adaptiv-value-mob('column-gap', 25)
-    //align-items: center
+    +tablet
+      flex: 1
+      //+adaptiv-value-tabl('width', 985)
+      +adaptiv-value-tabl('column-gap', 0)
+      +adaptiv-value-tabl('margin-left', 16)
+      +adaptiv-value-tabl('margin-bottom', 0)
     +laptop
-      //width: 50vw
+      flex: unset
       +adaptiv-value-desc('width', 985)
       +adaptiv-value-desc('column-gap', 50)
       +adaptiv-value-desc('margin-left', 40)
       +adaptiv-value-desc('margin-bottom', 10)
+    
     &-col
       display: grid
       grid-template-columns: 1fr 1fr
       +adaptiv-value-mob('grid-row-gap', 0)
       +adaptiv-value-desc('grid-column-gap', 25)
+      
+      +tablet
+        grid-template-columns: 1fr
+        +adaptiv-value-tabl('padding-top', 3)
+        +adaptiv-value-tabl('grid-row-gap', 25)
+        +adaptiv-value-tabl('grid-column-gap', 50)      
 
       +laptop
         grid-template-columns: 1fr 1fr
@@ -247,22 +50,9 @@
 
 
       .post-news
-        //&:last-child, &:nth-last-child(2)
-          display: none
-          +laptop
-            display: block
-
-
-
-
-        //&:last-child
-          //display: none
-          +laptop
-            display: block
-
         .img-wrapper
           display: none
-          +laptop
+          +tablet
             display: none
 
 
@@ -272,9 +62,14 @@
     //align-items: center
     flex-direction: column
     +adaptiv-value-mob('margin-bottom', 42)
+    +tablet
+      flex-direction: row
+      +adaptiv-value-tabl('margin-bottom', 50)
     +laptop
       flex-direction: row
       +adaptiv-value-desc('margin-bottom', 0)
+
+
   &-add
     display: none
     +laptop
@@ -286,38 +81,29 @@
       display: grid
       grid-template-columns: 1fr 1fr 1fr
       column-gap: 50px
-    //.news-col
-      +laptop
-        +adaptiv-value-desc('margin-right', 60)
-      //&:first-child
-        +laptop
-          +adaptiv-value-desc('margin-right', 117)
-      //&:last-child
-        +laptop
-           +adaptiv-value-desc('padding-top', 20)
-           margin-right: 0
+  
     .post-news__title
       +laptop
         +adaptiv-value-desc('padding-top', 5)
+        
   .post-news
-    //max-width: 39vw
-    //+adaptiv-value('margin-bottom', 100, 100)
     +adaptiv-value-mob('margin-bottom', 25)
     display: grid
     grid-template-columns: 0.22fr 1fr
     +adaptiv-value-mob('column-gap', 10)
 
-    +laptop
+    +tablet
       column-gap: unset
       display: flex
       flex-direction: column
       //max-width: 20.5vw
+      +adaptiv-value-tabl('margin-bottom', 54)
+    +laptop
       +adaptiv-value-desc('margin-bottom', 54)
+      
     &.mb-0
       margin-bottom: 0
     &__img
-      //+adaptiv-value('border-radius', 15, 12)
-      //margin-bottom: 30px
       +adaptiv-value-mob('border-radius', 10)
       +adaptiv-value-mob('min-width', 64)
       +adaptiv-value-mob('width', 64)
@@ -325,55 +111,64 @@
       +adaptiv-value-mob('height', 64)
       overflow: hidden
       grid-row: span 2
-      +laptop
+      +tablet
         min-height: unset
+        width: auto
+        +adaptiv-value-tabl('border-radius', 15)
+        +adaptiv-value-tabl('margin-bottom', 10)
+        height: unset
+      +laptop
         +adaptiv-value-desc('border-radius', 15)
         +adaptiv-value-desc('margin-bottom', 10)
-        height: unset
+
       img
         width: 100%
         height: 100%
         +adaptiv-value-mob('max-height', 64)
         object-fit: cover
+        +tablet
+          +adaptiv-value-tabl('max-height', 200)
         +laptop
           +adaptiv-value-desc('max-height', 200)
 
     &.img__post
-
+      +tablet
+        +adaptiv-value-tabl('margin-bottom', 20)
+        display: block
       +laptop
         max-width: 24vw
-        //margin-bottom: 70px
         +adaptiv-value-desc('margin-bottom', 15)
-        display: block
-      //&:last-child
-        display: none
-        +laptop
-          display: block
+      &:last-child
+        +tablet
+          margin-bottom: 0
 
 
 
   .post-news__title
     //display: none
     color: var(--post-title-color)
-    //+adaptiv-value('font-size', 32, 25)
-    //+adaptiv-value('margin-bottom', 40, 25)
     +adaptiv-value-mob('font-size', 16)
     +adaptiv-value-mob('margin-bottom', 5)
     font-family: $InterBold
     line-height: 1.35
 
 
-    +laptop
+    +tablet
       display: block
+      +adaptiv-value-tabl('font-size', 18)
+      +adaptiv-value-tabl('margin-bottom', 4)
+      
+    +laptop
       +adaptiv-value-desc('font-size', 18)
       +adaptiv-value-desc('margin-bottom', 4)
-
+      
     &.dib
       //margin-right: 5%
       //+adaptiv-value-mob('margin-bottom', 25)
+      +tablet
+        +adaptiv-value-tabl('margin-bottom', 8)
       +laptop
         +adaptiv-value-desc('margin-bottom', 8)
-
 
   .post-news__text
     line-height: 1.2
@@ -381,58 +176,70 @@
     +adaptiv-value-mob('margin-bottom', 14)
 
     display: none
+    +tablet
+      +adaptiv-value-tabl('margin-bottom', 8)
+      +adaptiv-value-tabl('font-size', 14)
+      display: block    
     +laptop
       +adaptiv-value-desc('margin-bottom', 8)
       +adaptiv-value-desc('font-size', 14)
       display: block
     &--sm
       +adaptiv-value-mob('font-size', 21.48)
+      +tablet
+        +adaptiv-value-tabl('font-size', 14.43)      
       +laptop
         +adaptiv-value-desc('font-size', 14.43)
+        
   .post-news__details
     //display: none
     grid-column: 2
     justify-content: flex-start
 
-    +laptop
+    +tablet
       display: flex
       justify-content: space-between
     .details__btn
       display: none
-      +laptop
+      +tablet
         display: block
         margin-left: auto
+        
   .news_foot
     grid-column: span 2
     +adaptiv-value-mob('margin-top', 5)
+    
+    +tablet
+      +adaptiv-value-tabl('margin-top', 25)
+      +adaptiv-value-tabl('min-height', 81.5)
+      display: flex
+      justify-content: flex-start
+      align-items: center    
     +laptop
       +adaptiv-value-desc('margin-top', 33)
       +adaptiv-value-desc('min-height', 81.5)
-      display: flex
-      justify-content: flex-start
-      align-items: center
+      
     &.btn-wrapper
+      +tablet
+        justify-content: space-between
+        align-items: end
       +laptop
         justify-content: flex-end
+        
   .news__col_title
     display: none
-    +laptop
+    
+    +tablet
       display: block
-      //+adaptiv-value('font-size', 46, 30)
-      //+adaptiv-value('margin-top', 70, 55)
-      +adaptiv-value-desc('font-size', 46)
-      //+adaptiv-value-desc('margin-top', 55)
+      +adaptiv-value-tabl('font-size', 46)
       font-family: $InterSemiBold
-      color: var(--post-col-title-color)
+      color: var(--post-col-title-color)    
+      
+    +laptop
+      +adaptiv-value-desc('font-size', 46)
 
   button.btn.see-more
     display: none
-    //+adaptiv-value('font-size', 25, 20)
-    //+adaptiv-value('margin-top', 65, 55)
-    //+adaptiv-value('padding-right', 54, 30)
-    //+adaptiv-value('padding-top', 22, 18)
-    //+adaptiv-value('padding-left', 54, 30)
-    //+adaptiv-value('padding-bottom', 22, 18)
     +adaptiv-value-mob('font-size', 14)
     +adaptiv-value-mob('margin-left', 0)
     +adaptiv-value-mob('padding-right', 51)
@@ -444,7 +251,18 @@
     color: var(--seemore-btn-color)
     background-color: var(--seemore-btn-bg)
     line-height: 1.2
-    //margin-left: 50%
+    &:first-child
+      +tablet
+        margin-left: 0
+    +tablet
+      display: block
+      +adaptiv-value-tabl('font-size', 12)
+      +adaptiv-value-tabl('padding-right', 12)
+      +adaptiv-value-tabl('padding-top', 13)
+      +adaptiv-value-tabl('padding-left', 14)
+      +adaptiv-value-tabl('padding-bottom', 14)
+      +adaptiv-value-mob('margin-left', 10)
+      width: 100%
     +laptop
       display: block
       +adaptiv-value-desc('font-size', 14)
@@ -463,7 +281,7 @@
     align-items: center
     +adaptiv-value-mob('margin-bottom',15)
     display: none
-    +laptop
+    +tablet
       display: none
     .title
       color: var(--submenu-title-color)
@@ -478,25 +296,30 @@
 
 
 .news__right-col
-  .post-news:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5))
-    display: none
-    +laptop
-      display: flex
   .post-news
     grid-column: span 2
-    +laptop
+    +tablet
       grid-column: unset
-
-    &:nth-child(1), &:nth-child(2), &:nth-child(3)
-      //grid-column: span 2
+      display: none
+      margin-bottom: 0!important
+    &:not(:nth-child(-n+5))
+      display: none!important
       +laptop
+        display: flex!important
+    &:nth-child(-n+5)
+      +tablet
+        display: block
+    &:nth-child(-n+3)
+      //grid-column: span 2
+      +tablet
         grid-column: unset
       .img-wrapper
         display: block
-        +laptop
+        +tablet
           display: none
-  .post-news:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3))
-    display: flex
-    flex-direction: column
-    +laptop
+    &:not(:nth-child(-n+3))
       display: flex
+      flex-direction: column
+      +tablet
+        display: flex
+

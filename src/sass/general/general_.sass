@@ -190,6 +190,12 @@ h4.title.title--xs
 		repeat: no-repeat
 		size: auto
 		position: center
+	+tablet
+		+adaptiv-value-tabl("width", 24)
+		+adaptiv-value-tabl("min-width", 24)
+		+adaptiv-value-tabl("height", 24)
+		+adaptiv-value-tabl("min-height", 24)
+		+adaptiv-value-tabl("padding", 5)
 
 .dropdown-menu
 	display: none
@@ -262,6 +268,8 @@ h4.title.title--xs
 	display: flex
 	justify-content: space-between
 	align-items: center
+	+tablet
+		+adaptiv-value-tabl('font-size', 12)
 	+laptop
 		+adaptiv-value-desc('font-size', 12)
 
@@ -281,6 +289,8 @@ h4.title.title--xs
 		width: 100%
 		line-height: 1.7
 		+adaptiv-value-mob('font-size', 20.6) //??
+		+tablet
+			+adaptiv-value-tabl('font-size', 12)
 		+laptop
 			+adaptiv-value-desc('font-size', 12)
 	&__source
@@ -297,6 +307,9 @@ h4.title.title--xs
 			image: url("../images/icons/open-arrow.png")
 			size: contain
 			repeat: no-repeat
+		+tablet
+			+adaptiv-value-tabl('width', 18)
+			+adaptiv-value-tabl('height', 20)
 		+laptop
 			+adaptiv-value-desc('width', 18)
 			+adaptiv-value-desc('height', 20)
